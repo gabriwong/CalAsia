@@ -195,16 +195,10 @@ footer a:hover {
   color: white;
 }
 
-footer .col-md-4:last-child .footerContent{
-  border-right: none;
- 
-}
-
-.footerContent {
+footer .col-md-4:nth-child(2) .footerContent{
+  border-left:solid 1px grey;
   border-right:solid 1px grey;
-
 }
-
 
 #copyright,#subscribe {
   text-align: center;
