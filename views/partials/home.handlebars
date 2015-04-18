@@ -59,10 +59,11 @@
                   <button class="close" data-dismiss="modal">&times;</button>
 
                   <h4 class="modal-title">[[event.name]]</h4>
-                  <h5>Date: [[event.date.string]], Time: [[event.eventTime.string]]</h5>
-                  <h5>Location: [[event.location]]</h5>
+                  <h5 ng-show="event.date.string">Date: [[event.date.string]]<span ng-show="event.eventTime.string">, Time: [[event.eventTime.string]]</span></h5>
+                  <h5 ng-show="event.location">Location: [[event.location]]</h5>
                   <h5 ng-show="event.capacity">Capacity: [[event.capacity]]</h5>
-                  <h5 ng-show="event.price">Price: $[[event.price]]</h5> 
+                  <h5 ng-show="event.price">Price: $[[event.price]]</h5>
+                  <h5 ng-show="event.memberPrice">Member: $[[event.memberPrice]]</h5>
                 </div><!-- end modal header-->
 
                 <div class="modal-body">
@@ -74,11 +75,11 @@
                   <div ng-if="event.past" style="display:inline-block; color:red" class="pull-left">
                     <p>This event has passed.</p>
                   </div>
-                  <button ng-show="event.externalLink" class="btn btn-default" type="button">
-                    <a href="[[event.externalLink]]" target="_blank">
-                      More Details <span class="glyphicon glyphicon-new-window"></span>
-                    </a>
-                  </button> 
+                  <a href="[[event.externalLink]]" target="_blank">
+                    <button ng-show="event.externalLink" class="btn btn-default" type="button">
+                        More Details <span class="glyphicon glyphicon-new-window"></span>
+                    </button>
+                  </a> 
                   <div ng-if="!event.past" style="display:inline-block">
                     <a href="[[event.registration.url]]" target="_blank" ng-show="event.registration.url"><button class="btn btn-success" type="button">Register for this Event</button></a>
                   </div>
@@ -91,7 +92,7 @@
             <h4><span class="glyphicon glyphicon-calendar"></span> Upcoming Cal-Asia and Partner Events <small><a href="/calendar">view all >></a></small></h4>
             <p style="padding: 0 30px;" ng-repeat="event in upcomingEvents">
               <strong>[[event.name]]</strong><br> 
-              <i>[[event.date.string]]</i><br>
+              <i>[[event.date.string]]</i><span style="color:gray"> - [[event.countDown]]</span><br>
               <span ng-show="event.location">
                 [[event.location]]
               </span>

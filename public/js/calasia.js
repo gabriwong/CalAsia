@@ -37,6 +37,10 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				templateUrl: 'partials/blog',
 				controller:"blogCtrl"
 			})
+			.when('/blog/:id', {
+				templateUrl: 'partials/blogEntry',
+				controller:"blogCtrl"
+			})
 			.when('/contact',{
 				templateUrl: 'partials/contact'
 			})
@@ -196,6 +200,13 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				data.push({name:"No Upcoming Events"});
 			}
 			$scope.upcomingEvents = data.slice(0,2);
+			var day = new Date().getDate();
+			$scope.upcomingEvents.forEach(function(item, i){
+				item.countDown = new Date(item.date.full).getDate() - day;
+				if(item.countDown == 0) item.countDown = 'Today';
+				else if (item.countDown == 1) item.countDown = 'Tomorrow';
+				else item.countDown = 'In '+item.countDown+' Days';
+			})
 		})
 		$http.get("/api/updates").success(function(data, status, headers, config){
 			if(data.length==0){
@@ -302,17 +313,17 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				var weekdayArr = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 				if($scope.form.date.full){
 					$scope.form.date.string = weekdayArr[$scope.form.date.full.getDay()] +", "+monthArr[$scope.form.date.full.getMonth()]+" "+$scope.form.date.full.getDate()+", "+$scope.form.date.full.getFullYear();
+					$scope.form.date.full = new Date($scope.form.date.string + ' 11:59 PM');
 					$scope.form.year = $scope.form.date.full.getFullYear();
 				}
 				if($scope.form.registration.date.full){
 					$scope.form.registration.date.string = weekdayArr[$scope.form.registration.date.full.getDay()] +", "+monthArr[$scope.form.registration.date.full.getMonth()]+" "+$scope.form.registration.date.full.getDate()+", "+$scope.form.registration.date.full.getFullYear();	
+					$scope.form.registration.date.full = new Date($scope.form.registration.date.string + ' 11:59 PM');
 				}
 			}
 			if($scope.form.registration.url != undefined){
 				if ($scope.form.registration.url.substring(0,4) != "http") $scope.form.registration.url = "http://"+$scope.form.registration.url;
 			}
-			if($scope.form.images!=undefined) $scope.form.images = $scope.form.images.split(/, */);
-			if($scope.form.speakers!=undefined) $scope.form.speakers = $scope.form.speakers.split(/, */);
 			if($scope.form.sponsors!=undefined) $scope.form.sponsors = $scope.form.sponsors.split(/, */);
 
 			if ($('#editor') !=undefined){
@@ -326,6 +337,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				hours = hours ? hours : 12;
 				minutes = minutes < 10 ? '0'+minutes : minutes;
 				$scope.form.eventTime.string = hours + ':' + minutes + ' ' + AMPM;
+				$scope.form.date.full = new Date($scope.form.date.string + ' ' +$scope.form.eventTime.string);
 			}
 			$scope.form.past = new Date > $scope.form.date.full;
 			$http.post('/api/events/new', $scope.form).
@@ -351,9 +363,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		success(function(data) {
 			$scope.form = data.event;
 			if($scope.form.description != undefined) $('#editor').append($scope.form.description);
-			if($scope.form.speakers!=undefined) $scope.form.speakers = $scope.form.speakers.join(", ");
 			if($scope.form.sponsors!=undefined) $scope.form.sponsors = $scope.form.sponsors.join(", ");
-			if($scope.form.image!=undefined) $scope.form.image = $scope.form.image.join(", ");
 			if($scope.form.date != undefined) $scope.form.date.full = new Date($scope.form.date.full);
 			else $scope.form.date = {};
 			if($scope.form.eventTime != undefined) $scope.form.eventTime.full = new Date($scope.form.eventTime.full);
@@ -375,17 +385,17 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				var weekdayArr = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 				if($scope.form.date.full){
 					$scope.form.date.string = weekdayArr[$scope.form.date.full.getDay()] +", "+monthArr[$scope.form.date.full.getMonth()]+" "+$scope.form.date.full.getDate()+", "+$scope.form.date.full.getFullYear();
+					$scope.form.date.full = new Date($scope.form.date.string + ' 11:59 PM');
 					$scope.form.year = $scope.form.date.full.getFullYear();
 				}
 				if($scope.form.registration.date.full){
 					$scope.form.registration.date.string = weekdayArr[$scope.form.registration.date.full.getDay()] +", "+monthArr[$scope.form.registration.date.full.getMonth()]+" "+$scope.form.registration.date.full.getDate()+", "+$scope.form.registration.date.full.getFullYear();	
+					$scope.form.registration.date.full = new Date($scope.form.registration.date.string + ' 11:59 PM');
 				}
 			}
 			if($scope.form.registration.url != undefined){
 				if ($scope.form.registration.url.substring(0,4) != "http") $scope.form.registration.url = "http://"+$scope.form.registration.url;
 			}
-			if($scope.form.images!=undefined) $scope.form.images = $scope.form.images.split(/, */);
-			if($scope.form.speakers!=undefined) $scope.form.speakers = $scope.form.speakers.split(/, */);
 			if($scope.form.sponsors!=undefined) $scope.form.sponsors = $scope.form.sponsors.split(/, */);
 
 			if ($('#editor') !=undefined){
@@ -399,6 +409,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				hours = hours ? hours : 12;
 				minutes = minutes < 10 ? '0'+minutes : minutes;
 				$scope.form.eventTime.string = hours + ':' + minutes + ' ' + AMPM;
+				$scope.form.date.full = new Date($scope.form.date.string + ' ' +$scope.form.eventTime.string);
 			}
 			$scope.form.past = new Date > $scope.form.date.full;
 			$http.put('/api/event/' + $routeParams.id, $scope.form).
@@ -468,9 +479,20 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		};
 	})
 	.controller("blogCtrl", function ($scope, $http){
-		$http.get('api/blogs').success(function(data){
-			$scope.blogs = data.blogs;
-		})
+		if($routeParams.id==undefined){
+			$http.get('/api/blogs').success(function(data){
+				if(data.length==0){
+					data.push({name:"No Entry"});
+				}
+				$scope.blogs = data;
+			})
+		}
+		else{
+			var id = $routeParams.id;
+			$http.get("/api/blog/"+id).success(function(data, status, headers, config){
+				$scope.blog = data.blog;
+			})
+		}
 	})
 	.controller("addBlogCtrl",function ($scope, $http, $location){
 		$('#editor').wysiwyg();
