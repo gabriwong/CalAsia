@@ -12,12 +12,10 @@ var EventSchema = new mongoose.Schema({
 		full:Date,
 		string:String
 	},
-	location:String,//
+	location:String,
 	capacity:Number,
-	description:String,//
-	image:[String],
-	speakers:[String],
-	price:Number,//
+	description:String,
+	price:Number,
 	memberPrice:Number,
 	sponsors:[String],
 	regLink:String,
