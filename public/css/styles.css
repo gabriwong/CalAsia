@@ -247,6 +247,35 @@ footer .col-md-4:nth-child(2) .footerContent{
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
 }
+#edit{
+  position:fixed;
+  top:0;
+  left:50%;
+  width:100%;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+}
+#stuff{
+  position:fixed;
+  right:0;
+  bottom:5px;
+  width:100px;
+}
+.note-codable{
+  display:none;
+}
+.button{
+  text-align: center;
+  display:block;
+  border-radius:50px;
+  background:#537368;
+  padding:5px;
+  margin:5px;
+  box-shadow:1px 1px 1px 2px rgba(0,0,0,0.3);
+  cursor:pointer;
+}
 
 
 /* --------------------------------------
@@ -270,6 +299,11 @@ body {
 }
 .navbar-default .navbar-brand {
   color: #515151;
+  width: 125px;
+  height: 125px;
+}
+.navbar-brand>img{
+  width:100%;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
   color: #000000;
