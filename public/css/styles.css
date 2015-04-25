@@ -34,7 +34,6 @@ body{
 #bodyDiv {
   background-color: white;
   color:black;
-
 }
 
 #homeAbout {
@@ -50,8 +49,13 @@ body{
 }
 
 #homeUpdates {
-  padding: 0px 0 20px 0; 
+  padding: 0;
+  border:solid 1px #ddd;
+  border-radius: 5px;
   margin: 20px;
+}
+#homeUpdates h4{
+  margin:5px 5px;
 }
 
 thead {
