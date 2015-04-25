@@ -92,12 +92,12 @@
             <h4><span class="glyphicon glyphicon-calendar"></span> Upcoming Cal-Asia and Partner Events <small><a href="/calendar">view all >></a></small></h4>
             <p style="padding: 0 30px;" ng-repeat="event in upcomingEvents">
               <strong>[[event.name]]</strong><br> 
-              <i>[[event.date.string]]</i><span style="color:gray"> - [[event.countDown]]</span><br>
+              <i ng-show="event.date.string">[[event.date.string]]</i><span style="color:gray" ng-show="event.date.string"> - [[event.countDown]]</span><br>
               <span ng-show="event.location">
                 [[event.location]]
               </span>
               <br>
-              <a ng-click="showModal([[event._id]])" style="cursor:pointer">Details</a> | <a href="[[event.registration.url]]" target="_blank">Registration</a>
+              <span ng-show="event._id"><a ng-click="showModal([[event._id]])" style="cursor:pointer">Details</a> | <a href="[[event.registration.url]]" target="_blank">Registration</a></span>
             </p>
           </div><!-- end homeEvents -->   
         </div><!-- end col-md-8 leftColumn --> 
