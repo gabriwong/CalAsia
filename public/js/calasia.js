@@ -277,7 +277,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		}
 	})
 	.controller("homeCtrl",function ($window, $scope, $http, $location, authenticationService, $routeParams){
-		$scope.$on('onRepeatLast', function(scope, element, attrs){
+		$scope.$on('onRepeatFirst', function(scope, element, attrs){
 			$(element).addClass('active');
 		});
 		$http.get("/api/carousel").success(function(data, status, headers, config){
@@ -309,10 +309,20 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			})
 		})
 		$http.get("/api/updates").success(function(data, status, headers, config){
+			var updateCount = 2;
 			if(data.length==0){
 				data.push({title:"No Updates"});
+			};
+			$scope.updates = data.slice(0,updateCount);
+			for (var i=0;i<updateCount;i++){
+				/* var temp = data[i].description.match(/<.*?\/[a-zA-Z]+>/)[0];
+				$scope.updates[i].more = temp.length==data[i].description.length?false:true;*/
+				var temp = $scope.updates[i].description.match(/.+?<br>/);
+				if (temp!=null) $scope.updates[i].preview = temp[0];
+				else $scope.updates[i].preview = $scope.updates[i].description;
+				$scope.updates[i].more = temp!=null?true:false;
+				console.log($scope.updates[i].preview);
 			}
-			$scope.updates = data.slice(0,2);
 		})
 		$scope.setActive = function(){
 			$('#slide1').addClass('active');
@@ -652,7 +662,6 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		});
 		
 		$scope.submitUpdate = function () {
-			console.log($scope.form.date.full);
 			if($scope.form.date.full){
 				var monthArr = ["January","February","March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 				var weekdayArr = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -875,7 +884,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 	.directive('carouselFirstActive', function() {
         return function(scope, element, attrs) {
             if (scope.$first) setTimeout(function(){
-                scope.$emit('onRepeatLast', element, attrs);
+                scope.$emit('onRepeatFirst', element, attrs);
             }, 1);
         };
     })
