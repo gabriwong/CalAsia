@@ -173,8 +173,17 @@ thead {
 .menubox img{
   box-shadow: 0 0 1px 1px rgba(0,0,0,0.5);
 }
-#editor{
+#editor, #editor2{
   overflow-y:scroll;
+}
+#editor img, #editor2 img{
+  height:100%;
+}
+.btn-toolbar{
+  padding:5px 0;
+}
+td img{
+  height:100px;
 }
 footer{
   background-color: #1F1F1F;
@@ -389,17 +398,7 @@ body {
 
 #myCarousel .item { height: 400px; }
 
-#slide1 {
-  background: url('../img/carousel/A_featureVietnam.jpg') top center no-repeat;
-}
 
-#slide2 {
-  background: url('../img/carousel/B_AN14-large.jpg') top center no-repeat;
-}
-
-#slide3 {
-  background: url('../img/carousel/C_CML-large.jpg') top center no-repeat;
-}
 
 /* --------------------------------------
    Global Styles

@@ -50,3 +50,11 @@ var BlogSchema = new mongoose.Schema({
 	text:String
 })
 exports.Blog = mongoose.model('Blog',BlogSchema);
+
+var CarouselSchema = new mongoose.Schema({
+	title:String,
+	text:String,
+	image:String,
+	order:Number
+})
+exports.Carousel = mongoose.model('Carousel',CarouselSchema);

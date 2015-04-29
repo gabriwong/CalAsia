@@ -71,6 +71,22 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 					}
 				}
 			})
+			.when('/adminCarousel',{
+				templateUrl: 'partials/adminCarousel',
+				controller: 'carouselCtrl',
+				resolve:{
+					auth: function ($q, authenticationService, $location){
+						var userInfo = authenticationService.getUserInfo();
+						if (userInfo) {
+							return $q.when(userInfo);
+						}
+						else{
+							$location.path('/login');
+							return $q.reject({authenticated:false});
+						}
+					}
+				}
+			})
 			.when('/addEvent',{
 				templateUrl: 'partials/addEvent',
 				controller:"addEventCtrl",
@@ -154,13 +170,29 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				templateUrl:'partials/blogform',
 				controller:"editBlogCtrl",
 				resolve:{
-					auth: function ($q, authenticationService){
+					auth: function ($q, authenticationService, $location){
 						var userInfo = authenticationService.getUserInfo();
 						if (userInfo) {
 							return $q.when(userInfo);
 						}
 						else{
-
+							$location.path('/login');
+							return $q.reject({authenticated:false});
+						}
+					}
+				}
+			})
+			.when('/editCarousel/:id',{
+				templateUrl:'partials/carouselform',
+				controller:"editCarouselCtrl",
+				resolve:{
+					auth: function ($q, authenticationService, $location){
+						var userInfo = authenticationService.getUserInfo();
+						if (userInfo) {
+							return $q.when(userInfo);
+						}
+						else{
+							$location.path('/login');
 							return $q.reject({authenticated:false});
 						}
 					}
@@ -197,6 +229,18 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		}
 	})
 	.controller("homeCtrl",function ($window, $scope, $http, $location, authenticationService, $routeParams){
+		$scope.$on('onRepeatLast', function(scope, element, attrs){
+			$(element).addClass('active');
+		});
+		$http.get("/api/carousel").success(function(data, status, headers, config){
+			if(data.length==0){
+				data.push({name:"No Upcoming Events",text:"",image:'<img src="img/cal-asia-logo-green.svg" alt="logo" onerror="this.onerror=null; this.src=\'img/logoblk.png\'">'});
+			}
+			$scope.carousel = data;
+			$scope.carousel.forEach(function(item, i){
+				item.image = item.image.slice(9, item.image.length-1);
+			})
+		})
 		$http.get("/api/upcomingEvents").success(function(data, status, headers, config){
 			if(data.length==0){
 				data.push({name:"No Upcoming Events"});
@@ -216,42 +260,14 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			}
 			$scope.updates = data.slice(0,2);
 		})
+		$scope.setActive = function(){
+			$('#slide1').addClass('active');
+		}
 		$scope.showModal = function (id){
 			var selector = "#"+id;
 			$(selector).modal('show');
 		}
-		// if($window.sessionStorage["userInfo"] != null){
-		// 	$("[contenteditable]").attr('contenteditable',true);
-		// 	// $("#edit").append(editorString);
-		// 	// $('#edit').summernote();
-		// 	$("#stuff").append("<p class='button'>Save</p><p class='button'>Logout</p>");
-		// 	$("[contenteditable]").click(function(){
-		// 		// $(this).summernote();
-		// 		$("#edit").empty();
-		// 		$("#edit").append(editorString);
-		// 		$(this).addClass('editor')
-		// 		$(this).wysiwyg();
-		// 		$(this).cleanHtml();
-		// 	})
-		// 	// $("[contenteditable]").focusout(function(){
-		// 	// 	// $(this).removeClass('editor');
-		// 	// 	// $(this).destroy();
-		// 	// })
-		// 	$scope.logout = function() {
-		// 		authenticationService.logout()
-		// 		.then(function (result) {
-		// 			$scope.userInfo = null;
-		// 			$location.path("/login");
-		// 			$('#stuff').empty();
-		// 		}, function (error) {
-		// 			console.log(error);
-		// 		});
-
-		// 	}
-		// }
-		// else{
 			$("[contenteditable]").attr('contenteditable',false);
-		// }
 	})
 	.controller("aboutCtrl", function(){
 		$('#toggle-view li h3, #toggle-view li strong').click(function () {
@@ -321,7 +337,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 	})
 	.controller("addEventCtrl",function ($scope, $http, $location){
 		$('#editor').wysiwyg();
-		$('#editor').cleanHtml();
+		// $('#editor').cleanHtml();
 		$scope.form = {};
 		$scope.form.date = {};
 		$scope.form.eventTime = {};
@@ -567,7 +583,6 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			else $scope.form.date = {};
 		});
 		$scope.submitBlog = function () {
-			console.log($scope.form.date.full);
 			if($scope.form.date.full){
 				var monthArr = ["January","February","March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 				var weekdayArr = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -584,6 +599,68 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			$http.put('/api/blog/' + $routeParams.id, $scope.form).
 				success(function(data) {
 					$location.url('/admin');
+				});
+		};
+	})
+	.controller('carouselCtrl', function ($scope, $filter, $http) {
+		$('#success').css("opacity",0);
+		var N;
+		$http.get('/api/carousel').success(function(data, status, headers, config){
+			$scope.items = data;
+			N = $scope.items.length;
+		})
+		$scope.addItem = function(){
+			N++;
+			$http.post('/api/carousel/new', {order:N, title:"", text:"", img:""}).
+			success(function(data) {
+				$scope.items.push(data);
+			});
+		}
+		$scope.saveOrder = function(){
+			$scope.items.forEach(function(item, i){
+				$http.put('/api/carousel/' + item._id, item).success(function(data) {
+					if (i = $scope.items.length-1){
+						$('#success').css("opacity",1);
+						window.setTimeout(function(){
+							$('#success').css("opacity",0);
+						}, 2000);
+					}
+				});
+			})
+		}
+		$scope.deleteItem = function(id){
+		    var current = "#"+id;
+		    if(confirm("Are you sure you want to delete this item?")==true){
+		      $http.delete('api/carousel/'+id)
+		        .success(function(data){
+					$(current).fadeOut("fast");
+					N--;
+		        })
+		    }
+		}
+	})
+	.controller("editCarouselCtrl", function ($scope, $http, $location, $routeParams){
+		$('#editor').wysiwyg();
+		$('#editor').cleanHtml();
+		$('#editor2').wysiwyg({toolbarSelector: '[data-role=editor-toolbar2]'});
+		$('#editor2').cleanHtml();
+		$scope.form = {};
+		$http.get('/api/carousel/' + $routeParams.id).
+		success(function(data) {
+			$scope.form = data.carousel;
+			if($scope.form.text != undefined) $('#editor').append($scope.form.text);
+			if($scope.form.image != undefined) $('#editor2').append($scope.form.image);
+		});
+		$scope.submitItem = function () {
+			if ($('#editor') !=undefined){
+				$scope.form.text = $('#editor').html();
+			}
+			if ($('#editor2') !=undefined){
+				$scope.form.image = $('#editor2').html();
+			}
+			$http.put('/api/carousel/' + $routeParams.id, $scope.form).
+				success(function(data) {
+					$location.url('/adminCarousel');
 				});
 		};
 	})
@@ -642,14 +719,14 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		    }
 		}
 		$scope.deleteBlog = function(id){
-		    var current = "."+id;
-		    if(confirm("Are you sure you want to delete this blog entry?")==true){
-		      $http.delete('api/blogs/'+id)
-		        .success(function(data){
+			var current = "."+id;
+			if(confirm("Are you sure you want to delete this blog entry?")==true){
+				$http.delete('api/blogs/'+id)
+				.success(function(data){
 					$(current).fadeOut("fast");
 					$scope.blogCount--;
-		        })
-		    }
+				})
+			}
 		}
 		$scope.logout = function() {
 	    authenticationService.logout()
@@ -679,6 +756,13 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			$scope.password = "";
 		};
 	})
+	.directive('carouselFirstActive', function() {
+        return function(scope, element, attrs) {
+            if (scope.$first) setTimeout(function(){
+                scope.$emit('onRepeatLast', element, attrs);
+            }, 1);
+        };
+    })
 	.factory("authenticationService", function ($http, $q, $window){
 		var userInfo;
 		function login(userName, password){
@@ -742,7 +826,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 	    }
 	  });
 	}]);
-var editorString ='<div class="btn-toolbar" data-role="editor-toolbar" data-target=".editor"><div class="btn-group"><a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="" data-original-title="Font"><i class="glyphicon glyphicon-font"></i><b class="caret"></b></a><ul class="dropdown-menu"><li><a data-edit="fontName Serif" style="font-family:\'Serif\'">Serif</a></li><li><a data-edit="fontName Sans" style="font-family:\'Sans\'">Sans</a></li><li><a data-edit="fontName Arial" style="font-family:\'Arial\'">Arial</a></li><li><a data-edit="fontName Arial Black" style="font-family:\'Arial Black\'">Arial Black</a></li><li><a data-edit="fontName Courier" style="font-family:\'Courier\'">Courier</a></li><li><a data-edit="fontName Courier New" style="font-family:\'Courier New\'">Courier New</a></li><li><a data-edit="fontName Comic Sans MS" style="font-family:\'Comic Sans MS\'">Comic Sans MS</a></li><li><a data-edit="fontName Helvetica" style="font-family:\'Helvetica\'">Helvetica</a></li><li><a data-edit="fontName Impact" style="font-family:\'Impact\'">Impact</a></li><li><a data-edit="fontName Lucida Grande" style="font-family:\'Lucida Grande\'">Lucida Grande</a></li><li><a data-edit="fontName Lucida Sans" style="font-family:\'Lucida Sans\'">Lucida Sans</a></li><li><a data-edit="fontName Tahoma" style="font-family:\'Tahoma\'">Tahoma</a></li><li><a data-edit="fontName Times" style="font-family:\'Times\'">Times</a></li><li><a data-edit="fontName Times New Roman" style="font-family:\'Times New Roman\'">Times New Roman</a></li><li><a data-edit="fontName Verdana" style="font-family:\'Verdana\'">Verdana</a></li></ul></div><div class="btn-group"><a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="" data-original-title="Font Size"><i class="glyphicon glyphicon-text-height"></i>&nbsp;<b class="caret"></b></a><ul class="dropdown-menu"><li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li><li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li><li><a data-edit="fontSize 1"><font size="1">Small</font></a></li></ul></div><div class="btn-group"><a class="btn btn-default" data-edit="bold" title="" data-original-title="Bold (Ctrl/Cmd+B)"><i class="glyphicon glyphicon-bold"></i></a><a class="btn btn-default" data-edit="italic" title="" data-original-title="Italic (Ctrl/Cmd+I)"><i class="glyphicon glyphicon-italic"></i></a><a class="btn btn-default" data-edit="underline" title="" data-original-title="Underline (Ctrl/Cmd+U)"><i class="glyphicon glyphicon-text-width"></i></a></div><div class="btn-group"><a class="btn btn-default" data-edit="insertunorderedlist" title="" data-original-title="Bullet list"><i class="glyphicon glyphicon-list"></i></a><a class="btn btn-default" data-edit="insertorderedlist" title="" data-original-title="Number list"><i class="glyphicon glyphicon-list-alt"></i></a><a class="btn btn-default" data-edit="outdent" title="" data-original-title="Reduce indent (Shift+Tab)"><i class="glyphicon glyphicon-indent-left"></i></a><a class="btn btn-default" data-edit="indent" title="" data-original-title="Indent (Tab)"><i class="glyphicon glyphicon-indent-right"></i></a></div><div class="btn-group"><a class="btn btn-default" data-edit="justifyleft" title="" data-original-title="Align Left (Ctrl/Cmd+L)"><i class="glyphicon glyphicon-align-left"></i></a><a class="btn btn-default" data-edit="justifycenter" title="" data-original-title="Center (Ctrl/Cmd+E)"><i class="glyphicon glyphicon-align-center"></i></a><a class="btn btn-default" data-edit="justifyright" title="" data-original-title="Align Right (Ctrl/Cmd+R)"><i class="glyphicon glyphicon-align-right"></i></a><a class="btn btn-default" data-edit="justifyfull" title="" data-original-title="Justify (Ctrl/Cmd+J)"><i class="glyphicon glyphicon-align-justify"></i></a></div><div class="btn-group"><a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="" data-original-title="Hyperlink"><i class="glyphicon glyphicon-link"></i></a><div class="dropdown-menu input-append"><input class="span2" placeholder="URL" type="text" data-edit="createLink"><button class="btn" type="button">Add</button></div><a class="btn btn-default" data-edit="unlink" title="" data-original-title="Remove Hyperlink"><i class="glyphicon glyphicon-remove"></i></a></div><div class="btn-group"><a class="btn btn-default" title="" id="pictureBtn" data-original-title="Insert picture (or just drag &amp; drop)"><i class="glyphicon glyphicon-picture"></i></a><input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" style="opacity: 0; position: absolute; top: 0px; left: 0px; width: 37px; height: 30px;"></div><div class="btn-group"><a class="btn btn-default" data-edit="undo" title="" data-original-title="Undo (Ctrl/Cmd+Z)"><i class="glyphicon glyphicon-backward"></i></a><a class="btn btn-default" data-edit="redo" title="" data-original-title="Redo (Ctrl/Cmd+Y)"><i class="glyphicon glyphicon-forward"></i></a></div></div>';
+//var editorString ='<div class="btn-toolbar" data-role="editor-toolbar" data-target=".editor"><div class="btn-group"><a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="" data-original-title="Font"><i class="glyphicon glyphicon-font"></i><b class="caret"></b></a><ul class="dropdown-menu"><li><a data-edit="fontName Serif" style="font-family:\'Serif\'">Serif</a></li><li><a data-edit="fontName Sans" style="font-family:\'Sans\'">Sans</a></li><li><a data-edit="fontName Arial" style="font-family:\'Arial\'">Arial</a></li><li><a data-edit="fontName Arial Black" style="font-family:\'Arial Black\'">Arial Black</a></li><li><a data-edit="fontName Courier" style="font-family:\'Courier\'">Courier</a></li><li><a data-edit="fontName Courier New" style="font-family:\'Courier New\'">Courier New</a></li><li><a data-edit="fontName Comic Sans MS" style="font-family:\'Comic Sans MS\'">Comic Sans MS</a></li><li><a data-edit="fontName Helvetica" style="font-family:\'Helvetica\'">Helvetica</a></li><li><a data-edit="fontName Impact" style="font-family:\'Impact\'">Impact</a></li><li><a data-edit="fontName Lucida Grande" style="font-family:\'Lucida Grande\'">Lucida Grande</a></li><li><a data-edit="fontName Lucida Sans" style="font-family:\'Lucida Sans\'">Lucida Sans</a></li><li><a data-edit="fontName Tahoma" style="font-family:\'Tahoma\'">Tahoma</a></li><li><a data-edit="fontName Times" style="font-family:\'Times\'">Times</a></li><li><a data-edit="fontName Times New Roman" style="font-family:\'Times New Roman\'">Times New Roman</a></li><li><a data-edit="fontName Verdana" style="font-family:\'Verdana\'">Verdana</a></li></ul></div><div class="btn-group"><a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="" data-original-title="Font Size"><i class="glyphicon glyphicon-text-height"></i>&nbsp;<b class="caret"></b></a><ul class="dropdown-menu"><li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li><li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li><li><a data-edit="fontSize 1"><font size="1">Small</font></a></li></ul></div><div class="btn-group"><a class="btn btn-default" data-edit="bold" title="" data-original-title="Bold (Ctrl/Cmd+B)"><i class="glyphicon glyphicon-bold"></i></a><a class="btn btn-default" data-edit="italic" title="" data-original-title="Italic (Ctrl/Cmd+I)"><i class="glyphicon glyphicon-italic"></i></a><a class="btn btn-default" data-edit="underline" title="" data-original-title="Underline (Ctrl/Cmd+U)"><i class="glyphicon glyphicon-text-width"></i></a></div><div class="btn-group"><a class="btn btn-default" data-edit="insertunorderedlist" title="" data-original-title="Bullet list"><i class="glyphicon glyphicon-list"></i></a><a class="btn btn-default" data-edit="insertorderedlist" title="" data-original-title="Number list"><i class="glyphicon glyphicon-list-alt"></i></a><a class="btn btn-default" data-edit="outdent" title="" data-original-title="Reduce indent (Shift+Tab)"><i class="glyphicon glyphicon-indent-left"></i></a><a class="btn btn-default" data-edit="indent" title="" data-original-title="Indent (Tab)"><i class="glyphicon glyphicon-indent-right"></i></a></div><div class="btn-group"><a class="btn btn-default" data-edit="justifyleft" title="" data-original-title="Align Left (Ctrl/Cmd+L)"><i class="glyphicon glyphicon-align-left"></i></a><a class="btn btn-default" data-edit="justifycenter" title="" data-original-title="Center (Ctrl/Cmd+E)"><i class="glyphicon glyphicon-align-center"></i></a><a class="btn btn-default" data-edit="justifyright" title="" data-original-title="Align Right (Ctrl/Cmd+R)"><i class="glyphicon glyphicon-align-right"></i></a><a class="btn btn-default" data-edit="justifyfull" title="" data-original-title="Justify (Ctrl/Cmd+J)"><i class="glyphicon glyphicon-align-justify"></i></a></div><div class="btn-group"><a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="" data-original-title="Hyperlink"><i class="glyphicon glyphicon-link"></i></a><div class="dropdown-menu input-append"><input class="span2" placeholder="URL" type="text" data-edit="createLink"><button class="btn" type="button">Add</button></div><a class="btn btn-default" data-edit="unlink" title="" data-original-title="Remove Hyperlink"><i class="glyphicon glyphicon-remove"></i></a></div><div class="btn-group"><a class="btn btn-default" title="" id="pictureBtn" data-original-title="Insert picture (or just drag &amp; drop)"><i class="glyphicon glyphicon-picture"></i></a><input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" style="opacity: 0; position: absolute; top: 0px; left: 0px; width: 37px; height: 30px;"></div><div class="btn-group"><a class="btn btn-default" data-edit="undo" title="" data-original-title="Undo (Ctrl/Cmd+Z)"><i class="glyphicon glyphicon-backward"></i></a><a class="btn btn-default" data-edit="redo" title="" data-original-title="Redo (Ctrl/Cmd+Y)"><i class="glyphicon glyphicon-forward"></i></a></div></div>';
 //var editorString = '<div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor"><div class="btn-group"><a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="icon-font"></i><b class="caret"></b></a><ul class="dropdown-menu"></ul></div><div class="btn-group"><a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="icon-text-height"></i>&nbsp;<b class="caret"></b></a><ul class="dropdown-menu"><li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li><li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li><li><a data-edit="fontSize 1"><font size="1">Small</font></a></li></ul></div><div class="btn-group"><a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a><a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a><a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="icon-strikethrough"></i></a><a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="icon-underline"></i></a></div><div class="btn-group"><a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="icon-list-ul"></i></a><a class="btn" data-edit="insertorderedlist" title="Number list"><i class="icon-list-ol"></i></a><a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="icon-indent-left"></i></a><a class="btn" data-edit="indent" title="Indent (Tab)"><i class="icon-indent-right"></i></a></div><div class="btn-group"><a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="icon-align-left"></i></a><a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="icon-align-center"></i></a><a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="icon-align-right"></i></a><a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="icon-align-justify"></i></a></div><div class="btn-group"><a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="icon-link"></i></a><div class="dropdown-menu input-append"><input class="span2" placeholder="URL" type="text" data-edit="createLink"/><button class="btn" type="button">Add</button></div><a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="icon-cut"></i></a></div><div class="btn-group"><a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn"><i class="icon-picture"></i></a><input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" /></div><div class="btn-group"><a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="icon-undo"></i></a><a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="icon-repeat"></i></a></div><input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech=""></div>'
 Date.prototype.formatDate = function () {
   var monthArr = ["January","February","March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];

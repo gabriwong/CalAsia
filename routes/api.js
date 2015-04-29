@@ -305,6 +305,73 @@ exports.deleteBlog = function (req, res){
 		res.json(true);
 	}
 }
+exports.carousel= function(req,res){
+	models.Carousel
+		.find()
+		.sort('order')
+		.exec(callback);
+	function callback (err, result){
+		res.json(result);
+	}
+}
+exports.carouselItem=function(req,res){
+	var id = req.params.id;
+	models.Carousel
+		.findOne({'_id':id})
+		.exec(callback);
+	function callback(err,result){
+		if(err){
+			console.log(err);
+			res.json(false);
+		}
+		res.json({carousel:result});
+    }
+}
+exports.addCarouselItem = function (req, res){
+	var newItem = new models.Carousel(req.body);
+	newItem.save(afterSaving);
+	function afterSaving(err){
+		if(err){
+			console.log(err);
+			res.send(500);
+		}
+		res.json(newItem);
+	}
+}
+exports.editCarouselItem = function (req, res){
+	var id = req.params.id
+	models.Carousel
+		.findOne({'_id':id})
+		.exec(callback);
+	function callback(err, result){
+		if(err) console.log(err);
+	    if(!result) res.json(false);
+	    else{
+			result.title = req.body.title;
+			result.image = req.body.image;
+			result.text = req.body.text;
+			result.order = req.body.order;
+			result.save(function(err){
+				if(err) res.send(500);
+				res.json(true);
+			});
+	    }
+	}
+}
+exports.deleteCarouselItem = function (req, res){
+	var id = req.params.id
+	models.Carousel
+		.findOne({'_id':id})
+		.remove()
+		.exec(afterRemove);
+	function afterRemove(err, result){
+		if(err){
+			console.log(err);
+			res.json(false);
+		}
+		res.json(true);
+	}
+}
 
 function checkPastEvents(){
 	models.Event

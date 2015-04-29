@@ -38,7 +38,8 @@ app.set('view engine', 'handlebars');
 app.set('views', __dirname + '/views');
 // app.set('view engine', 'jade');
 app.use(morgan('dev'));
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit:'50mb'}));
+app.use(bodyParser.urlencoded({limit:'50mb',extended:true}))
 app.use(methodOverride());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -117,6 +118,12 @@ app.get('/api/blog/:id', api.oneBlog)
 app.post('/api/blogs/new', api.addBlog);
 app.put('/api/blog/:id', api.editBlog);
 app.delete('/api/blogs/:id', api.deleteBlog);
+
+app.get('/api/carousel', api.carousel);
+app.get('/api/carousel/:id', api.carouselItem);
+app.post('/api/carousel/new', api.addCarouselItem);
+app.put('/api/carousel/:id', api.editCarouselItem);
+app.delete('/api/carousel/:id', api.deleteCarouselItem);
 
 
 app.post('/api/login', function (req, res) {
