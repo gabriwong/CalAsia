@@ -39,38 +39,31 @@
 		</div>
 	</div>
 	<p class="lead" style="padding-top:20px; text-align:center;">
-		[[CarouselCount]] Carousel Items
+		[[blogCount]] Blogs
 	</p>
+	<p class="text-center"><a href="/addBlog">Add an Entry +</a></p>
+	<input class="form-control" ng-model="blogSearch", placeholder="search" style="border-radius:0">
 	<div class="row">
 		<div class="col-lg-12">
 			<div class="table-responsive">
 				<table class="table table-hover">
 					<thead>
 					  <tr>
-					  	<th>Order</th>
-					  	<th>Name</th>
-					  	<th>Text</th>
-					  	<th>Image</th>
+					  	<th>Blog Name</th>
+					  	<th>Date</th>
 					  	<th>Edit</th>
 					  	<th>Delete</th>	
 					  </tr>
 					</thead>		
 					<tbody>
-						<tr ng-repeat="item in items | orderBy:'order'" id="[[item._id]]">
-							<td><input ng-model="item.order" type="number" class="form-control" style="width:64px"></td>
-							<td>[[item.title]]</td>
-							<td ng-bind-html="item.text"></td>
-							<td ng-bind-html="item.image"></td>
-							<td><a href="/editCarousel/[[item._id]]"><span class="glyphicon glyphicon-pencil"></span></a></td>
-							<td><p class="glyphicon glyphicon-trash" style="color:red;cursor:pointer" ng-click="deleteItem([[item._id]])"></p></td>
+						<tr ng-repeat="blog in blogs | filter:blogSearch | orderBy:'-date.full'" class="[[blog._id]]">
+							<th scope="row"><a ng-click="showModal([[blog._id]])" data-toggle="modal" style="cursor:pointer">[[blog.title]]</a></th>
+							<td>[[blog.date.string]]</td>
+							<td><a href="/editBlog/[[blog._id]]"><span class="glyphicon glyphicon-pencil"></span></a></td>
+							<td><p class="glyphicon glyphicon-trash" style="color:red;cursor:pointer" ng-click="deleteBlog([[blog._id]])"></p></td>
 						</tr>
 					</tbody>
 				</table>
-				<p class="text-center"><a ng-click="addItem()" style="cursor:pointer">Add an Item +</a></p>
-	        	<button class="btn btn-primary" ng-click="saveOrder()" style="margin:10px 20px 29px 10px;width:64px;vertical-align:top">Save</button>
-				<div id="success" class="alert alert-success text-center ease" style="display:inline-block;vertical-align:top"role="alert">
-					<strong>Success! :)</strong>
-				</div>
 			</div>
 		</div>
 	</div>

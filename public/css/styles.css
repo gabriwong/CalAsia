@@ -398,7 +398,15 @@ body {
 
 #myCarousel .item { height: 400px; }
 
-
+.carousel-indicators{
+  bottom:0;
+}
+.carousel-indicators li{
+  margin:5px;
+}
+.carousel-indicators .active{
+  margin:4px;
+}
 
 /* --------------------------------------
    Global Styles
