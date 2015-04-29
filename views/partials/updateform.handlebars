@@ -17,6 +17,31 @@
   <div style="padding:10px">
     <h4> Description:</h4>
     <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+      <div class="modal fade" id="addLink">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="form-group row-fluid">
+                <button class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add Link</h4>
+              </div>
+            </div><!-- end modal header-->
+
+            <div class="modal-body">
+              <div class="checkbox">
+                <label><input type="checkbox" checked="" id="linkTarget"> Open in new window</label>
+              </div>
+              <label>URL</label>
+              <input class="form-control span12" placeholder="URL" type="text" data-edit="createLink">
+            </div><!-- end modal body-->
+
+            <div class="modal-footer">
+              <button class="btn" type="button" id="addLinkBtn"onclick="$('#addLink').modal('hide')">Add</button>
+              <button class="btn btn-primary" data-dismiss="modal" type="button">Close</button>
+            </div><!-- end modal-footer -->
+          </div><!-- end modal content -->
+        </div><!-- end modal dialog --> 
+      </div><!--end modal fade --> 
       <div class="btn-group">
         <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="" data-original-title="Font"><i class="glyphicon glyphicon-font"></i><b class="caret"></b></a>
           <ul class="dropdown-menu">
@@ -48,13 +73,8 @@
         <a class="btn btn-default" data-edit="justifyfull" title="" data-original-title="Justify (Ctrl/Cmd+J)"><i class="glyphicon glyphicon-align-justify"></i></a>
       </div>
       <div class="btn-group">
-      <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="" data-original-title="Hyperlink"><i class="glyphicon glyphicon-link"></i></a>
-        <div class="dropdown-menu input-append">
-          <input class="span2" placeholder="URL" type="text" data-edit="createLink">
-          <button class="btn" type="button">Add</button>
-        </div>
+        <a class="btn btn-default" title="" data-original-title="Hyperlink" onclick="$('#addLink').modal('show')"><i class="glyphicon glyphicon-link"></i></a>
         <a class="btn btn-default" data-edit="unlink" title="" data-original-title="Remove Hyperlink"><i class="glyphicon glyphicon-remove"></i></a>
-
       </div>
 
       <div class="btn-group">

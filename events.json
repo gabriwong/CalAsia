@@ -7,8 +7,8 @@
     "eventType": "external",
     "year": 2015,
     "description": "After two decades of slow recovery from crisis, Japanese banks have \nregained their position among the world’s most active financial players.\n From North America to Emerging Asia, Japanese firms have rapidly \nexpanded their exposure, seeking greater yields and more attractive \neconomic prospects. With greater exposure come greater risks and more \ncomplex corporate governance requirements. How are the Japanese banks \ncurrently positioned vis a vis peers, and what are their biggest \nchallenges?\n\n<p><br></p>",
-    "past": false,
-    "__v": 2,
+    "past": true,
+    "__v": 0,
     "registration": {
       "url": "http://www.eventbrite.com/e/asia-financial-forum-japan-goes-out-registration-16384041108",
       "date": {
@@ -33,9 +33,8 @@
     "eventType": "external",
     "year": 2015,
     "past": true,
-    "schedule": [],
     "description": "<div style=\"text-align: center;\"><span style=\"font-size: medium; line-height: 1.42857143;\">Join the U.S. C</span><span style=\"font-size: medium; line-height: 1.42857143;\">ommercial Service – Silicon Valley on Friday, April 17, 2015, in San Jose, as we welcome Commercial Specialists from the U.S. Embassies in Burma, Indonesia, Malaysia, the Philippines, Singapore, Thailand, and Vietnam, who will provide a briefing on ICT market opportunities spanning the entire ASEAN region.&nbsp;</span></div><div style=\"text-align: center;\"><font size=\"3\"><br></font></div><div style=\"text-align: center;\"><font size=\"3\">A limited number of formal consultations are available during the afternoon of Friday, April 17.&nbsp;</font></div><div style=\"text-align: center;\"><font size=\"3\"><br></font></div><div style=\"text-align: center;\"><font size=\"3\">To request an appointment, please email your request to karl.kailing@trade.gov at the Silicon Valley U.S. Export Assistance Center.&nbsp;</font></div><div style=\"text-align: center;\"><font size=\"3\"><br></font></div><div style=\"text-align: center;\"><font size=\"3\">Please see <a href=\"http://www.calasia.org/events/15-4-17ASEAN%20_ICT_Briefing_DOCSJ.pdf\" target=\"_blank\">here</a> for more details.</font></div>",
-    "__v": 3,
+    "__v": 0,
     "registration": {
       "url": "https://emenuapps.ita.doc.gov/ePublic/event/editWebReg.do?SmartCode=5Q6B",
       "date": {
@@ -60,9 +59,8 @@
     "eventType": "external",
     "year": 2015,
     "past": true,
-    "schedule": null,
     "description": "<b>Final Registration Deadline: April 10, 2015 &nbsp;</b><div><b><br></b><div>Asia Pacific Business Outlook is the premier conference for business professionals seeking trade or investment opportunities in the Asia Pacific region. APBO particularly offers small and medium size businesses that are new to market tremendous opportunities to develop networks, devise strategies, and update understanding of current economic climate and socio-political trends in the region. Since 1988, the USC Marshall School of Business has produced the APBO Conference with the full support of the U.S. Commercial Service.</div></div>",
-    "__v": 4,
+    "__v": 0,
     "location": "Los Angeles, CA",
     "registration": {
       "url": "http://www.apboconference.com/registration.html",
@@ -89,17 +87,8 @@
     "externalLink": "",
     "year": 2015,
     "past": true,
-    "schedule": [
-      "8 AM to 10:30 AM Please check back for detailed agenda."
-    ],
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "<center style=\"text-align: left;\"><i>Please join experts and business representatives from Vietnam to learn more about opportunities for trade and investment in Vietnam. </i></center><div><br></div> Information: <a href=\"http://calasia.org/events/15-4-10VietnamMC.html\" target=\"_blank\"><a href=\"http://www.calasia.org/events/15-4-10VietnamMC.html\">Vietnam Breakfast Briefing</a><br></a><div><br></div><div>The briefing will focus specifically on,- Manufacturing,- Supply chains, including packaging, components, and spare parts,- Medical devices, pharmaceuticals, healthcare and related industries,- Electronic and telecommunication equipment, lT, gaming technology, software development,- Food and agro-business, including machinery, processing technology, and animal feed supply,- Property developers: shopping centers, luxury retail, condos, hotels, hospitals &amp; sports centers,- Investment funds and banking</div><div><b><br></b></div><div><b>Speakers:</b></div><div><b><br></b></div><div><b>Mark Dosker, </b>Partner, Squire Patton Boggs LLP<b><br>Hon. Vuong Hai Nam</b>, Consul General of Vietnam, SF,</div><div><b style=\"line-height: 1.42857143;\">Stephan Crawford</b><span style=\"line-height: 1.42857143;\">, Director, SF Global Markets, US Department of Commerce,</span></div><div><b style=\"line-height: 1.42857143;\">Tri Minh Bui</b><span style=\"line-height: 1.42857143;\">, Vice Chairman, Vietnam Binh Duong Industry Authority</span></div><div><span style=\"line-height: 1.42857143;\"></span><b style=\"line-height: 1.42857143;\">Dung Hung Mai</b><span style=\"line-height: 1.42857143;\">, General Director, Vietnam Binh Duong Dept. of Planning &amp; Investment,</span><b style=\"line-height: 1.42857143;\"><br>Dien Son  Vo (Steve Vo)</b><span style=\"line-height: 1.42857143;\">, Advisory &amp; Marketing Director, Becamex IDC Vietnam Corporation,<br></span><b style=\"line-height: 1.42857143;\">Herb Cochran</b><span style=\"line-height: 1.42857143;\">, Executive Director, American Chamber of Commerce (AmCham) HCMC,</span><br><b style=\"line-height: 1.42857143;\">Banh Cuu</b><span style=\"line-height: 1.42857143;\">, President, PMAS USA,<br></span><b style=\"line-height: 1.42857143;\">Bill Dao</b><span style=\"line-height: 1.42857143;\">, North America Representative, Becamex IDC&nbsp;</span><b style=\"line-height: 1.42857143;\"></b></div>",
-    "__v": 4,
+    "__v": 0,
     "registration": {
       "url": "http://vietnam-opportunities.eventbrite.com/",
       "date": {
@@ -134,13 +123,7 @@
     "year": 2014,
     "description": "MIGA (Multilateral\n            Investment Guarantee Agency):<br>\n            <br>\n            Our speaker, Edith Quintrell, is Director of the Operations\n            Group of MIGA, which is the political risk insurance arm of\n            the World Bank Group.<br>\n            <br>\n            ",
     "past": true,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
-    "__v": 2,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2014-11-11T02:09:32.336Z",
@@ -162,17 +145,8 @@
     "price": 20,
     "eventType": "external",
     "past": true,
-    "schedule": [
-      "TBA"
-    ],
-    "speakers": [
-      "Andy Rothman of Matthews International Capital Management"
-    ],
-    "image": [
-      ""
-    ],
     "description": "TBA",
-    "__v": 2,
+    "__v": 0,
     "year": 2014,
     "registration": {
       "date": {
@@ -202,14 +176,6 @@
     "capacity": 50,
     "eventType": "internal",
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "HE Ashok Kumar Mirpuri",
-      "Other"
-    ],
-    "image": [
-      "http://www.calasia.org/events/Photo3.jpg"
-    ],
     "description": "Mr Ashok Kumar Mirpuri took up his appointment as Singapore's Ambassador to the United States of America in July 2012.  Prior to his current appointment, he served as Ambassador to Indonesia from 2006 to 2012, High Commissioner to Malaysia from 2002 to 2006 and High Commissioner to Australia from 2000 to 2002.,A career diplomat, Mr Mirpuri joined the Ministry of Foreign Affairs (MFA) in 1984. In 1994, he was appointed Director of MFA's Policy Planning & Analysis Directorate I (Southeast Asia). In 1997, Mr Mirpuri was seconded to Shell International Ltd in the United Kingdom as Corporate Advisor (Asia Pacific). He was subsequently assigned to the Singapore Embassy in Jakarta in 1998 as Minister-Counsellor and Deputy Chief of Mission, having previously served in Jakarta as First Secretary (Political).,Mr Mirpuri graduated with an honours degree from the National University of Singapore. He received his MA at the University of London's School of Oriental & African Studies under a Raffles Scholarship. He attended the Programme for Executive Development at the Institute for Management Development, Switzerland, and the Advanced Management Program at Harvard Business School, USA.",
     "__v": 0,
     "externalLink": "",
@@ -239,17 +205,8 @@
     "name": "Cal-Asia Breakfast Roundtable Series: Honorable Han Dong-man, Consul General of Korea",
     "eventType": "internal",
     "past": true,
-    "schedule": [
-      "TBA"
-    ],
-    "speakers": [
-      "Hon. Han Dong-man"
-    ],
-    "image": [
-      ""
-    ],
     "description": "TBA",
-    "__v": 1,
+    "__v": 0,
     "externalLink": "",
     "year": 2014,
     "registration": {
@@ -276,17 +233,8 @@
     "name": "USTDA Vietnam Airport Development and Operations Reverse Trade Mission: Reception",
     "eventType": "external",
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Delegation of key officials from Vietnam's Ministry of Transport",
-      "Airports Corporation of Vietnam",
-      "the Civil Aviation Administration of Vietnam (CAAV)"
-    ],
-    "image": [
-      ""
-    ],
     "description": "",
-    "__v": 2,
+    "__v": 0,
     "year": 2014,
     "registration": {
       "date": {
@@ -314,19 +262,8 @@
     "name": "Breakfast Briefing: Japan Trade & Investment",
     "eventType": "internal",
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "US Embassy Tokyo Deputy Chief of Mission Kurt Tong",
-      "Senior Commercial Officer Andrew Wylegalam",
-      "Emily Vassos (Nikolas Weinstein Studios)",
-      "Robert Pearlstein (SRI)",
-      "Jim Rynne (Vigilent)"
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "externalLink": "",
     "year": 2014,
     "registration": {
@@ -352,16 +289,8 @@
     "name": "Luncheon with Asian Development Bank Vice President Stephen Groff",
     "eventType": "internal",
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Asian Development Bank Vice President",
-      "Stephen Groff"
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "externalLink": "",
     "year": 2014,
     "registration": {
@@ -383,15 +312,8 @@
     "name": "Silicon Valley US Commercial Speed Meetings with USFCS specialists from Southeast Asia",
     "eventType": "internal",
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "On Friday, April 11, 2014, the Silicon Valley U.S. Export Assistance Center will be holding a series of free, speed counseling sessions with industry specialists working at U.S. embassies in Indonesia, Malaysia, Singapore, and Vietnam.  Meetings are ~30 min in length and will be filled on a first come-first served basis.  Schedules fill quickly, so early responses are recommended.  Whether your company is already active in these markets, or is in the exploratory phase, you will benefit from the market intelligence shared by our on-the-ground experts.  To schedule an appointment, contact Aileen Nandi at aileen.nandi@trade.gov, or 408 535 2757 x102., ,INDONESIA – (Mr) Kalung Riang – Commercial Specialist, U.S. Embassy, Jakarta, Indonesia – responsible for the following industries: Consumer Electronics/Components, Electronics Industry Prod/Test Equipment, Architecture/Building Materials/Engineering,  Telecom, and Film, ,MALAYSIA – (Ms) Ms. Umaranjine Arumugam, Commercial Specialist, U.S. Embassy Kuala Lumpur, Malaysia – responsible for Professional services, Telecom, Consumer Electronics/Components, Electronics Industry Prod/Test Eq., Robotics, Travel and Tourism Industries, ,SINGAPORE: (Ms) Swee Hoon Chia - Senior Commercial Specialist, American Embassy Singapore - responsible for ICT, broadcasting, franchising and other business services, audio video equipment, film and content, and consumer electronics, ,VIETNAM: (Mr) Triet Huynh – Commercial Specialist, U.S. Consulate, Ho Chi Minh City, Vietnam – responsible for the IT, Telecom, Broadcasting, Transportation (Aviation, Railway & Automotive), and Wood & Woodworking machinery industries",
-    "__v": 3,
+    "__v": 0,
     "externalLink": "",
     "year": 2014,
     "registration": {
@@ -413,15 +335,8 @@
     "name": "Webinar: Chinese Energy Efficiency Market",
     "eventType": "internal",
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "externalLink": "",
     "year": 2014,
     "registration": {
@@ -444,15 +359,8 @@
     "name": "Asia Pacific Business Outlook Conference (APBO)",
     "eventType": "internal",
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 2,
+    "__v": 0,
     "externalLink": "",
     "year": 2014,
     "registration": {
@@ -474,15 +382,8 @@
     "name": "Asia Society's Launch of China's High Tech Surge: Investing in America and Innovation",
     "eventType": "external",
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "year": 2014,
     "registration": {
       "date": {
@@ -504,15 +405,8 @@
     "location": "Dentons LLP. 26th Floor",
     "eventType": "internal",
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Consul General Christopher Cheang of the Consulate General of Singapore"
-    ],
-    "image": [
-      ""
-    ],
     "description": "join us as we welcome Consul General Christopher Cheang and learn about his perspectives on US-Singapore business: the prospects, opportunities, and hurdles.  Hear what he wants to accomplish during his tour in the Western US to build US-Singapore trade and investment. Bring your questions, business-specific concerns and engage in a productive dialogue",
-    "__v": 1,
+    "__v": 0,
     "externalLink": "",
     "year": 2014,
     "registration": {
@@ -534,15 +428,8 @@
     "name": "Shanghai Free Trade Zone Briefing",
     "eventType": "internal",
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "externalLink": "",
     "year": 2014,
     "registration": {
@@ -568,9 +455,6 @@
     "externalLink": "",
     "year": 2013,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Delegates from Burma, Cambodia, Laos, Thailand, Vietnam",
     "__v": 0,
     "registration": {
@@ -595,20 +479,8 @@
     "externalLink": "",
     "year": 2013,
     "past": true,
-    "schedule": [
-      "Agenda (approximate) :",
-      "8:30 am - Breakfast & Networking ",
-      "9:00 am - Forum & Discussion",
-      "10:30 am - Conclusion"
-    ],
-    "speakers": [
-      ""
-    ],
-    "image": [
-      "http://www.calasia.org/VNConsulBreakfastBanner.jpg"
-    ],
     "description": "Cal-Asia,Cordially invites you to a Breakfast Forum:,Doing Business in Vietnam: ,Opportunities and Challenges in Vietnam's Biotech Sector,Tuesday, December 17, 2013,This seminar will provide you with an update on the business and legal issues facing biotech companies in Vietnam, drivers for biotech development, and a glimpse at key priorities from agriculture to health care.,Speakers (to date):,Huy Do, J.D., Partner, LNT & Partners; ,Rahul Pathak, Ph.D., Partner, Squire Sanders;,Moira Gunn, Ph.D., Host, NPR's Tech Nation and BioTech Nation, and Director, Business of Biotechnology Program, University of San Francisco,Moderator: Mark Dosker, Squire Sanders,Join us for an interactive discussion and learn the answers to these questions and more: ,- What is the scope of Vietnam's biotech sector, key priorities, players, assets, drivers?,- Are conditions in place for international investors to seriously consider investment in VN's biotech sector?,- How effective is the legal and regulatory infrastructure?- What are the opportunities and challenges?,- What are potential roles for US firms?,- What is the role of Vietnam's large diaspora?,Some informative background materials from various sources:,Biotech development plans in Vietnam until 2020 (Ministry of Agriculture and Development),Vietnam Healthcare article in Asia Pacific Biotech News: The next growth frontier? ,Location: Offices of Squire Sanders, 275 Battery St., 26th Floor, San Francisco,Date: Tuesday, December 17,Time: 8:30 to 10:30,Registration: ,Cal-Asia Sponsor Members: No fee; email membersmatter@calasia.org,Cal-Asia, SF Ho Chi Minh Sister City and SAVVi Members, US Commercial Service: $15,Non-member: $30,Space is limited; $10 drop in charge at the door. Please RSVP,Questions: Tel: (415) 986-8808 ,E-Mail: alerts@calasia.org ,About our key cosponsor:,US Commercial Service SF: The U.S. Commercial Service of the U.S. Department of Commerce is a federal government agency dedicated to helping small-to-medium sized companies develop international markets. The U.S. Export Assistance Center is part of an international network of global professionals and has 165 offices in 82 countries throughout the world. ,About our host Squire Sanders: In its third annual “Global 20” ranking, legal newswire Law360 has recognized Squire Sanders as among “the 20 law firms that had the largest global presence and were involved in the biggest, most complex and most diverse array of cross-border matters over the past year.”,About Cal-Asia: California-Asia Business Council (Cal-Asia) has received several commendations from the US Department of Commerce for catalyzing U.S.-Asia business, and through its robust schedule of informative forums and seminars with experts from business and government, has played a part in helping its members and cohort build, expand, and strengthen their business strategies in one or several of the 22 economies covered. Membership inquiries welcomed.",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T21:37:57.764Z",
@@ -631,21 +503,8 @@
     "externalLink": "",
     "year": 2013,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Experts from OPIC",
-      "TDA",
-      "EX-IM",
-      "SBA",
-      "USCS",
-      "Minority Business Development",
-      "Keynote by Jeremy W. Potash"
-    ],
-    "image": [
-      ""
-    ],
     "description": "Learn how to use essential export assistance tools from OPIC, Ex-Im Bank, TDA, SBA, US Commercial Service.",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T21:41:58.716Z",
@@ -667,9 +526,6 @@
     "eventType": "external",
     "year": 2013,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Fifth Greater China Conference. Focus on on philanthropy in China, U.S.-China strategic trust, U.S.-China cross-border investment trends and outlook, and China's environmental sustainability.",
     "__v": 0,
     "registration": {
@@ -694,9 +550,6 @@
     "externalLink": "",
     "year": 2013,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Presentation of New Silk Road Award to Ms. Weili Dai, President and Co-founder of Marvell Technology Group and celebrating the Bay Area Council. Visit www.asianight.org for flashback, photos, details on wonderful honorees, etc.",
     "__v": 0,
     "registration": {
@@ -744,9 +597,6 @@
     "eventType": "external",
     "year": 2013,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": null,
     "__v": 0,
     "registration": {
@@ -771,22 +621,8 @@
     "externalLink": "",
     "year": 2013,
     "past": true,
-    "schedule": [
-      "8:30 a.m. to 10:30 a.m. ",
-      "Agenda: ",
-      "8:30-9 am - Networking ",
-      "9-10:30 am - Program",
-      "Cost:      $5 for members",
-      "               $25 for non-members"
-    ],
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "Taiwan Breakfast Briefing: Shalizeh Nadjmi - Senior International Trade Specialist, Office of Japan, Korea, and Taiwan, US Dept. of Commerce,California-Asia Business Council and US Commercial Service SF are pleased to cohost a morning briefing focused on Taiwan on Monday, September 16, 2013..,About our speaker, Shalizeh Nadjmi: For the past nine years, Ms. Nadjmi has focused on advancing U.S. - Asia trade policy by her work at the US Department of Commerce.. Currently a member of the Taiwan/Japan/Korea team, she previously worked in the Office of China, as well as on the Indonesia, East Timor, and ASEAN desk.,Prior to joining Commerce, Ms. Nadjmi practiced law at Arnold and Porter, and was a NASA Entrepreneurship and Technology Apprenticeship Program fellow at the Technology Administration.,Ms. Nadjmi's presentation will be followed by an open discussion about business issues and opportunities in Taiwan.,Note: Learn more about Taiwan's planned Free Economic Pilot Zones designed to attract and bolster foreign investment. For details: see Taiwan FEPZ..",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "url": "https://secure.acceptiva.com/?cst=4ae715",
       "date": {
@@ -811,9 +647,6 @@
     "eventType": "external",
     "year": 2013,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Subject of significant import to Asia business. Cal-Asia is pleased to cosponsor.",
     "__v": 0,
     "registration": {
@@ -839,14 +672,6 @@
     "eventType": "internal",
     "year": 2013,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Hon. Lilia de Lima Director General Philippine Economic Zone Authority",
-      "Hon. Marciano A. Paynor ",
-      "Jr. Philippine Consul General Philippine Consulate General San Francisco",
-      "Michael Alfred V. Ignacio Trade Commissioner Philippine Trade & Investment Center Silicon Valley"
-    ],
-    "image": [],
     "description": "The California-Asia Business Council in close cooperation with the Philippine Trade & Investment Center, of the Consulate General of the Philippines in San Francisco, present a Breakfast Briefing and Investment Roadshow on Business Opportunities in almost 300 Philippine Economic Zones across the country. The Director General of the Philippine Economic Zone Authority, Hon. Lilia de LIma, will present the Business and Investment Opportunities in Philippine Economic Zones as gateways to the 600 Million-Strong South East Asian Market. Learn about the latest economic updates from the Philippines and why the it is now a leading business destination, having earned three Investment Rating upgrades from Global Credit Rating Agencies, and why its Stock Market has consistently been one of the best performing bourses worldwide.",
     "__v": 0,
     "registration": {
@@ -874,9 +699,6 @@
     "externalLink": "",
     "year": 2013,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Wide ranging discussion of needs, opportunities, hurdles, etc. in one of Asia's fastest growing economies. Meeting at Dentons, SF. Details to members.",
     "__v": 0,
     "registration": {
@@ -900,12 +722,6 @@
     "eventType": "external",
     "year": 2013,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Alexander Kinmont",
-      "Chief Executive Officer Milestone Asset Management Co"
-    ],
-    "image": [],
     "description": null,
     "__v": 0,
     "registration": {
@@ -928,14 +744,6 @@
     "eventType": "internal",
     "year": 2013,
     "past": true,
-    "schedule": [
-      "Agenda:",
-      "              5:30-6 p.m.    Registration",
-      "              6- 7:15 p.m.   Program",
-      "              7:15 - 8 p.m.  Networking"
-    ],
-    "speakers": [],
-    "image": [],
     "description": "USTDA ASEAN Smart Grid Reverse Trade Mission Meeting with Delegates from: Cambodia, Indonesia, Laos, Malaysia, Philippines, Thailand, Vietnam Monday, April 29, 2013,USTDA ASEAN Smart Grid Reverse Trade Mission: the U.S. Trade and Development Agency (USTDA), under the framework of the U.S.-Asia-Pacific Comprehensive Energy Partnership, is bringing a group of senior ASEAN utility representatives to the United States for a Reverse Trade Mission (RTM) from April 25 – May 1, 2013, to build on the key points from the U.S.-ASEAN Smart Grid Workshop held in Hanoi, Vietnam in November 2012. The RTM is designed to assist delegates in identifying the appropriate technical and regulatory solutions to promote reliable, efficient, and cost-effective smart grid investments. The delegates will meet with leading U.S. technology and service suppliers as well as power utilities and U.S. energy and regulatory agencies.,ASEAN Smart Grid Reception in San Francisco. Cal-Asia, in cooperation with USTDA, US Commercial Service of the Department of Commerce, and KPMG LLP, is providing an opportunity for representatives of US Smart Grid technology and service suppliers to meet informally with the 15 delegates from seven ASEAN countries. A brief program including discussion with the delegates will be followed by a networking reception. Delegate biographies can be found online at http://www.trademeetings.com/Files/EventPage/179_DelegateBackgroundExpect.April10.pdf ,$25 for members,$50 for non-members,($10 Drop-in Fee, space available),http://www.calasia.org/events/13-4-29SmartGrid.html",
     "__v": 0,
     "registration": {
@@ -963,15 +771,8 @@
     "eventType": "external",
     "year": 2013,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Frederic Lau (Managing Director Promontory Financial Group China Ltd.)"
-    ],
-    "image": [
-      ""
-    ],
     "description": "Frederic Lau delved into the problems and potential issues in the Chinese banking sector, including government platform financing loans, slower exports and economy, real estate bubble, deregulation of interest rates, shadow banking, weak corporate governance, and weak risk management capability, amongst other issues. He deliberated whether these problems will result in a hard landing for the banking sector, and considered the challenges ahead.",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T22:09:52.934Z",
@@ -995,15 +796,8 @@
     "eventType": "external",
     "year": 2013,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T22:09:05.236Z",
@@ -1026,18 +820,8 @@
     "externalLink": "",
     "year": 2013,
     "past": true,
-    "schedule": [
-      "8:30-9 am -  Networking",
-      "9-10:30 am - Program"
-    ],
-    "speakers": [
-      "Commercial Counselor David Gossack of US Embassy Jakarta"
-    ],
-    "image": [
-      ""
-    ],
     "description": "California-Asia Business Council and US Commercial Service SF are pleased to cohost a morning briefing focused on Indonesia on Tuesday, April 2, 2013.,About our speaker, David Gossack: Prior to his position as counselor for commercial affairs at the U.S. Embassy in Jakarta, Indonesia, David Gossack served as principal commercial officer at the U.S. Consulate in Shanghai from 2008 to 2011. He previously served as commercial attaché at the U.S. Embassy in Beijing from 2003 to 2007, in Bangkok from 1999 to 2002 and in Tokyo from 1995 to 1999. He is the recipient of numerous awards from the Dept. of Commerce. Earlier in his career, he held positions in the State Dept., at the American Embassy in Tokyo and the Office of the U.S. Trade Representative. From 1987 to 1990, he was counsel to U.S. Sen. Spark Matsunaga (D) of Hawaii, chairman of the Senate Finance Subcommittee on International Trade, where he was an active participant in drafting legislation in the Senate. Gossack subsequently practiced international trade and business law in a Washington, D.C., firm. He is a graduate of Stanford University and the School of Law at the University of Washington..  ,Mr. Gossack's presentation will be followed by an open discussion about business issues and opportunities in Indonesia.,Note: Indonesia has a robust plan for infrastructure improvements that may be of interest to relevant companies. For details see Indonesia Major Projects & Tenders. (http://export.gov/indonesia/majorprojectsandtenders/index.asp) ,Cost:      $5 for members,               $25 for non-members",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "url": "https://secure.acceptiva.com/?cst=6728ec",
       "date": {
@@ -1062,26 +846,8 @@
     "eventType": "external",
     "year": 2013,
     "past": true,
-    "schedule": [
-      "1PM to 2PM “China's Financial Reform - Opportunities and Challenges”",
-      "Speaker:  Chris Cooper, Americas Leader, Deloitte Chinese Services Group; partner, Deloitte & Touche LLP",
-      "2PM to 3PM PANEL DISCUSSION:",
-      "\tChina’s Capital Markets and Cross-Border Investments ",
-      "Speakers from Deloitte, China International Capital Corporation, Bay Area Council, ChinaSF, and Tsinghua University.",
-      "3PM to 3:45PM “RMB Internationalization and the Development of Offshore RMB Market”",
-      "Speaker:  Dr. Sibo Feng, Managing Director, China International Capital Corporation",
-      "3:45PM to 4:45PM PANEL DISCUSSION:",
-      "\tImplication of RMB globalization and capital market reform",
-      "   Speakers from Deloitte, China International Capital Corporation, Bank of Communications, ChinaSF,"
-    ],
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "With China’s economy booming over the last two decades, faster reform of the country’s financial system is essential to sustain strong economic growth, support rising domestic demand, and keep risks at bay. For decades, China's financial system effectively mobilized savings to satisfy the nation's investment requirements. Since the country's transition to a more sustainable growth trajectory on higher consumer spending and the development of service industries, a more balanced system will be needed to improve capital allocation. ,The conference is intended to bring together business leaders, policy makers, faculty and students to discuss the new wave of financial policy experimentation in China aimed at addressing structural imbalances and its effects on tomorrow’s economy.",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T21:43:42.040Z",
@@ -1104,9 +870,6 @@
     "externalLink": "",
     "year": 2013,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -1131,9 +894,6 @@
     "eventType": "external",
     "year": 2013,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -1156,9 +916,6 @@
     "eventType": "external",
     "year": 2013,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -1184,15 +941,8 @@
     "externalLink": "",
     "year": 2013,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T22:17:04.508Z",
@@ -1215,19 +965,8 @@
     "eventType": "external",
     "year": 2013,
     "past": true,
-    "schedule": [
-      "5:30 - 6:00 p.m.   Registration",
-      "6:00 - 7:00 p.m.   Speed Networking",
-      "7:00 - 7:30 p.m.   Refreshments and Reception"
-    ],
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "The California-Asia Business Council's Emerging Leaders and the Asia Society Northern California's Young Professionals Group (YPG) are partnering for an evening of networking, drinks and hors d'oeurves.  Join us to connect with other like-minded professionals in the San Francisco Bay Area with an interest in U.S.-Asia business and culture.,This event is now open for general registration. Please note that space is limited and seats will be allotted on a first-come-first-served basis.,Never been to a speed networking event before? Read the Wikipedia article (http://en.wikipedia.org/wiki/Speed_networking)  for a description. For this event, we'll be using the Round Robin approach. We look forward to seeing you there, and remember to bring plenty of business cards!,About the California-Asia Business Council’s Emerging Leaders,The California-Asia Business Council Emerging Leaders is a group dedicated to building and cultivating new business relationships, entrepreneurial endeavors, social and networking opportunities, and promoting civic leadership among the younger Asia-focused generation of business professionals.,Follow Cal-Asia Emerging Leaders on Facebook here http://www.facebook.com/groups/113007032091280/ ,About Asia Society’s Young Professionals Group,The Asia Society Young Professionals Group is an association of young professionals who share a strong interest in Asia.  Our members are talented, sophisticated and globally-minded future leaders in their twenties and thirties.  We provide a platform for members to network, exchange ideas, share common interests and hear from experts about all topics related to Asia.,Follow Asia Society YP on Facebook here http://www.facebook.com/pages/Young-Professionals-Group-Asia-Society-Northern-California/83219802821",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "url": "https://secure.acceptiva.com/?cst=98a660",
       "date": {
@@ -1250,11 +989,6 @@
     "externalLink": "",
     "year": 2012,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Hon. Craig Allen."
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -1276,9 +1010,6 @@
     "externalLink": "",
     "year": 2012,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -1302,15 +1033,8 @@
     "eventType": "external",
     "year": 2012,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T22:21:17.875Z",
@@ -1332,9 +1056,6 @@
     "eventType": "external",
     "year": 2012,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -1362,9 +1083,6 @@
     "externalLink": "",
     "year": 2012,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Discussion on business prospects in greater KL region,http://www.kwpkb.gov.my/",
     "__v": 0,
     "registration": {
@@ -1387,16 +1105,6 @@
     "externalLink": "",
     "year": 2012,
     "past": true,
-    "schedule": [
-      "8:30 am - Breakfast & Networking ",
-      "9:00 am - Introductions ",
-      "9:30 am - Consul General ",
-      "10:00 am - Discussion"
-    ],
-    "speakers": [
-      "Consul General for Vietnam The Hon. An T. Le"
-    ],
-    "image": [],
     "description": "Join us as we welcome incoming Consul General An Le and learn about his perspectives on US-Vietnam business: the prospects, opportunities, and hurdles.  Hear what he wants to accomplish during his tour in the Western US to build US-Vietnam trade and investment. Bring your questions, business-specific concerns and engage in a productive dialogue. ,About the Consul General ,An Le, a Senior Foreign Service Officer with the rank of Minister Counselor, arrived in Ho Chi Minh City, Vietnam on August 6, 2010, for a three-year assignment as Consul General.  A native of Virginia, he received a Bachelor of Science degree in Electrical Engineering in 1976 and a Master of Science in Engineering Administration in 1978, both from the George Washington University in Washington, DC.  He joined the Foreign Service in 1991, after having worked as a civil servant with the U.S. Department of the Navy for 15 years. ,During a 35-year career as a U.S. public servant, An Le has won a number of awards, including the 1990 Federal Engineer of the Year Award, the Secretary’s Award for Excellence, a number of Meritorious Step Increases (MSIs) and several Superior and Meritorious Honor Awards.  He was promoted to the Senior Foreign Service in 2001.  In 2006, he received the Department of State’s highest management achievement award – The Luther I. Replogle Award for Management Improvement – for significantly increasing the effectiveness of the Department in fulfilling its foreign affairs responsibilities. ,An Le has had broad experience in dealing with current economic, political and security issues across the Asia region.  His overseas assignments have included Beijing (1991-1994), Tokyo (1994-1997), Kuala Lumpur (1997-2001), Singapore (2001-2004), Seoul (2004-2007), and Paris (2007-2010).  Throughout his Foreign Service career, An Le has worked closely with the American business community to address issues of concern to American investors, business persons, and families working and living abroad.  One of his chief interests has been to anticipate and plan for the educational needs of American expatriate families.  During his tenure in Paris, An Le completed the first-ever public-private partnership in the Department of State to modernize the historic Hotel de Talleyrand, a USG-owned property in central Paris, preserving that structure while transforming it into a modern Class A office space.,More information about the US Consulate General in Ho Chi Minh City can be found at: usconsulate.gov,More information about the Vietnamese Consulate General in San Francisco can be found at:  www.vietnamconsulate-sf.org,Cal-Asia Sponsor Members: No fee; email info@calasia.org,Cal-Asia Corporate Member: $50,Non-member: $100 ,Space is limited; $10 drop in charge at the door. Please RSVP,http://www.calasia.org/events/12-8-24VietnamBreakfast.html",
     "__v": 0,
     "registration": {
@@ -1419,9 +1127,6 @@
     "externalLink": "",
     "year": 2012,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Detail:  Presentation from local government and industry leaders highlighting the investment potential of the northern Vietnamese province that has seen over 15% growth per annum since 2001",
     "__v": 0,
     "registration": {
@@ -1443,17 +1148,8 @@
     "externalLink": "",
     "year": 2012,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Christopher Quinlivan Commercial Counselor for China",
-      "Deputy SCO Embassy of the United States of America in Beijing",
-      "China"
-    ],
-    "image": [
-      ""
-    ],
     "description": "Peoples Republic of China: Breakfast briefing in SF with Christopher Quinlivan Commercial Counselor for China & Deputy SCO Embassy of the United States of America Beijing, China,Want to grow your business in China?,Want to know the latest rules and regulations for foreign investors in the region?,ANSWER YOUR QUESTIONS AT THE JULY 16 BREAKFAST BRIEFING WITH CAL-ASIA & US COMMERCIAL SERVICE!,Christopher R. Quinlivan ,Commercial Counselor for China ,Deputy Senior Commercial Officer,U.S. Embassy Beijing, China,On July 16th, the California-Asia Business Council invites you to join Christopher Quinlivan, Commercial Counselor for China & Deputy SCO US Embassy Beijing, China, for an executive briefing on current business trends, issues and opportunities in China.,Join us for a breakfast briefing during which Mr. Quinlivan will address a number of strategies to overcome hurdles to increasing business between U.S. firms and China. The briefing, with extensive Q&A, is held in conjunction with the US Commercial Service / San Francisco Export Assistance Center.,About our speaker: Christopher Quinlivan is a Foreign Service Officer with the Department of Commerce’s U.S. Commercial Service. He is currently Commercial Counselor and Deputy Senior Commerical Officer at the U.S. Embassy in Beijing, China, a post he has held since August 2011. Mr. Quinlivan serves as deputy to the Minister Counselor for Commercial Affairs, overseeing the U.S. Department of Commerce’s activities throughout China. Prior assignments include Vienna, Austria; Salt Lake City, Utah; Brussels, Belgium; Beijing, China (2001-03); and Athens, Greece. Mr. Quinlivan has seven years of private sector experience as an account manager and logistics agent.,Location:,SNR Denton,525 Market St., 26th Floor,San Francisco CA,Program:,8:30 am - Registration,9:00 am - Program,10:30 am Conclusion,Registration:,$5 for members; $25 for non-members,(http://www.calasia.org/events/12-7-16Chris%20Quinlivan.html)",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T22:27:05.127Z",
@@ -1479,15 +1175,8 @@
     "eventType": "external",
     "year": 2012,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "By Invitation",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T22:28:49.800Z",
@@ -1510,21 +1199,8 @@
     "externalLink": "",
     "year": 2012,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Consul General Jeong G. Lee",
-      "Consulate General of Korea",
-      "Director Woo Suk Choi (Ministry of Commerce of Korea)",
-      "Consulate General of Korea Representative",
-      "KOTRA Eric Sohn",
-      "Korea Desk Officer",
-      "US DOC"
-    ],
-    "image": [
-      ""
-    ],
     "description": "KOREA-US FREE TRADE AGREEMENT (KORUS FTA),The Nuts and Bolts of the Korea-US FTA: How can it help you grow your business in Korea,Friday, May 25, 2012,California-Asia Business Council and US Commercial Service,Cordially invite you to a working breakfast and briefing with: ,Speakers: ,Consul General Jeong G. Lee, Consulate General of Korea, SF;,Director Woo Suk Choi (Ministry of Commerce of Korea), Consulate General of Korea; ,Representative, KOTRA ,Eric Sohn, Korea Desk Officer, US DOC ,Cal-Asia and the US Commercial Service office San Francisco are pleased to sponsor this timely discussion on the Korea US Free Trade Agreement and the implications for US businesses.,We are please to welcome Consul General Jeong G. Lee, who will make welcoming remarks.,He will be followed by representatives of Korean agencies who will provide specifics about KORUS FTA impact on Korea's trade and investment in the U.S., and also a look at what their agencies can do to help foster US-Korea business.,Eric Sohn has spoken extensively about the impact of KORUS FTA on services, import/export, investment..",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T22:30:25.120Z",
@@ -1547,9 +1223,6 @@
     "externalLink": "",
     "year": 2012,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -1571,15 +1244,8 @@
     "externalLink": "",
     "year": 2012,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "Speakers: ,PATRICK SANTILLO  Senior Commercial Officer at the U.S. Embassy in Singapore,MAURICE NEO, Deputy Director, Singapore Public Utilities Board; Managing Director, Singapore Int'l Water Week.  ,EUGENE SEO, Centre Director (San Francisco), Singapore Economic Development Board ,Resource:,BOON HO TOH, Centre Director (Los Angeles), International Enterprise Singapore ,WEE LEONG NG,  Centre Director (Americas), SPRING Singapore ,Cal-Asia and the US Commercial Service office San Francisco are pleased to sponsor this timely discussion on clean and green opportunities in Singapore and neighboring countries.  ,Briefing will be led by Patrick Santillo, who brings a wealth of knowledge gathered from postings in Asia and Europe.  He will look at recent developments in Singapore and the region vis-à-vis energy, water, and environmental/natural resource policy as they may affect business. ,Eugene Seo of the Singapore Economic Development Board will provide an overview of Singapore's role in the sector and Maurice Neo, of the Public Utilities Board (PUB) and Managing Director, Singapore International Water Week (SIWW), will focus more on the water sector.,The briefing will be followed by Q&A.  On hand will be the head of International Enterprise Singapore (Los Angeles), Boon Ho Toh, and the director of SPRING Singapore (Americas).,Suggested industry sectors: architecture and design; urban planning; water and waste water treatment; energy -- clean, renewable, alternative, efficiency in production, transmission and distribution; pollution controls; etc. ,Organizations:,EDB - The Economic Development Board (EDB) plays a pivotal role in identifying and pioneering economic opportunities for Singapore, its people and its business partners. ,Public Utilities Board (Singapore) - As the national water agency, PUB is responsible for the collection, production, distribution and reclamation of water in Singapore. ,IE Singapore: International Enterprise (IE) Singapore is the government agency driving Singapore's external economy. ,SPRING Singapore is an agency under the Ministry of Trade and Industry responsible for helping Singapore enterprises grow and for building trust in Singapore products and services. It is both an enterprise development agency, and the national standards and accreditation body.,http://www.calasia.org/events/12-3-19Singapore.html",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T22:32:46.285Z",
@@ -1603,37 +1269,8 @@
     "externalLink": "",
     "year": 2012,
     "past": true,
-    "schedule": [
-      "8:00 - 8:30 Registration",
-      "8:30 - 8:40 Welcome Remarks and Introduction:",
-      "            Ms. Jeremy Potash, Executive Director, CalAsia",
-      "8:40 - 8:55 Remarks:",
-      "          H.E. Ambassador Jose L. Cuisia, Jr.",
-      "8:55 - 9:10 The Philippine Macro-Economy and Capital Markets",
-      "            Dr. Bernardo M. Villegas",
-      "          Head of Delegation, Professor and Director of Research",
-      "          University of Asia and the Pacific, Manila",
-      "9:10 - 9:25 Opportunities in Philippine Mining and Sustainable Initiatives",
-      "           Mr. Philip Romualdez, President, Chamber of Mines (Philippines)",
-      "9:25 - 9:40 Philippine Real Estate and Infrastructure Sectors",
-      "           Mr. Isidro A. Consunji, President, DMCI Holdings, Inc.",
-      "9:40 - 9:55 -- Philippine Human Resources ",
-      "           Mr. Jesus M. Zulueta, Jr., Director for Asia Pacific, ZMG Ward Howell",
-      "9:55 - 10:20  Moderated Q&A (20-30 mins)",
-      "           Moderator: Michael Alfred Ignacio, Trade Commissioner",
-      "           Philippine Trade and Investment Center",
-      "10:20 - 10:30 Concluding Remarks & Acknowledgement:",
-      "              Hon. Marciano A. Paynor, Jr. Consul General, Consulate General of the Philippines - San Francisco"
-    ],
-    "speakers": [
-      "HE Jose L. Cuisa Jr.",
-      ""
-    ],
-    "image": [
-      "Cal-Asia, SNR Denton LLP, Consulate General of the Philippines San Francisco, Philippine Trade & Investment Center"
-    ],
     "description": "More than 80 business leaders attended the Cal-Asia morning briefing to learn about Philippines' top priority sectors in investments and trade from leading experts. Our esteemed panel of experts included:  ,H.E. Jose L. Cuisia, Jr. Philippine Ambassador to the United States, former Central Bank Governor, and former CEO of various important Philippine companies and firms.,Dr. Bernardo M. Villegas, Head of Delegation Professor and Director of Research University of Asia and the Pacific,Benjamin Philip Romualdez, President, Chamber of Mines, Philippines President & CEO, Benguet Mining,Jesus M. Zulueta, Jr., Managing Director for Asia Pacific ZMG Ward Howell,Isidro A. Consunji, President, DMCI Holdings, Inc.,(http://www.calasia.org/events/12-1-31PhilippinesBreakfastRoadshow.html) ,(http://www.calasia.org/events/12-1-31-PhilippinesInvestmentRoadshowDetails.pdf)",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T22:34:15.119Z",
@@ -1656,9 +1293,6 @@
     "externalLink": "",
     "year": 2011,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Focus on urban development, affordable housing, water and energy issues.",
     "__v": 0,
     "registration": {
@@ -1680,9 +1314,6 @@
     "externalLink": "",
     "year": 2011,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "(http://asianight.org/index11.html)",
     "__v": 0,
     "registration": {
@@ -1704,9 +1335,6 @@
     "eventType": "external",
     "year": 2011,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -1731,9 +1359,6 @@
     "eventType": "external",
     "year": 2011,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -1755,15 +1380,8 @@
     "externalLink": "",
     "year": 2011,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "location": "Santa Clara, CA",
     "registration": {
       "date": {
@@ -1786,9 +1404,6 @@
     "eventType": "external",
     "year": 2011,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -1810,15 +1425,8 @@
     "externalLink": "",
     "year": 2011,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "Focus on implication of trade pacts including proposed TransPacific Partnership, \t,We are delighted that Ambassador Mike Moore, who is in San Francisco for the APEC talks, will join us to discuss both US-New Zealand trade and investment opportunities, as well as very timely global, regional and bilateral trade and investment topics. A former Prime Minister of New Zealand, he is also the former Director General of WTO, and oversaw the accession of China to WTO. More recently he is one of the architects of the TransPacific Strategic Economic Partnership agreement between New Zealand, Singapore, Brunei and Chile; this agreement has become known as the TransPacific Partnership (TPP) which US negotiators hope to join and help formalize in November.,He will be joined by Rebekah Mawson, New Zealand second secretary for trade and economics and the Embassy's APEC specialist,Bring your questions, business-specific concerns and engage in a productive dialogue. ,About the Ambassador,Rt Hon Mike Moore is a true global trade visionary. He is past Director-General of the World Trade Organisation (WTO) where he oversaw the launch of the Doha Development Round.,His period in office saw the successful accession to the WTO of China and Chinese Taipei along with Estonia, Jordan, Georgia, Albania, Oman, Croatia, Lithuania, and Moldova.,The Ambassador is a former Labour Prime Minister of New Zealand. He has held portfolios in a wide range of areas and served in a number of senior political positions including Trade Minister, Foreign Minister, Minister of Tourism, Minister for the America's Cup and Deputy Minister of Finance.,Mr Moore worked as a meat and construction worker, and a printer where he became an active Trade Unionist. He became a social worker in a hospital for the criminally insane – an experience he claims “prepared him well for a life in politics”.,The Ambassador held numerous appointments and board memberships with global policy and commercial organisations. These included Membership of the United Nations Commission on the Legal Empowerment of the Poor; Commissioner for the UN Global Commission on International Migration; senior counsellor for Fonterra; and a Board member for SGS.,He served on the Economic Development Board of South Australia, and was an advisor to other governments. Ambassador Moore is also a Trilateral Commission member and a member of the Privy Council.,Mr Moore was an Adjunct Professor at Adelaide University, Australia, and La Trobe University, Australia, is Honorary Professor at Beijing Normal University in Zhuhai, Honorary Professor at the Chinese University for Political Science and International Law in Beijing, and Honorary Professor, Shanghai Customs College.,He is the recipient of numerous honours from governments in Africa, Europe and South America. The Ambassador has been awarded New Zealand’s highest honour, the Order of New Zealand.,Mr Moore also holds honorary doctorates in commerce from Lincoln University, New Zealand; in economics from the People’s University of China, Beijing; in commerce from Auckland University of Technology and Canterbury University, and law from La Trobe University in Australia.,He is the author of ten books including: A Pacific Parliament; Hard Labour, Fighting For New Zealand; Children of the Poor; A Brief History of the Future and A World Without Walls.,Mr Moore’s latest book, “Saving Globalisation”, was published by Wiley’s in 2009.,Mr Moore is the founder of a New Zealand Charity “School Aid” which creates investment funds which are managed by High School students, the profits of which will go to schools in developing countries.,(http://calasia.org/events/11-9-16AmbMikeMoore.html)",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T22:42:01.965Z",
@@ -1840,9 +1448,6 @@
     "eventType": "external",
     "year": 2011,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -1867,9 +1472,6 @@
     "eventType": "external",
     "year": 2011,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -1891,14 +1493,6 @@
     "externalLink": "",
     "year": 2011,
     "past": true,
-    "schedule": [
-      "8:30 am - Breakfast & Networking ",
-      "9:00 am - Introductions ",
-      "9:30 am - Consul General ",
-      "10:00 am - Discussion"
-    ],
-    "speakers": [],
-    "image": [],
     "description": "Cal-Asia welcomes Vietnam's new Consul General to California/Pacific Northwest,Join us as we welcome incoming Consul General Nguyen Ba Hung and learn about his perspectives on US-Vietnam business: the prospects, opportunities, and hurdles.  Hear what he wants to accomplish during his tour in the Western US to build US-Vietnam trade and investment. Bring your questions, business-specific concerns and engage in a productive dialogue. ,About the Consul General ,Consul General Nguyen Ba Hung was appointed as Consul General of Viet Nam in San Francisco in July 2011.  He was previously Director General of the Americas Department, Ministry of Foreign Affairs.,From 2000 to 2003, Mr. Nguyen served as Counselor for Political and Economic Affairs at the Vietnamese Embassy in Washington, D.C.,Mr. Nguyen joined the foreign service in 1987 and in subsequent years has been assigned to the Americas Department.  He was promoted to Deputy Director General of the Department in 1998, then Director General in 2007, a position he held until his posting in San Francisco.  While leading the Department, he also was appointed to head the Viet Nam's Office for Seeking Missing Persons three times in 1998, 2006 and 2010.   He has been a key player in the development of Vietnam-U.S. relations, especially in their humanitarian cooperation on the American POW/MIA matter.,Mr. Nguyen earned his Master of International Public Policy degree at the John Hopkins University in 1996.  He was a fellow at Georgetown University in 1995. He studied International Public Law at the Institute of Social Studies, the Netherlands, in 1990-1991.,Mr. Nguyen speaks Vietnamese, English and French.,Cal-Asia Sponsor Members: No fee; email info@calasia.org,Cal-Asia Corporate Member: $50,Non-member: $100 ,Space is limited; $10 drop in charge at the door. Please RSVP,More information about the Vietnamese Consulate General in San Francisco can be found at:  www.vietnamconsulate-sf.org,(http://www.calasia.org/events/11-8-8VietnamBreakfast.html)",
     "__v": 0,
     "registration": {
@@ -1920,9 +1514,6 @@
     "eventType": "external",
     "year": 2011,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -1944,15 +1535,8 @@
     "externalLink": "",
     "year": 2011,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "With The Honorable Commissioner  Sudharma Yoonaidharma, Thailand  Govt.’s National Broadcasting & Telecommunications Commission (NBTC)  Berkeley Law ,(http://www.calasia.org/events/11-5-27Thailand.html)",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T22:47:10.963Z",
@@ -1975,9 +1559,6 @@
     "eventType": "external",
     "year": 2011,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -1999,22 +1580,8 @@
     "externalLink": "",
     "year": 2011,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Patrick T. Wall - Commercial Counselor Manila – Philippines",
-      "U.S. Commercial Service Philippines",
-      "U.S. Department of Commerce; and Consul Alfonso Ver",
-      "Career Minister",
-      "Consulate General of the Philippines",
-      "SF. Cosponsored by the Philippines Trade Center/Department of Trade & Industry",
-      "and the U.S. Commercial Service",
-      "San Francisco"
-    ],
-    "image": [
-      ""
-    ],
     "description": "(http://www.calasia.org/bios/11-PatrickWall.html)",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T23:25:14.387Z",
@@ -2036,9 +1603,6 @@
     "externalLink": "",
     "year": 2011,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2063,16 +1627,8 @@
     "externalLink": "",
     "year": 2011,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Dr. Lawrence Spinelli",
-      "OPIC"
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T23:27:46.206Z",
@@ -2094,9 +1650,6 @@
     "eventType": "external",
     "year": 2011,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2118,9 +1671,6 @@
     "externalLink": "",
     "year": 2011,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2143,9 +1693,6 @@
     "externalLink": "",
     "year": 2011,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2167,17 +1714,8 @@
     "externalLink": "",
     "year": 2011,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Hong Phong Pho",
-      "Vietnam Desk Officer",
-      "US Department of Commerce"
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T23:29:21.271Z",
@@ -2200,15 +1738,8 @@
     "externalLink": "",
     "year": 2010,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T23:30:14.126Z",
@@ -2230,17 +1761,6 @@
     "externalLink": "",
     "year": 2010,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Mr. Joon-Woon CHONG Regional Director (Western Americas)",
-      "Americas Singapore Economic Development Board",
-      "Mr. Stephan Crawford Director- US Commercial Service San Francisco",
-      "Mr. William Roger  AIA  ACHA  Senior Vice President",
-      "HOK",
-      "Mr. Daniel Thompson Senior Commercial Officer  US Commercial Service Singapore  US Embassy Singapore",
-      "Mr. Boon Ho TOH Center Director – Los Angeles International Enterprise Singapore"
-    ],
-    "image": [],
     "description": "Singapore is one of the most highly developed and sophisticated industrial, commercial, financial economies in the world. Singapore is an established regional hub for transportation, logistics, aircraft Maintenance, Repair and Overhead (MRO), petroleum refining, offshore oil rig production, pharmaceuticals, medical care, electronics, and chip manufacturing. Finance, education and biotechnology are newer concentrations. ,Singapore was the first country in Asia to sign a Free Trade Agreement (FTA) with the United States which came into force January 1, 2004. It expanded U.S. market access in goods, services, investment, and government procurement. The U.S. - Singapore FTA also enhanced intellectual property protection and provided for cooperation in promoting labor rights and the environment.,Fast Economic facts about Singapore,The World Bank's \"Doing Business 2010\" report ranked Singapore as the easiest country in which to do business,English is the language of business and government.,The rule of law and Intellectual Property Rights are respected. ,Singapore was the 12th largest export market and 17th largest trading partner of the U.S. in 2008.  ,The U.S. was Singapore's 2nd largest import source, behind Malaysia. ,Over 1,500 U.S. firms have offices or facilities in Singapore, many with regional Asian operations. ,At US$82 billion, U.S. foreign direct investment in Singapore is greater only in Japan in the Asia-Pacific area.,resource: http://www.buyusa.gov,Mr. Joon-Woon CHONG,Regional Director (Western Americas), Americas,Singapore Economic Development Board,Mr. Stephan Crawford,Director, US Commercial Service, San Francisco,Mr. William Roger, AIA, ACHA ,Senior Vice President, HOK,Mr. Daniel Thompson,Senior Commercial Officer ,US Commercial Service Singapore ,US Embassy Singapore,Mr. Boon Ho TOH,Center Director – Los Angeles,International Enterprise Singapore",
     "__v": 0,
     "registration": {
@@ -2262,9 +1782,6 @@
     "externalLink": "",
     "year": 2010,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2286,9 +1803,6 @@
     "eventType": "external",
     "year": 2010,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2310,9 +1824,6 @@
     "externalLink": "",
     "year": 2010,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2335,12 +1846,6 @@
     "externalLink": "",
     "year": 2010,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Awinash Bawle",
-      "Office of South Asia and Oceania US Department of Commerce"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2363,12 +1868,6 @@
     "externalLink": "",
     "year": 2010,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Jim Zimmerman",
-      "AMCHAM Beijing chairman emeritus and author of China Law Deskbook"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2390,16 +1889,8 @@
     "externalLink": "",
     "year": 2010,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Mahendra Siregar - Indonesia's Vice Minister of Trade",
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T23:37:52.699Z",
@@ -2421,11 +1912,6 @@
     "externalLink": "",
     "year": 2010,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Asian Development Bank Managing Director Rajat Nag"
-    ],
-    "image": [],
     "description": "Luncheon discussion with Asian Development Bank Managing Director Rajat Nag to launch ADB's new flagship study \"Institutions for Asian Regionalism - Enhancing Cooperation and Integration in Asia and the Pacific\". Study synopsis: http://www.calasia.org/docs/10-ADB_IFR-Synopsis_%20FA_JUNE3.pdf",
     "__v": 0,
     "registration": {
@@ -2446,9 +1932,6 @@
     "eventType": "external",
     "year": 2010,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Conference proceedings are now online: http://www.frbsf.org/banking/asiasource/events/2010/0607/",
     "__v": 0,
     "registration": {
@@ -2470,16 +1953,8 @@
     "externalLink": "",
     "year": 2010,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Hon. Kenneth Fairfax -  US Consul General to Ho Chi Minh City",
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-03-30T23:40:38.448Z",
@@ -2501,15 +1976,8 @@
     "eventType": "external",
     "year": 2010,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "externalLink": "http://www.opicevents.com/index.php?id=2",
     "registration": {
       "date": {
@@ -2531,16 +1999,8 @@
     "eventType": "external",
     "year": 2010,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "William Zarit (Minister Counselor for Commercial Affairs)",
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T21:02:51.999Z",
@@ -2562,15 +2022,8 @@
     "externalLink": "",
     "year": 2010,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T21:01:55.839Z",
@@ -2593,9 +2046,6 @@
     "eventType": "external",
     "year": 2010,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2620,12 +2070,6 @@
     "externalLink": "",
     "year": 2010,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Dr. Vo Quy (founder of CRES)",
-      "Ambassador Xuan (Vietnam's chief WTO negotiator)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2648,9 +2092,6 @@
     "externalLink": "",
     "year": 2010,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2672,15 +2113,8 @@
     "eventType": "external",
     "year": 2010,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "Truly excellent content; highly recommended. Early career executives encouraged to take part in April 10 Leadership Forum.",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T21:06:46.763Z",
@@ -2702,12 +2136,6 @@
     "externalLink": "",
     "year": 2010,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "HE Don Pramudwinai (Thailand's Ambassador to the US)",
-      ""
-    ],
-    "image": [],
     "description": "Thailand's Ambassador to the US, HE Don Pramudwinai came to San Francisco to promote trade and investment with Thailand",
     "__v": 0,
     "registration": {
@@ -2730,9 +2158,6 @@
     "eventType": "external",
     "year": 2010,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2754,9 +2179,6 @@
     "eventType": "external",
     "year": 2010,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2778,11 +2200,6 @@
     "externalLink": "",
     "year": 2010,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "H.E. Roy Ferguson (New Zealand Ambassador to the U.S.)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2803,9 +2220,6 @@
     "eventType": "external",
     "year": 2010,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2831,9 +2245,6 @@
     "eventType": "external",
     "year": 2010,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2855,15 +2266,8 @@
     "eventType": "external",
     "year": 2010,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Zhou Wenzhong (Chinese Ambassador to the U.S.)"
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T21:21:20.823Z",
@@ -2886,15 +2290,8 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Hon. Mustapha Mohamed (Minister of International Trade and Industry)"
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "url": "http://www.calasia.org/events/09MIDASeminarFlyer.pdf",
       "date": {
@@ -2917,9 +2314,6 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Led by former Vietnam Ambassador to the U.S. Details to members.",
     "__v": 0,
     "registration": {
@@ -2940,9 +2334,6 @@
     "eventType": "external",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -2965,15 +2356,8 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "Reception featured consular tables from many countries and included the beers ofChina, India, Philippines, Thailand and Vietnam. Attended by the ambassadors of Brunei and Vietnam, and consuls general and/or trade officials from nine countries of Asia. To read press release (http://www.calasia.org/AsiaNight2009/cal-asia.html)",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T21:25:16.975Z",
@@ -2995,12 +2379,6 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Truong Vinh Trong (Deputy Prime Minister)",
-      ""
-    ],
-    "image": [],
     "description": "Meet Vietnam Investment Forum, led by Deputy Prime Minister Truong Vinh Trong, with Vice Ministers of Planning and Investment, Information and Communications, and Foreign Affairs plus 100+ member delegation. Cal-Asia co-hosted with Government of Vietnam and San Francisco Mayor's Office of International Trade.",
     "__v": 0,
     "registration": {
@@ -3026,9 +2404,6 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -3051,15 +2426,8 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Allen Chien (American Institute in Taiwan)"
-    ],
-    "image": [
-      ""
-    ],
     "description": "(http://www.cepd.gov.tw/encontent/m1.aspx?sNo=0011390)",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "url": "",
       "date": {
@@ -3082,11 +2450,6 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Barbara Finamore (China-US Energy Efficiency Alliance)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -3109,9 +2472,6 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -3136,11 +2496,6 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Chairman Jiang Zhaobai (Pengxin Group)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -3163,11 +2518,6 @@
     "eventType": "external",
     "year": 2009,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Jennifer Turner (China Environment Forum)"
-    ],
-    "image": [],
     "description": null,
     "__v": 0,
     "registration": {
@@ -3189,15 +2539,8 @@
     "eventType": "external",
     "year": 2009,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Gunjan Bagla (Amritt Inc.)"
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 2,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T21:40:45.404Z",
@@ -3220,12 +2563,6 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Albert Ting (U.S. Department of Commerce",
-      "Office of the China Economic Area)"
-    ],
-    "image": [],
     "description": null,
     "__v": 0,
     "registration": {
@@ -3247,15 +2584,8 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Awinash Bawle (India Desk Officer at the US Department of Commerce)"
-    ],
-    "image": [
-      ""
-    ],
     "description": "Discussion on business issues and opportunities in the country.",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T21:44:39.367Z",
@@ -3277,9 +2607,6 @@
     "eventType": "external",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "An important half-day symposium that continues the tradition of the Federal Reserve Bank San Francisco in examining emerging trends and issues that will impact banking and financial centers both in Asia and in the United States. Financial experts from US and Asia will speak.",
     "__v": 0,
     "registration": {
@@ -3303,16 +2630,8 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Dr. Kim N.B. Ninh (Asia Foundation Country Representative",
-      "Vietnam)"
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T21:43:04.882Z",
@@ -3334,14 +2653,6 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Robert Ward (Economist Intelligence Unit)",
-      "Qi Bin (China Security Research Center)",
-      "Sanjiv Sanghvi (President and CEO Wells Fargo HSBC Trade Bank)",
-      "Henry Sender (Financial Times)"
-    ],
-    "image": [],
     "description": "Leading experts on US and Asian finance will address key issues in a half-day conference focused on the causes of the economic meltdown, the policy response in the US and Asia, and prospects for growth in the coming year.",
     "__v": 0,
     "registration": {
@@ -3364,11 +2675,6 @@
     "eventType": "external",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Mrs. Rita Lau (Secretary for Commerce and Economic Development)"
-    ],
-    "image": [],
     "description": "Conference and business luncheon, hosted by The San Francisco Hong Kong Economic and Trade Office, featuring Mrs. Rita Lau, Secretary for Commerce and Economic Development, Hong Kong SAR Government, and other preeminent business notables, that will examine policy, programs, and infrastructure and explore opportunities to capitalize on Hong Kong's advantages for the China market.",
     "__v": 0,
     "registration": {
@@ -3393,11 +2699,6 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Hon. Patricia M. Haslach (U.S. Ambassador to APEC)"
-    ],
-    "image": [],
     "description": null,
     "__v": 0,
     "registration": {
@@ -3419,13 +2720,6 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Hon. Hong-Phong Pho (Vietnam",
-      "Laos & Cambodia Desk Officer",
-      "US Dept. of Commerce SF)"
-    ],
-    "image": [],
     "description": null,
     "__v": 0,
     "registration": {
@@ -3447,15 +2741,8 @@
     "eventType": "external",
     "year": 2009,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "Senior executives and leading bankers in Vietnam address business conditions and opportunities in the country.",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T21:57:06.407Z",
@@ -3477,9 +2764,6 @@
     "eventType": "external",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -3501,17 +2785,8 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Simon Ogus (noted economist and founder of DSG Asia)",
-      "Cindy Marks (FRBSF San Francisco)",
-      "Dr. Nancy Mangold (Cal-State East Bay University)"
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T21:58:03.399Z",
@@ -3533,15 +2808,8 @@
     "eventType": "external",
     "year": 2009,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "Conference on green building in the US, China, and emerging markets in Asia.",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T21:59:37.461Z",
@@ -3565,9 +2833,6 @@
     "eventType": "external",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "The event will bring together business leaders and government officials from over 20 countries to discuss EE in a variety of contexts and to exhibit key EE technologies",
     "__v": 0,
     "registration": {
@@ -3589,9 +2854,6 @@
     "eventType": "external",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "The event will bring together business leaders and government officials from over 20 countries to discuss EE in a variety of contexts and to exhibit key EE technologies.",
     "__v": 0,
     "registration": {
@@ -3613,9 +2875,6 @@
     "eventType": "external",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Join utility executives, engineers, policy makers and other to learn more about efficient design and operation of electrical distribution systems, as well as associated DSM programs, Both components are critical in developing a successful electrical system in any country. An event of the Asia Pacific Partnership.",
     "__v": 0,
     "registration": {
@@ -3638,9 +2897,6 @@
     "eventType": "external",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "The longest running, most successful regional conference of its kind focusing specifically on Asian markets.",
     "__v": 0,
     "registration": {
@@ -3662,12 +2918,6 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Barbara Cassens (Director of Northern California Region - Food and Drug Administration)",
-      "Jerry Gillespie (Western Institute for Food Safety and Security)"
-    ],
-    "image": [],
     "description": "Discussion led by Barbara Cassens, Director, Northern California Region, Food and Drug Administration and Jerry Gillespie of Western Institute for Food Safety and Security. Invitation only.",
     "__v": 0,
     "registration": {
@@ -3690,9 +2940,6 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Featuring Consul Hong Ju Jo, Consulate General of Korea in SF and discussion of Korea's green development initiatives.  Members and previous participants have received emails about this event.",
     "__v": 0,
     "registration": {
@@ -3715,9 +2962,6 @@
     "eventType": "external",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -3741,15 +2985,8 @@
     "externalLink": "http://www.waterchina.merebo.com/",
     "year": 2009,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "The largest Chinese trade fair for the Water Industry. Organized by the China Foreign Trade Centre Group in association with MEREBO Messe Marketing.",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T22:22:17.961Z",
@@ -3772,9 +3009,6 @@
     "eventType": "external",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Exploring Emerging Transformations in Asia.",
     "__v": 0,
     "registration": {
@@ -3796,9 +3030,6 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "China is the single most important and fastest growing marketplace, as well as manufacturing base, for US products and services. Come learn how to use Hong Kong as your platform to do business with Mainland China.",
     "__v": 0,
     "registration": {
@@ -3821,9 +3052,6 @@
     "externalLink": "",
     "year": 2009,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Debriefing on Bay Area Council's 2008 U.S China Green Energy Conference",
     "__v": 0,
     "registration": {
@@ -3845,9 +3073,6 @@
     "externalLink": "",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Details sent to Cal-Asia members",
     "__v": 0,
     "registration": {
@@ -3869,15 +3094,8 @@
     "externalLink": "",
     "year": 2008,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T22:25:44.152Z",
@@ -3899,9 +3117,6 @@
     "externalLink": "",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Details sent to Cal-Asia members",
     "__v": 0,
     "registration": {
@@ -3924,9 +3139,6 @@
     "eventType": "external",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "High-level Government and Business Leaders to address Trans-Pacific cooperation, investment and business alliances in US-China green energy.",
     "__v": 0,
     "registration": {
@@ -3951,15 +3163,8 @@
     "eventType": "external",
     "year": 2008,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "Chinese and Foreign Experts Discuss China's Energy Ecosystem",
-    "__v": 3,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T22:28:03.890Z",
@@ -3981,9 +3186,6 @@
     "eventType": "external",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -4006,15 +3208,8 @@
     "eventType": "external",
     "year": 2008,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "Half-day complimentary seminar in San Francisco. ,http://www.calasia.org/events/08BIPBSurvey.html,http://www.calasia.org/events/08BIPBbios.html,http://www.calasia.org/events/08BIPBDelegationList.html,http://www.calasia.org/events/08BIPBagenda.html",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T22:32:08.529Z",
@@ -4039,16 +3234,8 @@
     "eventType": "external",
     "year": 2008,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Andrew Sheng (Chief Advisor to the China Banking Regulatory Commission)",
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T22:30:12.791Z",
@@ -4070,9 +3257,6 @@
     "eventType": "external",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Briefings on the APP Asia Clean Technology Initiative Bringing together industry, NGOs, state, local and federal government officials in Los Angeles & San Jose. For more information, please see APP Asia Clean Technology Initiative pdf (http://www.calasia.org/events/08-Oct-APP_flyer_9-18-FINAL.pdf)",
     "__v": 0,
     "registration": {
@@ -4093,9 +3277,6 @@
     "eventType": "external",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": null,
     "__v": 0,
     "registration": {
@@ -4120,15 +3301,8 @@
     "externalLink": "",
     "year": 2008,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "url": "http://www.greeningasia.org/index.html",
       "date": {
@@ -4153,9 +3327,6 @@
     "eventType": "external",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Sponsored by AsianWeek Foundation to Feature Emerging Asian American Artists Natalise, Mud, and Paul Kim",
     "__v": 0,
     "registration": {
@@ -4180,9 +3351,6 @@
     "eventType": "external",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -4205,9 +3373,6 @@
     "eventType": "external",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": null,
     "__v": 0,
     "registration": {
@@ -4230,15 +3395,8 @@
     "eventType": "external",
     "year": 2008,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Dr. Yuan Liu (son of the victim of 512 Sichuan Earthquake)"
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T22:47:08.880Z",
@@ -4260,9 +3418,6 @@
     "eventType": "external",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -4286,9 +3441,6 @@
     "eventType": "external",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "ASCEND, a resource for Asian American accounting and financial professionals, is holding its annual leadership conference and dinner.",
     "__v": 0,
     "registration": {
@@ -4310,15 +3462,8 @@
     "eventType": "external",
     "year": 2008,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "To RSVP, please call: (510) 763-0370",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T22:49:29.556Z",
@@ -4341,9 +3486,6 @@
     "eventType": "external",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -4364,9 +3506,6 @@
     "eventType": "external",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Also, launch of the US-China Green Energy Council (UCGEC)",
     "__v": 0,
     "registration": {
@@ -4397,9 +3536,6 @@
     "externalLink": "",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -4422,9 +3558,6 @@
     "externalLink": "",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -4446,15 +3579,8 @@
     "externalLink": "",
     "year": 2008,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "Discussion of current conditions in Vietnam's IT sector and business opportunities from Ministry of Industry and Trade (MOIT) senior officials and business delegates.. Delegation List here (http://www.calasia.org/events/08VietnamListofCompanies.html)",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T22:53:24.046Z",
@@ -4477,9 +3603,6 @@
     "externalLink": "",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "http://www.calasia.org/events/08shandongNAMElist.html",
     "__v": 0,
     "registration": {
@@ -4501,15 +3624,8 @@
     "externalLink": "",
     "year": 2008,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "William Overholt (Rand Corporation)"
-    ],
-    "image": [
-      ""
-    ],
     "description": "An Expert Look at Business Prospects in 2008,What can your firm expect in the lunar Year of the Rat (2008)? Will California-Asia business,conditions improve over 2007? Or with diminished growth forecasts on both sides of the Pacific, ,are we headed into a major downturn? What major issues should you be concerned about?,Join our panel of experts as we look at key issues affecting California/Asia business prospects in,the year ahead.,Wednesday, March 19, 2008 ,Reception / Check in: 11 am ~ Luncheon: 11:30 am ~ Program: 12:15 pm to 3:00 pm,The University Club, 800 Powell St., San Francisco, CA 94104 University Club Parking Map,$100 members; $135 non-members,(Fee includes copy of Asia, America, And the Transformation of Geopolitics by William H. ,Overholt for those who reserve by March 12),SPEAKERS (panel in formation),China, Asia and America: A Dangerous Confusion ,William H. Overholt, Director of the RAND Center for Asia Pacific Policy (CAPP),Banking in the Year of the Brown Earth Rat: Focus Asia ,Teresa M. Curran, Group Vice President for Banking Supervision, ,Federal Reserve Bank, San Francisco ,Asian Financial Markets ,G. Paul Matthews, Chairman, Chief Investment Officer, Portfolio Manager ,Matthews International Capital Management, LLC, Matthews Asian Funds,Implications of Sustainable Design for China ,Patricia Yeh, Associate Project Manager, SOM ,Corporate Sponsor: Wells Fargo Bank ,Members of Cal-Asia and Cosponsoring Organizations (Asia Society, Asian American Association,of Bankers(AABA), California Chamber of Commerce, Chinese Information and Networking,Association (CINA) ): $100 / ,Non-members: $135 per person - -advanced registration required,To register on line,To pay by check, download form and pay by check as indicated.,Although Council business will not be discussed, this event will serve as Cal-Asia's 2008 ,Annual Meeting. At this event we will be introducing our officers and members of the ,Board of Directors. Space is limited.. ,Questions: Tel: (510) 272-7331 Fax: (510) 272-7339 E-Mail: jeremy@calasia.org,PANEL TOPICS: China, Asia and America: A Dangerous Confusion ,Speaker: William Overholt, Rand Corporation,William H. Overholt holds the Asia Policy Research Chair at RAND’s California headquarters and is Director of the Center.,Previously Dr. Overholt was Joint Senior Fellow at Harvard University. He was also Distinguished Visiting Professor at Yonsei University in South Korea for 2003-‘05. He served as Head of Strategy and Economics at Nomura’s regional headquarters in Hong Kong from 1998 to 2001, and as Managing Director and Head of Research at Bank Boston's regional headquarters in Singapore. During 18 years at Bankers Trust, he ran a country risk team in New York from 1980 to 1984, then was regional strategist and Asia research head based in Hong Kong from 1985 to 1998. ,http://www.calasia.org/events/08Mar19YearofRat.html",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T22:54:45.670Z",
@@ -4533,23 +3649,8 @@
     "externalLink": "",
     "year": 2008,
     "past": true,
-    "schedule": [
-      "11:30 a.m.   Registration and Networking ",
-      "Noon          Welcome Remarks: Hon. Marciano Paynor, Consul General of the Philippines ",
-      "                 Introduction of the Philippine Department of Agriculture Delegation",
-      "12:15 p.m.\t  Luncheon ",
-      "12:45 p.m.   Keynote Presentation by Honorable Secretary Arthur C. Yap",
-      "1:30 p.m.\t   Break-out Sessions",
-      "3:00 p.m.\t   Close"
-    ],
-    "speakers": [
-      "Josyline Javelosa (Philippine Assistant Secretary of Agriculture)"
-    ],
-    "image": [
-      ""
-    ],
     "description": "A luncheon featuring Philippine Assistant Secretary of Agriculture Josyline Javelosa followed by one-on-one meetings with Philippine Dept. of Agriculture Delegation.,EVENT FULLY SUBSCRIBED; REGISTRATION CLOSED,Philippine Agriculture 2008:,Trade and Investment Opportunities     \t ,Luncheon Event with Honorable Arthur C. Yap,,Secretary Philippine Department of Agriculture,Thursday, March 6, 2008; 11:30- 3:00pm,University Club of San Francisco, 800 Powell St., San Francisco,Learn about Philippine agriculture and the opportunities available for entrepreneurs and development partners looking to invest in and trade with the Philippines. Discuss areas of collaboration in agribusiness, including alternative energy development, with the Secretary and members of his delegation.,Hosts: Philippine Department of Agriculture; Philippine Department of Trade and Industry ,Sponsors: Green Energy Technology (GET) Inc.; Philippine Center Management Board ,Organizers/Cooperating Organizations: Philippine Trade and Investment Center (PTIC); California-Asia Business Council (Cal-Asia); California Chamber of Commerce (CalChamber),EVENT FULLY SUBSCRIBED; REGISTRATION CLOSED",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T22:56:55.639Z",
@@ -4571,15 +3672,8 @@
     "externalLink": "",
     "year": 2008,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Dr. Enrique Garcia (President of Andean Development Corporation)"
-    ],
-    "image": [
-      ""
-    ],
     "description": "http://www.calasia.org/events/08-FebGarciaWeb.doc",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T22:59:16.339Z",
@@ -4601,11 +3695,6 @@
     "externalLink": "",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Mike Rowse (Director General of Invest Hong Kong)"
-    ],
-    "image": [],
     "description": null,
     "__v": 0,
     "registration": {
@@ -4627,9 +3716,6 @@
     "externalLink": "",
     "year": 2008,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Implications for Green Business, San Francisco. For members and stakeholders.",
     "__v": 0,
     "registration": {
@@ -4653,9 +3739,6 @@
     "eventType": "external",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -4677,9 +3760,6 @@
     "externalLink": "",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -4703,9 +3783,6 @@
     "externalLink": "",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -4729,9 +3806,6 @@
     "externalLink": "",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -4753,9 +3827,6 @@
     "eventType": "external",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -4777,11 +3848,6 @@
     "externalLink": "",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Jim Wunderman (President of Bay Area Council on Bay Area)"
-    ],
-    "image": [],
     "description": "On theYangtze Council MOU on clean development",
     "__v": 0,
     "registration": {
@@ -4804,9 +3870,6 @@
     "externalLink": "",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -4827,9 +3890,6 @@
     "eventType": "external",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -4850,9 +3910,6 @@
     "eventType": "external",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -4873,9 +3930,6 @@
     "eventType": "external",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -4898,9 +3952,6 @@
     "eventType": "external",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -4922,15 +3973,8 @@
     "externalLink": "",
     "year": 2007,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Tony Tyler (Cathay Pacific CEO)"
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2015-04-01T23:14:36.625Z",
@@ -4953,9 +3997,6 @@
     "eventType": "external",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -4977,9 +4018,6 @@
     "externalLink": "",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Featuring ,-Tim Olson, Manager of the California Energy Commission and the California Energy Technology Export Program,-Stephan Crawford, US Commercial Service,-Jeremy Potash, Executive Director of Cal-Asia,<a href=\"http://www.globalenergyconnection.ca.gov/tep/jsp/index.jsp\" target=\"_blank\">Please visit here for more information</a>",
     "__v": 0,
     "registration": {
@@ -5005,9 +4043,6 @@
     "externalLink": "",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Featured USTDA-sponsored delegation of broadband experts from Malaysia",
     "__v": 0,
     "registration": {
@@ -5032,9 +4067,6 @@
     "eventType": "external",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5056,9 +4088,6 @@
     "eventType": "external",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "The Asian Business Association of Silicon Valley celebrated the grand opening of it's new Mountain View office and it's 10th year in service to Asian business throughout Northern California.",
     "__v": 0,
     "registration": {
@@ -5080,11 +4109,6 @@
     "externalLink": "",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Lida Tan (EPA)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5106,9 +4130,6 @@
     "eventType": "external",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Featuring Indonesia's Minister of Trade, Marie Pangestu",
     "__v": 0,
     "registration": {
@@ -5129,9 +4150,6 @@
     "eventType": "external",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5153,11 +4171,6 @@
     "externalLink": "",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Hon. Burhanuddin Abdullah (Governor)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5180,12 +4193,6 @@
     "externalLink": "",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Datuk Rafidah Aziz (Minister of International Trade and Industry of Malaysia)",
-      "Tim Harris (CEO Komag)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5207,9 +4214,6 @@
     "eventType": "external",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5233,12 +4237,6 @@
     "externalLink": "",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Hon. Ralph L. Boyce (US Ambassador to Thailand)",
-      "Lombard Investments (Co-Host)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5260,11 +4258,6 @@
     "externalLink": "",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Barry Friedman (Minister Counselor for Commercial Affairs at US Embassy Beijing)"
-    ],
-    "image": [],
     "description": null,
     "__v": 0,
     "registration": {
@@ -5286,9 +4279,6 @@
     "externalLink": "",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5313,11 +4303,6 @@
     "externalLink": "",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "H.E. Sudjadnan Parnohadiningrat (Ambassador of the Republic of Indonesia to the U.S.)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5339,9 +4324,6 @@
     "externalLink": "",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": null,
     "__v": 0,
     "registration": {
@@ -5367,11 +4349,6 @@
     "externalLink": "",
     "year": 2007,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Barbara Weisel (Assistant USTR)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5393,9 +4370,6 @@
     "externalLink": "",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5418,9 +4392,6 @@
     "eventType": "external",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5442,9 +4413,6 @@
     "externalLink": "",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5469,9 +4437,6 @@
     "externalLink": "",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5493,9 +4458,6 @@
     "externalLink": "",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Members only reception & networking with senior executives of Hangzhou Branch of Guangdong Development Bank.",
     "__v": 0,
     "registration": {
@@ -5516,9 +4478,6 @@
     "eventType": "external",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Indonesia Day in San Francisco with the Indonesian Day Committee, comprising of dozens of volunteers from the Indonesian community in Northern California. This event is in conjunction with the celebration of the Indonesian Independence Day on August 17th.",
     "__v": 0,
     "registration": {
@@ -5539,9 +4498,6 @@
     "eventType": "external",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Featuring ,-David Gossack, Commercial Attaché, U.S. Embassy Beijing ,-David DeChant,  President of Vision Quest Intelligence; former International Marketer and Consultant, MD State           ,Department of Agriculture,-Jennifer Turner, PhD,  Coordinator of the China Environment Forum & Woodrow Wilson International Center for Scholars",
     "__v": 0,
     "registration": {
@@ -5566,9 +4522,6 @@
     "externalLink": "",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5590,9 +4543,6 @@
     "externalLink": "",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Featuring ,-Dr. David Ray, Deputy Director, Vietnam Competitiveness Initiative, -Dr. Franck Wiebe, Chief Economist, The Asia Foundation, Moderator.,Cosponsored with The Asia Foundation",
     "__v": 0,
     "registration": {
@@ -5614,9 +4564,6 @@
     "eventType": "external",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Senior Chinese Banking Delegation briefing & networking reception.,Part of the week-long training session featuring senior executives from 11 China City Commercial Banks, representatives of China Banking Regulatory Commission and China Banking Association. Some 50 speakers, including presenters from sponsor companies: Fiserv, US Bank, Sandler O'Neill Partners, Oracle, Wells Fargo Bank, Sonnenschein Nath & Rosenthal, Pivotal Resources, Ser Technology and United Commercial Bank. Reception for US companies with presentations by Cisco and office of Governor Arnold Schwarzenegger.",
     "__v": 0,
     "registration": {
@@ -5642,9 +4589,6 @@
     "externalLink": "",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5666,9 +4610,6 @@
     "externalLink": "",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "An informal discussion with the Honorable Muhammad Lutfi, Chairman of the BKPM (Indonesian Investment Coordinating Board)",
     "__v": 0,
     "registration": {
@@ -5693,9 +4634,6 @@
     "externalLink": "",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "An informal dialogue with Hon. P. Tsagaan, Founder of Steppe Link, Mongolia",
     "__v": 0,
     "registration": {
@@ -5717,11 +4655,6 @@
     "externalLink": "",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "David S. Bohigian (U.S. Assistant Secretary of Commerce)"
-    ],
-    "image": [],
     "description": null,
     "__v": 0,
     "registration": {
@@ -5745,11 +4678,6 @@
     "externalLink": "",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "George Ruffner (Senior Commercial Officer at the U.S. Embassy in Singapore)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5770,9 +4698,6 @@
     "eventType": "external",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5798,9 +4723,6 @@
     "eventType": "external",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Delegation featuring senior executives from Changzhou, led by the Mayor of Changzhou and featuring Representative Mike Honda",
     "__v": 0,
     "registration": {
@@ -5822,9 +4744,6 @@
     "externalLink": "",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5846,11 +4765,6 @@
     "externalLink": "",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "David Loevinger (Deputy Assistant Secretary of Treasury for Asia and soon to be financial attaché at the U.S. Embassy in Beijing)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5872,9 +4786,6 @@
     "externalLink": "",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Featuring David Loevinger, Deputy Assistant Secretary of Treasury for Asia and soon to be financial attaché at the U.S. Embassy in Beijing.",
     "__v": 0,
     "registration": {
@@ -5896,9 +4807,6 @@
     "externalLink": "",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "Featuring Henry S. (Hank) Levine, Deputy Assistant Secretary of Commerce for Asia and former US Consul General in Shanghai",
     "__v": 0,
     "registration": {
@@ -5920,11 +4828,6 @@
     "externalLink": "",
     "year": 2006,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Henry S. (Hank) Levine (Deputy Assistant Secretary of Commerce for Asia and former US Consul General in Shanghai)"
-    ],
-    "image": [],
     "description": null,
     "__v": 0,
     "registration": {
@@ -5946,11 +4849,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "James McGregor"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -5974,9 +4872,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6002,9 +4897,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6028,9 +4920,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6056,15 +4945,8 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2005-11-03T23:27:47.989Z",
@@ -6088,12 +4970,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Warren Rothman (Cal-Asia board member)",
-      "Edward Epstein (Salans Shanghai)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6117,9 +4993,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6144,9 +5017,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6170,9 +5040,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6194,9 +5061,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6218,9 +5082,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6242,11 +5103,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Mrs. Rafidah Aziz (Minister of International Trade & Industry - Malaysia)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6268,9 +5124,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6303,9 +5156,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "July 25 - July 27, 2005",
     "__v": 0,
     "registration": {
@@ -6330,12 +5180,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Mr. Xu Guangchun (Henan Provincial Party Committee Secretary)",
-      "Mr. Shi Ji Chun (Vice Governor of Henan Province)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6357,9 +5201,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6383,9 +5224,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6408,9 +5246,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6434,9 +5269,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6461,9 +5293,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6488,11 +5317,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "U.S. Senator Dianne Feinstein"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6514,12 +5338,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Soulivong Daravong (Minister of Commerce - Laos)",
-      "Sary Tatpaporn (US Laos National Coalition)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6546,9 +5364,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "April 27 - April 29, 2005",
     "__v": 0,
     "registration": {
@@ -6572,9 +5387,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "The second meeting in the series: China Financial Services and Banking Project.",
     "__v": 0,
     "registration": {
@@ -6602,9 +5414,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "April 18 - April 20, 2005",
     "__v": 0,
     "registration": {
@@ -6629,15 +5438,8 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "April 7 - April 8, 2005",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2005-04-07T23:32:00.497Z",
@@ -6660,15 +5462,8 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Hon. Tan Sri Dr. Koh Tsu Koon"
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2005-03-16T23:31:12.026Z",
@@ -6691,15 +5486,8 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Richard Martin"
-    ],
-    "image": [
-      ""
-    ],
     "description": "A discussion with Richard Martin, Managing Editor, IMA Asia.",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2005-03-03T00:29:39.886Z",
@@ -6722,9 +5510,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "The first meeting in the series: China Financial Services and Banking Project.",
     "__v": 0,
     "registration": {
@@ -6757,18 +5542,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Lynn Pascoe (US Ambassador to Indonesia)",
-      "Margaret Keshishian (Senior Commercial Officer & US Embassy Jakarta)",
-      "Joe Bartlett (President at  American Chamber of Commerce)",
-      "James Castle (Castle Asia)",
-      "Milind Gadre (Vision-Ease Asia)",
-      "Andy Cobham (Motorola)",
-      "Darrell Johnson (SSEK)",
-      "Darryl Hadaway (Ernst & Young)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6794,9 +5567,6 @@
     "externalLink": "",
     "year": 2005,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6818,9 +5588,6 @@
     "externalLink": "",
     "year": 2004,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6848,9 +5615,6 @@
     "externalLink": "",
     "year": 2004,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6874,11 +5638,6 @@
     "externalLink": "",
     "year": 2004,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Juan Carlos Rivera-Montes (OPIC Small Business Manager)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6903,12 +5662,6 @@
     "externalLink": "",
     "year": 2004,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Alan Adcock (Rouse & Co.)",
-      "Emma Davis (Clifford Chance)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6933,12 +5686,6 @@
     "externalLink": "",
     "year": 2004,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Douglas Mancill (Deacons Bangkok)",
-      "Stephan Crawford (US Commercial Service)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -6960,15 +5707,8 @@
     "externalLink": "",
     "year": 2004,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Gavin Newsom (Mayor of San Francisco. Principal sponsor - Hong Kong Association of Northern California)"
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2004-09-25T23:14:24.620Z",
@@ -6990,15 +5730,8 @@
     "externalLink": "",
     "year": 2004,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2004-08-18T23:13:23.471Z",
@@ -7028,11 +5761,6 @@
     "externalLink": "",
     "year": 2004,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Forrest Metz"
-    ],
-    "image": [],
     "description": "Forrest Metz - Investment Research Analyst, Overseas Private Investment Corporation's (OPIC) Investment Development and Economic Growth Division",
     "__v": 0,
     "registration": {
@@ -7054,18 +5782,6 @@
     "externalLink": "",
     "year": 2004,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Dr. Do Van Loc",
-      "Mr. Le Thanh Binh",
-      "Dr. Nguyen Trong Giang",
-      "Dr. Dao Khac An",
-      "Dr. Nguyen Anh Tuan",
-      "Dr. Nguyen Khac Hai",
-      "Mr. Vuong Dua",
-      "Dr. Che Dinh Ly"
-    ],
-    "image": [],
     "description": "Cal-Asia briefing on business incubators and entrepreneurship.,In cooperation with San Jose City College:,- Dr. Do Van Loc, General Director, High-tech Dept, Ministry of Science and Technology,- Mr. Le Thanh Binh, Deputy General Director, International Relation Dept, MOST,- Prof. , Dr. Nguyen Trong Giang, Director, Post graduate education and training center, Hanoi University of Technology,- Dr. Dao Khac An, Senior Researcher, Institute for Material Science, Vietnam Institute for Science and technology,- Dr. Nguyen Anh Tuan, Deputy Rector, Can Tho University,- Prof. Dr. Nguyen Khac Hai, Director, Institute for Medical Labor and Environmental sanitary;,- Mr. Vuong Dua, General Director, Education and Science Dept, Nhan Dan Newspaper,- Dr. Che Dinh Ly, Director, Science and International Relation Cooperation Dept, Ho Chi Minh City National University",
     "__v": 0,
     "registration": {
@@ -7089,11 +5805,6 @@
     "externalLink": "",
     "year": 2004,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Mr. Howard Gould (Commissioner of Financial Institutions State of California Principal sponsor: Association of Asian American Bankers)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7116,15 +5827,8 @@
     "eventType": "internal",
     "year": 2004,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "Honoring Washington Sycip and featuring the art of Pop Zhao.",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2004-05-14T23:03:15.429Z",
@@ -7146,15 +5850,8 @@
     "externalLink": "",
     "year": 2004,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Vasana Mututanont"
-    ],
-    "image": [
-      ""
-    ],
     "description": "Vasana Mututanont,Economic Counselor, Office of the Economic Counselor, Thailand Board of Investment, New York - San Francisco",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2004-04-06T23:01:43.404Z",
@@ -7176,11 +5873,6 @@
     "externalLink": "",
     "year": 2004,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Vice Mayor Chen Mingde"
-    ],
-    "image": [],
     "description": "Delegation of senior businessmen and officials led by Vice Mayor Chen Mingde.",
     "__v": 0,
     "registration": {
@@ -7202,11 +5894,6 @@
     "externalLink": "",
     "year": 2004,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      ""
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7230,11 +5917,6 @@
     "externalLink": "",
     "year": 2003,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Michael J. Scown (Regional Council &  Asia Pacific Intel Capital)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7256,15 +5938,8 @@
     "externalLink": "",
     "year": 2003,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Joe O'Keefe (Manager at Corporate Relations International Finance Corporation (IFC))"
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2003-10-21T22:46:09.723Z",
@@ -7286,13 +5961,6 @@
     "externalLink": "",
     "year": 2003,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Mr. C.L. Lai (Advisor Singapore Technologies - Vietnam Investments & Vietnam Singapore Industrial Park - VSIP)",
-      "Mr. Nguyen Van Hung (Vice Chairman - Vietnam Singapore Industrial Park)",
-      "Mr. Tran Quang Lan (General Director - Vietnam Singapore Industrial Park)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7314,11 +5982,6 @@
     "externalLink": "",
     "year": 2003,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Adam Dupre (China Company Research Services Ltd.)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7340,17 +6003,8 @@
     "externalLink": "",
     "year": 2003,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Shao Yi (Secretary of the CPC Changxing County Committee)",
-      "Ge Wei (Director of Changxing Development Zone)",
-      "Lu Debin (Chairman at Juneng Industry Co. Ltd)"
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2003-09-15T22:40:52.243Z",
@@ -7372,16 +6026,6 @@
     "externalLink": "",
     "year": 2003,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Phil Crowley",
-      "Richard B. Lewis",
-      "Douglas Mancill",
-      "Edwarde Webre",
-      "Kevin Hobgood-Brown",
-      "DEACONS International Law Firm"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7403,11 +6047,6 @@
     "externalLink": "",
     "year": 2003,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Stephen Selby (Director of Intellectual Property. Hong Kong Special Administrative Region Government)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7430,11 +6069,6 @@
     "externalLink": "",
     "year": 2003,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Daniel K.H. Chao (Bechtel Enterprises)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7456,13 +6090,6 @@
     "externalLink": "",
     "year": 2003,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Kimberlee Kimura (SF Fed)",
-      "Paul Matthews (Matthews Int'l Capital)",
-      "Robert Theleen (ChinaVest)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7484,13 +6111,6 @@
     "externalLink": "",
     "year": 2003,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Jing Wang (Qualcomm)",
-      "Stanley Chia (Vodafone)",
-      "Lindsay Leveen (Bechtel)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7512,15 +6132,6 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Ambassador Linda Tsao Yang",
-      "Stanley Lubman (Esq.)",
-      "Claire Wright",
-      "(Esq.)",
-      "Kimberlee Kimura (Federal Reserve Bank of San Francisco)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7542,11 +6153,6 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Emily Sano (Director -  Asian Art Museum SF)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7568,9 +6174,6 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7592,15 +6195,8 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "Antony Leung (Financial Secretary. Hong Kong Special Administrative Region)"
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2002-09-27T22:29:56.877Z",
@@ -7622,9 +6218,6 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7646,11 +6239,6 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Michael J. Scown (Intel Capital)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7672,11 +6260,6 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Richard Chang (General Partner at Bowman Capital. Former Sony executive and co-founder of Columbia Pictures Asia)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7698,9 +6281,6 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7723,15 +6303,8 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "July 10 - July 12, 2002",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2002-07-10T22:25:15.028Z",
@@ -7754,13 +6327,6 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Paul Matthews (Matthews Int'l Capital)",
-      "Steve Schoenfeld (Barclay's Global)",
-      "Reuven Glick (FRBSF)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7782,11 +6348,6 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Wang Yunxiang (Consul General of the PRC in San Francisco)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7808,11 +6369,6 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Datuk Rafidah Aziz (Minister of International Trade and Industry - Malaysia)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7834,15 +6390,8 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      "H.E. Sakthip Krairiksh (Ambassador of Thailand to the United States)"
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2002-05-29T22:20:06.502Z",
@@ -7865,9 +6414,6 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7889,11 +6435,6 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Robert Broadfoot (Asia Risk Expert)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7915,9 +6456,6 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7939,11 +6477,6 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Dr. Victor Li"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7965,12 +6498,6 @@
     "externalLink": "",
     "year": 2002,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Robert Kapp (U.S. China Business Council)",
-      "George Koo (Deloitte & Touche)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -7992,11 +6519,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Vietnam Government and Trade Delegation led by Vietnam's Deputy Prime Minister Nguyen Tan Dzung"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8018,11 +6540,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Mme. Pham Chi Lan (Vietnam Chamber of Commerce & Industry)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8044,11 +6561,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "H.E. Chan Heng Chee (Singapore's Ambassador to the United States)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8070,9 +6582,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8094,9 +6603,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8118,11 +6624,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Minister Counselor Lee Boam (US Embassy Beijing)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8144,9 +6645,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8168,9 +6666,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8192,11 +6687,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Dr. Douglas Ramage"
-    ],
-    "image": [],
     "description": "Dr. Douglas Ramage - The Asia Foundation's Representative in Indonesia, East Timor, and Malaysia.",
     "__v": 0,
     "registration": {
@@ -8218,11 +6708,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Kuala Lumpur"
-    ],
-    "image": [],
     "description": "June 27 - June 29, 2001",
     "__v": 0,
     "registration": {
@@ -8244,11 +6729,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "H.E. Dr. Tej Bunnag (Ambassador of Thailand to the U.S)"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8270,12 +6750,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Richard Martin",
-      "EIU"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8297,9 +6771,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8322,9 +6793,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8346,9 +6814,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8370,9 +6835,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8394,11 +6856,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [
-      "Senior Chinese Trade Experts"
-    ],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8420,9 +6877,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8444,9 +6898,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8468,15 +6919,8 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": null,
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2001-02-22T22:53:47.942Z",
@@ -8498,9 +6942,6 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": [],
-    "speakers": [],
-    "image": [],
     "description": "",
     "__v": 0,
     "registration": {
@@ -8522,15 +6963,8 @@
     "externalLink": "",
     "year": 2001,
     "past": true,
-    "schedule": null,
-    "speakers": [
-      ""
-    ],
-    "image": [
-      ""
-    ],
     "description": "An informal, sector-by-sector dialogue with Cal-Asia experts on business prospects",
-    "__v": 1,
+    "__v": 0,
     "registration": {
       "date": {
         "full": "2001-01-10T22:50:56.651Z",

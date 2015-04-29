@@ -39,7 +39,7 @@
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" href="/"><img src="img/logoblk.png" alt="logo" onerror="this.onerror=null; this.src='img/logoblk.png'"></a>
+          <a class="navbar-brand" href="/"><img src="img/cal-asia-logo-green.svg" alt="logo" onerror="this.onerror=null; this.src='img/logoblk.png'"></a>
         </div><!-- end navbar-header -->
 
         <div class="collapse navbar-collapse" id = "nav_list" >
@@ -55,7 +55,7 @@
             </li>
             <li><a href="/membership">Membership</a></li>
             <li><a href="/resources">Resources</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <!--<li><a href="/blog">Blog</a></li>-->
             <li><a href="/about">About</a></li>
             <li><a href="http://asianight.org/" target="_blank" class="extLink">Asia Night <span class="glyphicon glyphicon-new-window"></span></a></li>
           
@@ -167,9 +167,9 @@
                   </address>
                   <address>
                     <strong>Executive Director, Ms. Jeremy Potash</strong> 
-                    <a href="mailto:#">jeremy@calasia.org</a><br>
+                    <a href="mailto:#">jeremy<span style="display:none">Cal-Asia</span>@calasia.org</a><br>
                     <strong>General Information</strong>
-                    <a href="mailto:#">info@calasia.org</a>
+                    <a href="mailto:#">info<span style="display:none">Cal-Asia</span>@calasia.org</a>
                   </address>
                 </div><!-- end col-lg-12 -->
               </div><!-- end row -->
@@ -198,17 +198,20 @@
                     <h2>Subscribe to Cal-Asia</h2>
                     <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
                     <div class="mc-field-group">
-                      <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-                    </label>
+                      <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
                       <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
                     </div>
                     <div class="mc-field-group">
-                      <label for="mce-FNAME">First Name </label>
-                      <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                      <label for="mce-FNAME">First Name  <span class="asterisk">*</span></label>
+                      <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
                     </div>
                     <div class="mc-field-group">
-                      <label for="mce-LNAME">Last Name </label>
-                      <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                      <label for="mce-LNAME">Last Name  <span class="asterisk">*</span></label>
+                      <input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
+                    </div>
+                    <div class="mc-field-group">
+                      <label for="mce-COMPANY">Company/Organization </label>
+                      <input type="text" value="" name="COMPANY" class="" id="mce-COMPANY">
                     </div>
                     <div id="mce-responses" class="clear">
                       <div class="response" id="mce-error-response" style="display:none"></div>
@@ -219,7 +222,7 @@
                   </div>
                 </form>
               </div>
-              <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[5]='MMERGE5';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+              <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[5]='MMERGE5';ftypes[5]='text';fnames[6]='COMPANY';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
               <!--End mc_embed_signup-->
             </div><!-- end modal body-->
           </div><!-- end modal content -->
@@ -241,6 +244,12 @@
       </section>
     </div> <!-- end Body Container-->
 
+    <!--
+    <div id="stuff">
+    </div>
+    <div id="edit">
+    </div>-->
+
   
     <!-- All Javascript at the bottom of the page for faster page loading -->
       
@@ -254,8 +263,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-sanitize.js"></script>
+
     <script src="https://mindmup.github.io/bootstrap-wysiwyg/external/jquery.hotkeys.js"></script>
     <script src="js/bootstrap-wysiwyg.js"></script>
+    
+    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+    <link href="csss/summernote.css" rel="stylesheet">
+    <script src="js/summernote.min.js"></script>-->
+
     <script src="js/calasia.js"></script>
     <script src="js/script.js"></script>
 

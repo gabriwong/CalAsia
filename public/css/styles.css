@@ -34,7 +34,6 @@ body{
 #bodyDiv {
   background-color: white;
   color:black;
-
 }
 
 #homeAbout {
@@ -50,8 +49,13 @@ body{
 }
 
 #homeUpdates {
-  padding: 0px 0 20px 0; 
+  padding: 0;
+  border:solid 1px #ddd;
+  border-radius: 5px;
   margin: 20px;
+}
+#homeUpdates h4{
+  margin:5px 5px;
 }
 
 thead {
@@ -169,8 +173,17 @@ thead {
 .menubox img{
   box-shadow: 0 0 1px 1px rgba(0,0,0,0.5);
 }
-#editor{
+#editor, #editor2{
   overflow-y:scroll;
+}
+#editor img, #editor2 img{
+  height:100%;
+}
+.btn-toolbar{
+  padding:5px 0;
+}
+td img{
+  height:100px;
 }
 footer{
   background-color: #1F1F1F;
@@ -247,6 +260,35 @@ footer .col-md-4:nth-child(2) .footerContent{
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
 }
+#edit{
+  position:fixed;
+  top:0;
+  left:50%;
+  width:100%;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+}
+#stuff{
+  position:fixed;
+  right:0;
+  bottom:5px;
+  width:100px;
+}
+.note-codable{
+  display:none;
+}
+.button{
+  text-align: center;
+  display:block;
+  border-radius:50px;
+  background:#537368;
+  padding:5px;
+  margin:5px;
+  box-shadow:1px 1px 1px 2px rgba(0,0,0,0.3);
+  cursor:pointer;
+}
 
 
 /* --------------------------------------
@@ -270,6 +312,11 @@ body {
 }
 .navbar-default .navbar-brand {
   color: #515151;
+  width: 125px;
+  height: 125px;
+}
+.navbar-brand>img{
+  width:100%;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
   color: #000000;
@@ -351,17 +398,7 @@ body {
 
 #myCarousel .item { height: 400px; }
 
-#slide1 {
-  background: url('../img/carousel/A_featureVietnam.jpg') top center no-repeat;
-}
 
-#slide2 {
-  background: url('../img/carousel/B_AN14-large.jpg') top center no-repeat;
-}
-
-#slide3 {
-  background: url('../img/carousel/C_CML-large.jpg') top center no-repeat;
-}
 
 /* --------------------------------------
    Global Styles

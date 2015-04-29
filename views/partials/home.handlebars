@@ -4,34 +4,18 @@
 
           <!-- Indicators -->
           <ol class="carousel-indicators">
-            <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
-            <li data-slide-to="1" data-target="#myCarousel"></li>
-            <li data-slide-to="2" data-target="#myCarousel"></li>
+            <li data-slide-to="[[item.order]]" data-target="#myCarousel" carousel-first-active ng-repeat="item in carousel"></li>
           </ol>
 
           <!-- Wrapper for slides --> 
           <div class="carousel-inner">
-            <div class="item active" id="slide1">
-              <div class="carousel-caption">
-              <h4>Upcoming Cal-Asia Event</h4>
-              <p><a href="https://www.eventbrite.com/e/business-opportunities-in-vietnam-breakfast-briefing-tickets-16045945856" target="_blank">Breakfast Briefing: Business Opportunities in Vietnam</a></p>
+            <div class="item" id="slide[[item.order]]" ng-repeat="item in carousel" carousel-first-active style="background: url([[item.image]]) top center no-repeat">
+              <div class="carousel-caption" contenteditable="false">
+                <h4>[[item.title]]</h4>
+                <div ng-bind-html="item.text"></div>
               </div><!--end carousel-caption --> 
-            </div><!-- end item active -->  
-
-            <div class="item" id="slide2">
-              <div class="carousel-caption">
-                <h4>Asia Night 2014</h4>
-                <p>(From Left to Right) Liz Ferguson (Chairwoman), Richard Blum (Blum Capital), Jeremy Potash (Executive Director), and George Sycip (Vice President) after presenting Mr. Blum the 2014 New Silk Road Award</p>
-              </div><!-- end carousel-caption-->
-            </div><!-- end item 2 --> 
-
-            <div class="item" id="slide3">
-              <div class="carousel-caption">
-                <h4>Asia Night 2012</h4>
-                <p>New Silk Road Recipient Mr. Chong-Moon Lee giving a speech on the rise of Asia</p>
-              </div><!-- end carousel-caption-->
-            </div><!-- end item 3 --> 
-          </div><!-- end carousel-inner -->
+            </div><!-- end item -->
+          </div>
 
           <!-- Controls -->
           <a class="left carousel-control" data-slide="prev" onclick="$('#myCarousel').carousel('prev')" style="cursor:pointer"><span class="icon-prev"></span></a>
@@ -46,8 +30,8 @@
         <div class="col-md-8">
 
           <!-- 1 About Our Work -->
-          <div id="homeAbout" id="leftColumn">
-            <h4> About Our Work</h4>
+          <div id="homeAbout" id="leftColumn" contenteditable="false">
+            <h4><span class="glyphicon glyphicon-globe"></span> About Our Work</h4>
             <p style="padding: 0 30px;"> California-Asia Business Council (Cal-Asia) is one of California's leading private-sector, non-profit, international business-promotion associations. Our mission is to help California firms of all sizes develop or expand their commercial ties with the economies of Pacific Asia and India. Cal-Asia members range from some of the nation's largest multinational companies to small and medium-sized exporters, importers, manufacturers, and service companies. Industries represented range from infrastructure development to technology, and also export-import, resource development, global transportation, engineering and design, banking and finance. </p> 
           </div><!-- end homeAbout -->
 
@@ -92,47 +76,27 @@
             <h4><span class="glyphicon glyphicon-calendar"></span> Upcoming Cal-Asia and Partner Events <small><a href="/calendar">view all >></a></small></h4>
             <p style="padding: 0 30px;" ng-repeat="event in upcomingEvents">
               <strong>[[event.name]]</strong><br> 
-              <i>[[event.date.string]]</i><span style="color:gray"> - [[event.countDown]]</span><br>
+              <i ng-show="event.date.string">[[event.date.string]]</i><span style="color:gray" ng-show="event.date.string"> - [[event.countDown]]</span><br>
               <span ng-show="event.location">
                 [[event.location]]
               </span>
               <br>
-              <a ng-click="showModal([[event._id]])" style="cursor:pointer">Details</a> | <a href="[[event.registration.url]]" target="_blank">Registration</a>
+              <span ng-show="event._id"><a ng-click="showModal([[event._id]])" style="cursor:pointer">Details</a> | <a href="[[event.registration.url]]" target="_blank">Registration</a></span>
             </p>
           </div><!-- end homeEvents -->   
         </div><!-- end col-md-8 leftColumn --> 
 
         <div class="col-md-4" id="rightColumn">
           <!-- 3 News & Updates -->  
-          <div class="modal fade" id="[[update._id]]" ng-repeat="update in updates">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button class="close" data-dismiss="modal">&times;</button>
-
-                  <h4 class="modal-title">[[update.title]]</h4>
-                  <h5 ng-if="update.date.string">Date: [[update.date.string]]</h5>
-                </div><!-- end modal header-->
-
-                <div class="modal-body">
-                <p ng-bind-html="update.description"></p> 
-
-                </div><!-- end modal body-->
-
-                <div class="modal-footer">
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">Close</button>
-                </div><!-- end modal-footer -->
-              </div><!-- end modal content -->
-            </div><!-- end modal dialog --> 
-          </div><!--end modal fade -->  
           <div id="homeUpdates"> 
-            <h4><span class="glyphicon glyphicon-asterisk"></span> News and Updates</h4>
-            <p ng-repeat="update in updates" style="padding: 0 30px;">
+            <div>
+              <h4><span class="glyphicon glyphicon-paperclip"></span> News and Updates</h4>
+            </div>
+            <p ng-repeat="update in updates" style="padding: 10px 30px 10px 30px;margin:0;border-top:solid 1px #ddd">
               <strong>[[update.title]]</strong><br>
               <span ng-if="update.description">
                 <i ng-if="update.date.string">[[update.date.string]]</i><br ng-if="update.date.string">
-                <span ng-bind-html="update.description"></span><br>
-                <a ng-click="showModal([[update._id]])" style="cursor:pointer">Read More >></a>
+                <span ng-bind-html="update.description"></span>
               </span>
             </p>
            </div><!-- end homeUpdates -->
@@ -150,8 +114,8 @@
         <div id="sponsors">
           <div class="row">
             <div class="col-md-12">
-              <p class="lead text-center">Asia Night Site Sponsors</p>
-               <div id="sponsorlogos" class="text-center"> 
+              <p class="lead text-center" contenteditable="false">Asia Night Site Sponsors</p>
+              <div id="sponsorlogos" class="text-center" contenteditable="false"> 
                 <a href="http://www.ambex.com/management.htm" target="_blank"><img src="../img/logo-ambex.png" alt="AMBEX" height=10% width=10% class="sponsorlogo"></a>
 
                 <a href="http://www.blumcapital.com/" target="_blank"><img src="../img/logo-blum.gif" alt="Blum Capital" class="sponsorlogo"></a>

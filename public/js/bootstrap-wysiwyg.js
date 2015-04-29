@@ -39,7 +39,23 @@
 				var commandArr = commandWithArgs.split(' '),
 					command = commandArr.shift(),
 					args = commandArr.join(' ') + (valueArg || '');
-				document.execCommand(command, 0, args);
+					console.log(args);
+				if (args.substring(0,4) == "data"){
+					document.execCommand(command, 0, args);
+				}
+				else if (args != ''){
+					if (args.substring(0,4) != "http") args = "http://"+args;
+					var selected = document.getSelection();
+					if ($('#linkTarget').is(':checked')){
+						document.execCommand("insertHTML",false,"<a href='"+args+"' target='_blank'>"+selected+"</a>");
+					}
+					else{
+						document.execCommand("insertHTML",false,"<a href='"+args+"'>"+selected+"</a>");
+					}
+				}
+				else{
+					document.execCommand(command, 0, args);
+				}
 				updateToolbar();
 			},
 			bindHotkeys = function (hotKeys) {
@@ -110,6 +126,10 @@
 					saveSelection();
 				});
 				toolbar.find('[data-toggle=dropdown]').click(restoreSelection);
+				toolbar.find('input-append').click(function(){
+					this.parent().attr('aria-expand',true);
+					restoreSelection();
+				})
 
 				toolbar.find('input[type=text][data-' + options.commandRole + ']').on('webkitspeechchange change', function () {
 					var newValue = this.value; /* ugly but prevents fake double-calls due to selection restoration */
@@ -122,6 +142,7 @@
 					saveSelection();
 				}).on('focus', function () {
 					var input = $(this);
+					console.log("test");
 					if (!input.data(options.selectionMarker)) {
 						markSelection(input, options.selectionColor);
 						input.focus();
