@@ -234,7 +234,12 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		});
 		$http.get("/api/carousel").success(function(data, status, headers, config){
 			if(data.length==0){
-				data.push({name:"No Upcoming Events",text:"",image:'<img src="img/cal-asia-logo-green.svg" alt="logo" onerror="this.onerror=null; this.src=\'img/logoblk.png\'">'});
+				data.push({
+					order:1,
+					title:"California-Asia Business Council",
+					text:"One of California's leading private-sector, non-profit, international business-promotion associations",
+					image:'<img src="img/cal-asia-logo-green.svg">'
+				});
 			}
 			$scope.carousel = data;
 			$scope.carousel.forEach(function(item, i){
