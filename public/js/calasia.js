@@ -73,7 +73,55 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			})
 			.when('/adminCarousel',{
 				templateUrl: 'partials/adminCarousel',
-				controller: 'carouselCtrl',
+				controller: 'adminCarouselCtrl',
+				resolve:{
+					auth: function ($q, authenticationService, $location){
+						var userInfo = authenticationService.getUserInfo();
+						if (userInfo) {
+							return $q.when(userInfo);
+						}
+						else{
+							$location.path('/login');
+							return $q.reject({authenticated:false});
+						}
+					}
+				}
+			})
+			.when('/adminEvent',{
+				templateUrl: 'partials/adminEvent',
+				controller: 'adminEventCtrl',
+				resolve:{
+					auth: function ($q, authenticationService, $location){
+						var userInfo = authenticationService.getUserInfo();
+						if (userInfo) {
+							return $q.when(userInfo);
+						}
+						else{
+							$location.path('/login');
+							return $q.reject({authenticated:false});
+						}
+					}
+				}
+			})
+			.when('/adminUpdate',{
+				templateUrl: 'partials/adminUpdate',
+				controller: 'adminUpdateCtrl',
+				resolve:{
+					auth: function ($q, authenticationService, $location){
+						var userInfo = authenticationService.getUserInfo();
+						if (userInfo) {
+							return $q.when(userInfo);
+						}
+						else{
+							$location.path('/login');
+							return $q.reject({authenticated:false});
+						}
+					}
+				}
+			})
+			.when('/adminBlog',{
+				templateUrl: 'partials/adminBlog',
+				controller: 'adminBlogCtrl',
 				resolve:{
 					auth: function ($q, authenticationService, $location){
 						var userInfo = authenticationService.getUserInfo();
@@ -244,6 +292,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			$scope.carousel = data;
 			$scope.carousel.forEach(function(item, i){
 				item.image = item.image.slice(9, item.image.length-1);
+				item.index = item.order - 1;
 			})
 		})
 		$http.get("/api/upcomingEvents").success(function(data, status, headers, config){
@@ -338,6 +387,72 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			$('html,body').animate({scrollTop: $('#economyMenu').offset().top},1000);
 			var country = $routeParams.country;
 			$('#'+country).fadeToggle("fast", "linear");
+		}
+	})
+	.controller("blogCtrl", function ($scope, $http){
+		if($routeParams.id==undefined){
+			$http.get('/api/blogs').success(function(data){
+				if(data.length==0){
+					data.push({name:"No Entry"});
+				}
+				$scope.blogs = data;
+			})
+		}
+		else{
+			var id = $routeParams.id;
+			$http.get("/api/blog/"+id).success(function(data, status, headers, config){
+				$scope.blog = data.blog;
+			})
+		}
+	})
+	.controller('adminEventCtrl', function ($scope, $filter, $http, authenticationService) {
+		$http.get('/api/events').success(function(data, status, headers, config){
+			$scope.eventCount = data.length;
+		})
+		$http.get('/api/events/2015').success(function(data, status, headers, config){
+			$scope.events = data;
+			$scope.yearEventCount = $scope.events.length;
+			$scope.year = "2015";
+		})
+		$scope.showYear =function(year){
+			console.log(year);
+			if (year == 'All'){
+				$http.get('/api/events').success(function(data, status, headers, config){
+					$scope.events = data;
+					$scope.yearEventCount = $scope.events.length;
+					$scope.year = year;
+				})
+			}
+			else {
+				$http.get('/api/events/'+year).success(function(data, status, headers, config){
+					$scope.events = data;
+					$scope.yearEventCount = $scope.events.length;
+					$scope.year = year;
+				})
+			}
+		}
+		$scope.showModal = function (id){
+			var selector = "#"+id;
+			$(selector).modal('show');
+		}
+		$scope.deleteEvent = function(id){
+		    var current = "."+id;
+		    if(confirm("Are you sure you want to delete this event?")==true){
+				$http.delete('api/events/'+id)
+					.success(function(data){
+						$(current).fadeOut("fast");
+						$scope.eventCount--;
+						$scope.yearEventCount--;
+				})
+			}
+		}
+		$scope.logout = function() {
+			authenticationService.logout().then(function (result) {
+				$scope.userInfo = null;
+				$location.path("/login");
+			}, function (error) {
+				console.log(error);
+			});
 		}
 	})
 	.controller("addEventCtrl",function ($scope, $http, $location){
@@ -473,6 +588,30 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				});
 		};
 	})
+	.controller('adminUpdateCtrl', function ($scope, $filter, $http, authenticationService) {
+		$http.get('/api/updates').success(function(data, status, headers, config){
+			$scope.updates = data;
+			$scope.updateCount = $scope.updates.length;
+		})
+		$scope.deleteUpdate = function(id){
+		    var current = "."+id;
+		    if(confirm("Are you sure you want to delete this update?")==true){
+		      $http.delete('api/updates/'+id)
+		        .success(function(data){
+					$(current).fadeOut("fast");
+					$scope.updateCount--;
+		        })
+		    }
+		}
+		$scope.logout = function() {
+			authenticationService.logout().then(function (result) {
+				$scope.userInfo = null;
+				$location.path("/login");
+			}, function (error) {
+				console.log(error);
+			});
+		}
+	})
 	.controller("addUpdateCtrl",function ($scope, $http, $location){
 		$('#editor').wysiwyg();
 		$('#editor').cleanHtml();
@@ -533,20 +672,32 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				});
 		};
 	})
-	.controller("blogCtrl", function ($scope, $http){
-		if($routeParams.id==undefined){
-			$http.get('/api/blogs').success(function(data){
-				if(data.length==0){
-					data.push({name:"No Entry"});
-				}
-				$scope.blogs = data;
-			})
+	.controller('adminBlogCtrl', function ($scope, $filter, $http, authenticationService) {
+		$http.get('/api/blogs').success(function(data, status, headers, config){
+			$scope.blogs = data;
+			$scope.blogCount = $scope.blogs.length;
+		})
+		$scope.showModal = function (id){
+			var selector = "#"+id;
+			$(selector).modal('show');
 		}
-		else{
-			var id = $routeParams.id;
-			$http.get("/api/blog/"+id).success(function(data, status, headers, config){
-				$scope.blog = data.blog;
-			})
+		$scope.deleteBlog = function(id){
+			var current = "."+id;
+			if(confirm("Are you sure you want to delete this blog entry?")==true){
+				$http.delete('api/blogs/'+id)
+				.success(function(data){
+					$(current).fadeOut("fast");
+					$scope.blogCount--;
+				})
+			}
+		}
+		$scope.logout = function() {
+			authenticationService.logout().then(function (result) {
+				$scope.userInfo = null;
+				$location.path("/login");
+			}, function (error) {
+				console.log(error);
+			});
 		}
 	})
 	.controller("addBlogCtrl",function ($scope, $http, $location){
@@ -607,11 +758,12 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				});
 		};
 	})
-	.controller('carouselCtrl', function ($scope, $filter, $http) {
+	.controller('adminCarouselCtrl', function ($scope, $filter, $http, authenticationService) {
 		$('#success').css("opacity",0);
 		var N;
 		$http.get('/api/carousel').success(function(data, status, headers, config){
 			$scope.items = data;
+			$scope.carouselCount = $scope.items.length;
 			N = $scope.items.length;
 		})
 		$scope.addItem = function(){
@@ -619,6 +771,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			$http.post('/api/carousel/new', {order:N, title:"", text:"", img:""}).
 			success(function(data) {
 				$scope.items.push(data);
+				$scope.carouselCount++;
 			});
 		}
 		$scope.saveOrder = function(){
@@ -639,9 +792,18 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		      $http.delete('api/carousel/'+id)
 		        .success(function(data){
 					$(current).fadeOut("fast");
+					$scope.carouselCount--;
 					N--;
 		        })
 		    }
+		}
+		$scope.logout = function() {
+			authenticationService.logout().then(function (result) {
+				$scope.userInfo = null;
+				$location.path("/login");
+			}, function (error) {
+				console.log(error);
+			});
 		}
 	})
 	.controller("editCarouselCtrl", function ($scope, $http, $location, $routeParams){
@@ -670,78 +832,27 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		};
 	})
 	.controller("adminCtrl", function ($scope, $http, $timeout, $location, authenticationService){
-		$http.get('/api/events/2015').success(function(data, status, headers, config){
-			$scope.events = data;
-			$scope.eventCount = $scope.events.length;
-			$scope.year = "2015";
+		$http.get('/api/carousel').success(function(data, status, headers, config){
+			$scope.carouselCount = data.length;
+		})
+		$http.get('/api/events').success(function(data, status, headers, config){
+			$scope.eventCount = data.length;
 		})
 		$http.get('/api/updates').success(function(data, status, headers, config){
-			$scope.updates = data;
-			$scope.updateCount = $scope.updates.length;
+			$scope.updateCount = data.length;
 		})
 		$http.get('/api/blogs').success(function(data, status, headers, config){
 			$scope.blogs = data;
 			$scope.blogCount = $scope.blogs.length;
 		})
-		$scope.showYear =function(year){
-			console.log(year);
-			if (year == 'All'){
-				$http.get('/api/events').success(function(data, status, headers, config){
-					$scope.events = data;
-					$scope.eventCount = $scope.events.length;
-				})
-			}
-			else {
-				$http.get('/api/events/'+year).success(function(data, status, headers, config){
-					$scope.events = data;
-					$scope.eventCount = $scope.events.length;
-				})
-			}
-			$scope.year = year;
-		}
-		$scope.showModal = function (id){
-			var selector = "#"+id;
-			$(selector).modal('show');
-		}
-		$scope.deleteEvent = function(id){
-		    var current = "."+id;
-		    if(confirm("Are you sure you want to delete this event?")==true){
-				$http.delete('api/events/'+id)
-					.success(function(data){
-						$(current).fadeOut("fast");
-						$scope.eventCount--;
-				})
-		    }
-		}
-		$scope.deleteUpdate = function(id){
-		    var current = "."+id;
-		    if(confirm("Are you sure you want to delete this update?")==true){
-		      $http.delete('api/updates/'+id)
-		        .success(function(data){
-					$(current).fadeOut("fast");
-					$scope.updateCount--;
-		        })
-		    }
-		}
-		$scope.deleteBlog = function(id){
-			var current = "."+id;
-			if(confirm("Are you sure you want to delete this blog entry?")==true){
-				$http.delete('api/blogs/'+id)
-				.success(function(data){
-					$(current).fadeOut("fast");
-					$scope.blogCount--;
-				})
-			}
-		}
 		$scope.logout = function() {
-	    authenticationService.logout()
-	      .then(function (result) {
-	        $scope.userInfo = null;
-	        $location.path("/login");
-	      }, function (error) {
-	        console.log(error);
-	      });
-	  }
+			authenticationService.logout().then(function (result) {
+				$scope.userInfo = null;
+				$location.path("/login");
+			}, function (error) {
+				console.log(error);
+			});
+		}
 	})
 	.controller("loginCtrl", function ($scope,$location,$window,authenticationService){
 		$scope.userInfo = null;
