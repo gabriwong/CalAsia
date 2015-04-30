@@ -44,9 +44,9 @@
 					document.execCommand(command, 0, args);
 				}
 				else if (args != ''){
-					if (args.substring(0,4) != "http") args = "http://"+args;
 					var selected = document.getSelection();
 					if ($('#linkTarget').is(':checked')){
+						if (args.substring(0,4) != "http") args = "http://"+args;
 						document.execCommand("insertHTML",false,"<a href='"+args+"' target='_blank'>"+selected+"</a>");
 					}
 					else{
