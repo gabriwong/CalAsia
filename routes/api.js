@@ -107,7 +107,19 @@ exports.oneEvent=function(req,res){
 		res.json({event:result});
     }
 }
-
+exports.oneEventTitle=function(req,res){
+	var title = req.params.title;
+	models.Event
+		.findOne({'name':title})
+		.exec(callback);
+	function callback(err,result){
+		if(err){
+			console.log(err);
+			res.json(false);
+		}
+		res.json({event:result});
+	}
+}
 exports.addEvent = function (req, res){
 	var newEvent = new models.Event(req.body);
 	newEvent.save(afterSaving);
@@ -190,7 +202,20 @@ exports.oneUpdate=function(req,res){
 			res.json(false);
 		}
 		res.json({update:result});
-    }
+	}
+}
+exports.oneUpdateTitle=function(req,res){
+	var title = req.params.title;
+	models.Update
+		.findOne({'title':title})
+		.exec(callback);
+	function callback(err,result){
+		if(err){
+			console.log(err);
+			res.json(false);
+		}
+		res.json({update:result});
+	}
 }
 exports.addUpdate = function (req, res){
 	var newUpdate = new models.Update(req.body);

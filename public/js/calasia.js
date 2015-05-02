@@ -280,6 +280,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		$scope.$on('onRepeatFirst', function(scope, element, attrs){
 			$(element).addClass('active');
 		});
+		var modalLinks=[];
 		$http.get("/api/carousel").success(function(data, status, headers, config){
 			if(data.length==0){
 				data.push({
@@ -289,24 +290,90 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 					image:'<img src="img/cal-asia-logo-green.svg">'
 				});
 			}
+
 			$scope.carousel = data;
 			$scope.carousel.forEach(function(item, i){
 				item.image = item.image.slice(9, item.image.length-1);
 				item.index = item.order - 1;
+				var oldLinks = item.text.match(/<a class="" href="(update|event):.+?>/g);
+				var newLinks=[];
+				console.log(oldLinks);
+				if(oldLinks){
+					for (var i=0;i<oldLinks.length;i++){
+						newLinks.push(oldLinks[i]);
+						var curr = newLinks.length-1;
+						newLinks[curr] = newLinks[i].slice(18,newLinks[i].length-2);
+						newLinks[curr] = newLinks[curr].split(/:\s*/);
+						console.log(newLinks[curr]);
+						var type = newLinks[curr].shift();
+						var title = newLinks[curr].join(": ");
+						console.log(title);
+						newLinks[curr] = "<a class=\""+title.replace(/[^\w]+/g,'')+"\">";
+						console.log(newLinks[curr]);
+						modalLinks.push("."+title.replace(/[^\w]+/g,''));
+						$(modalLinks.join(",")).click(function(){
+							console.log($(this).attr('class'));
+						})
+						item.text = item.text.replace(new RegExp(oldLinks[i]), newLinks[curr]);
+						console.log(title);
+						$http.get('/api/'+type+'Title/'+title).success(function(data, status, headers, config){
+							if(data.update!=undefined){
+								if(data.update.date==undefined) data.update.date={string:''};
+								$('#rightColumn').append('<div class="modal fade" id="'+data.update.title.replace(/[^\w]+/g,'')+'"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-header"> <button class="close" data-dismiss="modal">&times;</button> <h3 class="modal-title">'+data.update.title+'<br><small>'+data.update.date.string+'</small></h3> </div> <div class="modal-body"> <p>'+data.update.description+'</p> </div> <div class="modal-footer"> <button class="btn btn-primary" data-dismiss="modal" type="button">Close</button></div></div></div></div>');
+							}
+							else if(data.event!=undefined) {
+								var eventName = data.event.name.replace(/[^\w]+/g,''),
+									eventDate = data.event.date==undefined?'TBA':'Date: '+data.event.date.string,
+									eventTime = data.event.eventTime==undefined?'':', Time: '+data.event.eventTime.string,
+									eventLocation = data.event.location==undefined?'TBA':'Location: '+data.event.location,
+									eventCapacity = data.event.capacity==undefined?'':'Capacity: '+data.event.capacity,
+									eventPrice = data.event.price==undefined?'':'Price: $'+data.event.price,
+									eventMPrice = data.event.memberPrice==undefined?'':'Member: $'+data.event.memberPrice,
+									eventExtLink = data.event.externalLink==undefined?'':'<a href="'+data.event.externalLink+'" target="_blank"><button class="btn btn-default" type="button"> More Details <span class="glyphicon glyphicon-new-window"></span></button></a>',
+									eventRegUrl = data.event.past?'':'<div style="display:inline-block"><a href="'+data.event.registration.url+'" target="_blank" ng-show="event.registration.url"><button class="btn btn-success" type="button">Register for this Event</button></a></div>',
+									eventPast = data.event.past?'<div style="display:inline-block; color:red" class="pull-left"><p>This event has passed.</p></div>':'',
+									eventDescription = data.event.description==undefined?'Coming soon...':data.event.description;
+								$('#leftColumn').append('<div class="modal fade" id="'+data.event.name.replace(/[^\w]+/g,'')+'"> <div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">'+data.event.name+'</h4><h5>'+eventDate+eventTime+'</h5><h5>'+eventLocation+'</h5><h5>'+eventCapacity+'</h5><h5>'+eventPrice+'</h5><h5>'+eventMPrice+'</h5></div><div class="modal-body"><p>'+eventDescription+'</p></div><div class="modal-footer">'+eventPast+eventExtLink+eventRegUrl+'<button class="btn btn-primary" data-dismiss="modal" type="button">Close</button></div></div></div></div>');
+							}
+						})
+					}
+					// oldLinks.forEach(function(str, i){
+					// 	str = str.slice(9,str.length-2);
+					// 	// str = str.split(/:\s*/);
+					// 	// var type = str[0];
+					// 	// var title = str[1];
+					// 	// console.log(str)
+						
+					// })
+				}
 			})
+			// console.log(modalLinks.join(", "));
+			// var test = modalLinks.join(", ");
+			// console.log($(modalLinks.join(", ")).length)
+			// $(modalLinks.join(",")).click(function(){
+			// 	console.log($(this).attr('class'));
+			// })
 		})
+		window.setTimeout(function(){
+			$(modalLinks.join(",")).click(function(){
+				var id = "#"+$(this).attr('class');
+				$(id).modal('show');
+			});
+		},500)
 		$http.get("/api/upcomingEvents").success(function(data, status, headers, config){
 			if(data.length==0){
-				data.push({name:"No Upcoming Events"});
+				$scope.upcomingEvents = [{name:"No Upcoming Events"}];
 			}
-			$scope.upcomingEvents = data.slice(0,2);
-			var day = new Date().getDate();
-			$scope.upcomingEvents.forEach(function(item, i){
-				item.countDown = new Date(item.date.full).getDate() - day;
-				if(item.countDown == 0) item.countDown = 'Today';
-				else if (item.countDown == 1) item.countDown = 'Tomorrow';
-				else item.countDown = 'In '+item.countDown+' Days';
-			})
+			else{
+				$scope.upcomingEvents = data.slice(0,2);
+				var day = new Date().getDate();
+				$scope.upcomingEvents.forEach(function(item, i){
+					item.countDown = new Date(item.date.full).getDate() - day;
+					if(item.countDown == 0) item.countDown = 'Today';
+					else if (item.countDown == 1) item.countDown = 'Tomorrow';
+					else item.countDown = 'In '+item.countDown+' Days';
+				})
+			}
 		})
 		$http.get("/api/updates").success(function(data, status, headers, config){
 			var updateCount = 2;
@@ -321,7 +388,6 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				if (temp!=null) $scope.updates[i].preview = temp[0];
 				else $scope.updates[i].preview = $scope.updates[i].description;
 				$scope.updates[i].more = temp!=null?true:false;
-				console.log($scope.updates[i].preview);
 			}
 		})
 		$scope.setActive = function(){

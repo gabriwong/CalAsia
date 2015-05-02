@@ -13,6 +13,7 @@
   <div style="padding:10px">
     <h4>Text:</h4>
     <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+      
       <div class="modal fade" id="addLink">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -28,7 +29,18 @@
                 <label><input type="checkbox" checked="" id="linkTarget"> Open in new window</label>
               </div>
               <label>URL</label>
-              <input class="form-control span12" placeholder="URL" type="text" data-edit="createLink">
+              <input class="form-control span12" placeholder="URL" type="text" data-edit="createLink"></input>
+              <div class="panel panel-default" style="margin-top:20px">
+                <div class="panel-heading">For update & event modals:</div>
+                <div class="panel-body">
+                  <strong>Format: </strong><br>
+                    [type]: [title]<br><br>
+                  <strong>Example: </strong><br>
+                    update: update title<br>
+                    event: event title<br><br>
+                  <i>*Titles must be exactly the same as exsiting ones</i>
+                </div>
+              </div>
             </div><!-- end modal body-->
 
             <div class="modal-footer">

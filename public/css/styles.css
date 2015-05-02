@@ -19,6 +19,10 @@ body{
    font-size: 12px;
 }
 
+a{
+  cursor:pointer;
+}
+
 #missionBox{
   background: #862600;
   color: #fff;

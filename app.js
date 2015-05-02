@@ -96,6 +96,7 @@ app.get('/partials/:name', routes.partials);
 // JSON API
 app.get('/api/events', api.events);
 app.get('/api/event/:id', api.oneEvent);
+app.get('/api/eventTitle/:title', api.oneEventTitle);
 app.get('/api/upcomingEvents', api.upcomingEvents);
 app.get('/api/pastEvents', api.pastEvents);
 app.get('/api/internalEvents', api.internalEvents);
@@ -108,13 +109,14 @@ app.put('/api/event/:id', api.editEvent);
 app.delete('/api/events/:id', api.deleteEvent);
 
 app.get('/api/updates', api.updates);
-app.get('/api/update/:id', api.oneUpdate)
+app.get('/api/update/:id', api.oneUpdate);
+app.get('/api/updateTitle/:title', api.oneUpdateTitle);
 app.post('/api/updates/new', api.addUpdate);
 app.put('/api/update/:id', api.editUpdate);
 app.delete('/api/updates/:id', api.deleteUpdate);
 
 app.get('/api/blogs', api.blogs);
-app.get('/api/blog/:id', api.oneBlog)
+app.get('/api/blog/:id', api.oneBlog);
 app.post('/api/blogs/new', api.addBlog);
 app.put('/api/blog/:id', api.editBlog);
 app.delete('/api/blogs/:id', api.deleteBlog);
