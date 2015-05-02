@@ -300,25 +300,17 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				item.index = item.order - 1;
 				var oldLinks = item.text.match(/<a class="" href="(update|event):.+?>/g);
 				var newLinks=[];
-				console.log(oldLinks);
 				if(oldLinks){
 					for (var i=0;i<oldLinks.length;i++){
 						newLinks.push(oldLinks[i]);
 						var curr = newLinks.length-1;
 						newLinks[curr] = newLinks[i].slice(18,newLinks[i].length-2);
 						newLinks[curr] = newLinks[curr].split(/:\s*/);
-						console.log(newLinks[curr]);
 						var type = newLinks[curr].shift();
 						var title = newLinks[curr].join(": ");
-						console.log(title);
 						newLinks[curr] = "<a class=\""+title.replace(/[^\w]+/g,'')+"\">";
-						console.log(newLinks[curr]);
 						modalLinks.push("."+title.replace(/[^\w]+/g,''));
-						$(modalLinks.join(",")).click(function(){
-							console.log($(this).attr('class'));
-						})
 						item.text = item.text.replace(new RegExp(oldLinks[i]), newLinks[curr]);
-						console.log(title);
 						$http.get('/api/'+type+'Title/'+title).success(function(data, status, headers, config){
 							if(data.update!=undefined){
 								if(data.update.date==undefined) data.update.date={string:''};
@@ -340,22 +332,8 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 							}
 						})
 					}
-					// oldLinks.forEach(function(str, i){
-					// 	str = str.slice(9,str.length-2);
-					// 	// str = str.split(/:\s*/);
-					// 	// var type = str[0];
-					// 	// var title = str[1];
-					// 	// console.log(str)
-						
-					// })
 				}
 			})
-			// console.log(modalLinks.join(", "));
-			// var test = modalLinks.join(", ");
-			// console.log($(modalLinks.join(", ")).length)
-			// $(modalLinks.join(",")).click(function(){
-			// 	console.log($(this).attr('class'));
-			// })
 		})
 		window.setTimeout(function(){
 			$(modalLinks.join(",")).click(function(){
@@ -494,7 +472,6 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			$scope.year = "2015";
 		})
 		$scope.showYear =function(year){
-			console.log(year);
 			if (year == 'All'){
 				$http.get('/api/events').success(function(data, status, headers, config){
 					$scope.events = data;
