@@ -29,6 +29,9 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			.when('/resources-orgs',{
 				templateUrl: 'partials/resources-orgs'
 			})
+			.when('/resources-seniorofficials',{
+				templateUrl: 'partials/resources-seniorofficials'
+			})
 			.when('/membership', {
 				templateUrl: 'partials/membership',
 				controller:"membershipCtrl"
