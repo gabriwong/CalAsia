@@ -60,7 +60,7 @@ var CarouselSchema = new mongoose.Schema({
 exports.Carousel = mongoose.model('Carousel',CarouselSchema);
 
 var BoardSchema = new mongoose.Schema({
-	type:String,
+	type:[String],
 	name:String,
 	image:String,
 	position:String,

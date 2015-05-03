@@ -898,9 +898,12 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		$('#editor').cleanHtml();
 		$('#editor2').wysiwyg({toolbarSelector: '[data-role=editor-toolbar2]'});
 		$('#editor2').cleanHtml();
-		$scope.form = {company:{}};
+		$scope.form = {company:{},type:[]};
 		$scope.submitBoard = function () {
-			$scope.form.type = $('input[name=boardType]:checked', 'form').val();
+			// $scope.form.type.push($('input[name=boardType]:checked', 'form').val());
+			for (var i=0;i<$('input[name=boardType]:checked', 'form').length;i++){
+				$scope.form.type.push($('input[name=boardType]:checked:eq('+i+')', 'form').val());
+			}
 			if ($('#editor') !=undefined){
 				$scope.form.bio = $('#editor').html();
 			}
@@ -922,10 +925,12 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		$http.get('/api/board/' + $routeParams.id).
 		success(function(data) {
 			$scope.form = data.member;
+			$scope.form.type.forEach(function(type,i){
+				$(':checkbox[value='+type+']').prop('checked',true);
+			})
 			if(data.member.company==undefined) $scope.form.company = {};
 			if($scope.form.bio != undefined) $('#editor').append($scope.form.bio);
 			if($scope.form.image != undefined) $('#editor2').append($scope.form.image);
-			console.log($scope.form.company)
 		});
 		$scope.submitBoard = function () {
 			if ($('#editor') !=undefined){
