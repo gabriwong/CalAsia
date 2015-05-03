@@ -58,3 +58,13 @@ var CarouselSchema = new mongoose.Schema({
 	order:Number
 })
 exports.Carousel = mongoose.model('Carousel',CarouselSchema);
+
+var BoardSchema = new mongoose.Schema({
+	type:String,
+	name:String,
+	image:String,
+	position:String,
+	company:{name:String, wesite:String},
+	bio:String
+})
+exports.Board = mongoose.model('Board',BoardSchema);

@@ -398,6 +398,76 @@ exports.deleteCarouselItem = function (req, res){
 	}
 }
 
+exports.CalAsiaBoard= function(req,res){
+	models.Board
+		.find()
+		.sort('name')
+		.exec(callback);
+	function callback (err, result){
+		res.json(result);
+	}
+}
+exports.boardMember=function(req,res){
+	var id = req.params.id;
+	models.Board
+		.findOne({'_id':id})
+		.exec(callback);
+	function callback(err,result){
+		if(err){
+			console.log(err);
+			res.json(false);
+		}
+		res.json({member:result});
+    }
+}
+exports.addBoardMember = function (req, res){
+	var newMember = new models.Board(req.body);
+	newMember.save(afterSaving);
+	function afterSaving(err){
+		if(err){
+			console.log(err);
+			res.send(500);
+		}
+		res.json(newMember);
+	}
+}
+exports.editBoardMember = function (req, res){
+	var id = req.params.id
+	models.Board
+		.findOne({'_id':id})
+		.exec(callback);
+	function callback(err, result){
+		if(err) console.log(err);
+	    if(!result) res.json(false);
+	    else{
+	    	result.type = req.body.type;
+			result.name = req.body.name;
+			result.image = req.body.image;
+			result.position = req.body.position;
+			result.company = {name:req.body.company.name, website:req.body.company.wesite};
+			result.bio = req.body.bio;
+			result.save(function(err){
+				if(err) res.send(500);
+				res.json(true);
+			});
+	    }
+	}
+}
+exports.deleteBoardMember = function (req, res){
+	var id = req.params.id
+	models.Board
+		.findOne({'_id':id})
+		.remove()
+		.exec(afterRemove);
+	function afterRemove(err, result){
+		if(err){
+			console.log(err);
+			res.json(false);
+		}
+		res.json(true);
+	}
+}
+
 function checkPastEvents(){
 	models.Event
 		.find({past:false})

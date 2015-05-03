@@ -138,6 +138,22 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 					}
 				}
 			})
+			.when('/adminBoard',{
+				templateUrl: 'partials/adminBoard',
+				controller: 'adminBoardCtrl',
+				resolve:{
+					auth: function ($q, authenticationService, $location){
+						var userInfo = authenticationService.getUserInfo();
+						if (userInfo) {
+							return $q.when(userInfo);
+						}
+						else{
+							$location.path('/login');
+							return $q.reject({authenticated:false});
+						}
+					}
+				}
+			})
 			.when('/addEvent',{
 				templateUrl: 'partials/addEvent',
 				controller:"addEventCtrl",
@@ -220,6 +236,38 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			.when('/editBlog/:id',{
 				templateUrl:'partials/blogform',
 				controller:"editBlogCtrl",
+				resolve:{
+					auth: function ($q, authenticationService, $location){
+						var userInfo = authenticationService.getUserInfo();
+						if (userInfo) {
+							return $q.when(userInfo);
+						}
+						else{
+							$location.path('/login');
+							return $q.reject({authenticated:false});
+						}
+					}
+				}
+			})
+			.when('/addBoard',{
+				templateUrl: 'partials/boardForm',
+				controller:"addBoardCtrl",
+				resolve:{
+					auth: function ($q, authenticationService, $location){
+						var userInfo = authenticationService.getUserInfo();
+						if (userInfo) {
+							return $q.when(userInfo);
+						}
+						else{
+							$location.path('/login');
+							return $q.reject({authenticated:false});
+						}
+					}
+				}
+			})
+			.when('/editBoard/:id',{
+				templateUrl:'partials/boardForm',
+				controller:"editBoardCtrl",
 				resolve:{
 					auth: function ($q, authenticationService, $location){
 						var userInfo = authenticationService.getUserInfo();
@@ -520,14 +568,14 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		$scope.form.registration = {};
 		$scope.form.registration.date = {};
 		if($('#external').prop('checked') == true) $('#externalLink').prop('disabled', false);
-	    else $('#externalLink').prop('disabled', true);
+		else $('#externalLink').prop('disabled', true);
 		(function(){
 		    $scope.form.date.full = new Date();
 		    $scope.form.registration.date.full = new Date();
 		})();
 		$('#internal, #external').click(function(){
 			if($('#external').prop('checked') == true) $('#externalLink').prop('disabled', false);
-		    else $('#externalLink').prop('disabled', true);
+			else $('#externalLink').prop('disabled', true);
 		})
 		$scope.submitEvent = function () {
 			$scope.form.eventType = $('input[name=eventType]:checked', 'form').val();
@@ -813,6 +861,85 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				});
 		};
 	})
+	.controller('adminBoardCtrl', function ($scope, $filter, $http, authenticationService) {
+		$http.get('/api/board').success(function(data, status, headers, config){
+			$scope.board = data;
+			$scope.boardCount = $scope.board.length;
+			$scope.board.forEach(function(member, i){
+				if(member.image.length>0) member.image = member.image.slice(9, member.image.length-1);
+				else member.image = '../img/default-profile.jpg';
+			});
+		})
+		$scope.showModal = function (id){
+			var selector = "#"+id;
+			$(selector).modal('show');
+		}
+		$scope.deleteBoard = function(id){
+			var current = "."+id;
+			if(confirm("Are you sure you want to delete this board member?")==true){
+				$http.delete('api/board/'+id)
+				.success(function(data){
+					$(current).fadeOut("fast");
+					$scope.boardCount--;
+				})
+			}
+		}
+		$scope.logout = function() {
+			authenticationService.logout().then(function (result) {
+				$scope.userInfo = null;
+				$location.path("/login");
+			}, function (error) {
+				console.log(error);
+			});
+		}
+	})
+	.controller("addBoardCtrl",function ($scope, $http, $location){
+		$('#editor').wysiwyg();
+		$('#editor').cleanHtml();
+		$('#editor2').wysiwyg({toolbarSelector: '[data-role=editor-toolbar2]'});
+		$('#editor2').cleanHtml();
+		$scope.form = {company:{}};
+		$scope.submitBoard = function () {
+			$scope.form.type = $('input[name=boardType]:checked', 'form').val();
+			if ($('#editor') !=undefined){
+				$scope.form.bio = $('#editor').html();
+			}
+			if ($('#editor2') !=undefined){
+				$scope.form.image = $('#editor2').html();
+			}
+			$http.post('/api/board/new', $scope.form).
+				success(function(data) {
+					alert("Board member added");
+					$location.path('/adminBoard');
+				});
+		};
+	})
+	.controller("editBoardCtrl", function ($scope, $http, $location, $routeParams){
+		$('#editor').wysiwyg();
+		$('#editor').cleanHtml();
+		$('#editor2').wysiwyg({toolbarSelector: '[data-role=editor-toolbar2]'});
+		$('#editor2').cleanHtml();
+		$http.get('/api/board/' + $routeParams.id).
+		success(function(data) {
+			$scope.form = data.member;
+			if(data.member.company==undefined) $scope.form.company = {};
+			if($scope.form.bio != undefined) $('#editor').append($scope.form.bio);
+			if($scope.form.image != undefined) $('#editor2').append($scope.form.image);
+			console.log($scope.form.company)
+		});
+		$scope.submitBoard = function () {
+			if ($('#editor') !=undefined){
+				$scope.form.text = $('#editor').html();
+			}
+			if ($('#editor2') !=undefined){
+				$scope.form.image = $('#editor2').html();
+			}
+			$http.put('/api/board/' + $routeParams.id, $scope.form).
+				success(function(data) {
+					$location.url('/adminBoard');
+				});
+		};
+	})
 	.controller('adminCarouselCtrl', function ($scope, $filter, $http, authenticationService) {
 		$('#success').css("opacity",0);
 		var N;
@@ -897,8 +1024,10 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			$scope.updateCount = data.length;
 		})
 		$http.get('/api/blogs').success(function(data, status, headers, config){
-			$scope.blogs = data;
-			$scope.blogCount = $scope.blogs.length;
+			$scope.blogCount = data.length;
+		})
+		$http.get('/api/board').success(function(data, status, headers, config){
+			$scope.boardCount = data.length;
 		})
 		$scope.logout = function() {
 			authenticationService.logout().then(function (result) {
