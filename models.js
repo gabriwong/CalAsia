@@ -64,7 +64,7 @@ var BoardSchema = new mongoose.Schema({
 	name:String,
 	image:String,
 	position:String,
-	company:{name:String, wesite:String},
+	company:{name:String, position:String, wesite:String},
 	bio:String
 })
 exports.Board = mongoose.model('Board',BoardSchema);

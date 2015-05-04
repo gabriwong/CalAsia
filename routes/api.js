@@ -444,7 +444,7 @@ exports.editBoardMember = function (req, res){
 			result.name = req.body.name;
 			result.image = req.body.image;
 			result.position = req.body.position;
-			result.company = {name:req.body.company.name, website:req.body.company.wesite};
+			result.company = {name:req.body.company.name, position:req.body.company.position, website:req.body.company.wesite};
 			result.bio = req.body.bio;
 			result.save(function(err){
 				if(err) res.send(500);
