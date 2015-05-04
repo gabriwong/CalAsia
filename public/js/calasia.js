@@ -933,8 +933,11 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			if($scope.form.image != undefined) $('#editor2').append($scope.form.image);
 		});
 		$scope.submitBoard = function () {
+			for (var i=0;i<$('input[name=boardType]:checked', 'form').length;i++){
+				$scope.form.type.push($('input[name=boardType]:checked:eq('+i+')', 'form').val());
+			}
 			if ($('#editor') !=undefined){
-				$scope.form.text = $('#editor').html();
+				$scope.form.bio = $('#editor').html();
 			}
 			if ($('#editor2') !=undefined){
 				$scope.form.image = $('#editor2').html();
