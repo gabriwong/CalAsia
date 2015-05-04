@@ -128,6 +128,8 @@ app.put('/api/carousel/:id', api.editCarouselItem);
 app.delete('/api/carousel/:id', api.deleteCarouselItem);
 
 app.get('/api/board', api.CalAsiaBoard);
+app.get('/api/board/officers', api.boardOfficers);
+app.get('/api/board/directors', api.boardDirectors);
 app.get('/api/board/:id', api.boardMember);
 app.post('/api/board/new', api.addBoardMember);
 app.put('/api/board/:id', api.editBoardMember);

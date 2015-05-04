@@ -36,6 +36,10 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				templateUrl: 'partials/membership',
 				controller:"membershipCtrl"
 			})
+			.when('/board', {
+				templateUrl: 'partials/board',
+				controller:"boardCtrl"
+			})
 			.when('/blog', {
 				templateUrl: 'partials/blog',
 				controller:"blogCtrl"
@@ -510,6 +514,26 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			})
 		}
 	})
+	.controller("boardCtrl",function ($scope, $http){
+		$http.get("/api/board/officers").success(function(data, status, headers, config){
+			$scope.officers = data;
+			$scope.officers.forEach(function(member, i){
+				if(member.image.length>0) member.image = member.image.slice(9, member.image.length-1);
+				else member.image = '../img/default-profile.jpg';
+			});
+		})
+		$http.get("/api/board/directors").success(function(data, status, headers, config){
+			$scope.directors = data;
+			$scope.directors.forEach(function(member, i){
+				if(member.image.length>0) member.image = member.image.slice(9, member.image.length-1);
+				else member.image = '../img/default-profile.jpg';
+			});
+		})
+		$scope.showModal = function (id){
+			var selector = "#"+id;
+			$(selector).modal('show');
+		}
+	})
 	.controller('adminEventCtrl', function ($scope, $filter, $http, authenticationService) {
 		$http.get('/api/events').success(function(data, status, headers, config){
 			$scope.eventCount = data.length;
@@ -933,6 +957,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			if($scope.form.image != undefined) $('#editor2').append($scope.form.image);
 		});
 		$scope.submitBoard = function () {
+			$scope.form.type=[];
 			for (var i=0;i<$('input[name=boardType]:checked', 'form').length;i++){
 				$scope.form.type.push($('input[name=boardType]:checked:eq('+i+')', 'form').val());
 			}

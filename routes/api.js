@@ -407,6 +407,26 @@ exports.CalAsiaBoard= function(req,res){
 		res.json(result);
 	}
 }
+exports.boardOfficers = function(req, res){
+	models.Board
+		.find({type:'officer'})
+		.sort('name')
+		.exec(callback);
+	function callback (err, result){
+		if(err) console.log(err);
+		res.json(result);
+	}
+}
+exports.boardDirectors = function(req, res){
+	models.Board
+		.find({type:'director'})
+		.sort('name')
+		.exec(callback);
+	function callback (err, result){
+		if(err) console.log(err);
+		res.json(result);
+	}
+}
 exports.boardMember=function(req,res){
 	var id = req.params.id;
 	models.Board
