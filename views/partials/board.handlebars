@@ -18,9 +18,6 @@
 						<h5 style="cursor:pointer" ng-click="showModal([[member._id]])"><strong>[[member.name]]</strong></h5>
 						<h5><strong>[[member.position]]</strong></h5>
 					</div>
-					<div class="text-center">
-						<a style="cursor:pointer" ng-click="showModal([[member._id]])">Learn More</a>
-					</div>
 				</div>
 			</div>
 			<div class="modal fade" id="[[member._id]]" ng-repeat="member in officers | orderBy:'name'">
