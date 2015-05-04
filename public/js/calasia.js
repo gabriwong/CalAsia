@@ -309,6 +309,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
   		$interpolateProvider.endSymbol(']]');
 	}])
 	.controller("programsCtrl",function ($scope, $http, $routeParams){
+		window.scrollTo(0,0);
 		if($routeParams.year==undefined){
 			$http.get("/api/events/2015").success(function(data, status, headers, config){
 				if(data.length==0){
@@ -332,6 +333,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		}
 	})
 	.controller("homeCtrl",function ($window, $scope, $http, $location, authenticationService, $routeParams){
+		window.scrollTo(0,0);
 		$scope.$on('onRepeatFirst', function(scope, element, attrs){
 			$(element).addClass('active');
 		});
@@ -345,7 +347,6 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 					image:'<img src="img/cal-asia-logo-green.svg">'
 				});
 			}
-
 			$scope.carousel = data;
 			$scope.carousel.forEach(function(item, i){
 				item.image = item.image.slice(9, item.image.length-1);
@@ -392,7 +393,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				var id = "#"+$(this).attr('class');
 				$(id).modal('show');
 			});
-		},500)
+		},1000)
 		$http.get("/api/upcomingEvents").success(function(data, status, headers, config){
 			if(data.length==0){
 				$scope.upcomingEvents = [{name:"No Upcoming Events"}];
@@ -433,6 +434,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			$("[contenteditable]").attr('contenteditable',false);
 	})
 	.controller("aboutCtrl", function(){
+		window.scrollTo(0,0);
 		$('#toggle-view li h3, #toggle-view li strong').click(function () {
 	        var text = $(this).parent().children('div.panel');
 	        if (text.is(':hidden')) {
@@ -446,6 +448,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 	    });
 	})
 	.controller("membershipCtrl", function(){
+		window.scrollTo(0,0);
 		$('#toggle-view li h3, #toggle-view li strong').click(function () {
 	        var text = $(this).parent().children('div.panel');
 	        if (text.is(':hidden')) {
@@ -459,6 +462,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 	    });
 	})
 	.controller("calendarCtrl",function ($scope, $http){
+		window.scrollTo(0,0);
 		$http.get("/api/upcomingInternalEvents").success(function(data, status, headers, config){
 			if(data.length==0){
 				data.push({name:"No Upcoming Internal Events"});
@@ -497,8 +501,12 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			var country = $routeParams.country;
 			$('#'+country).fadeToggle("fast", "linear");
 		}
+		else{
+			window.scrollTo(0,0);
+		}
 	})
 	.controller("blogCtrl", function ($scope, $http){
+		window.scrollTo(0,0);
 		if($routeParams.id==undefined){
 			$http.get('/api/blogs').success(function(data){
 				if(data.length==0){
@@ -515,6 +523,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		}
 	})
 	.controller("boardCtrl",function ($scope, $http){
+		window.scrollTo(0,0);
 		$http.get("/api/board/officers").success(function(data, status, headers, config){
 			$scope.officers = data;
 			$scope.officers.forEach(function(member, i){
@@ -535,6 +544,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		}
 	})
 	.controller('adminEventCtrl', function ($scope, $filter, $http, authenticationService) {
+		window.scrollTo(0,0);
 		$http.get('/api/events').success(function(data, status, headers, config){
 			$scope.eventCount = data.length;
 		})
@@ -584,6 +594,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		}
 	})
 	.controller("addEventCtrl",function ($scope, $http, $location){
+		window.scrollTo(0,0);
 		$('#editor').wysiwyg();
 		// $('#editor').cleanHtml();
 		$scope.form = {};
@@ -646,6 +657,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		};
 	})
 	.controller("editEventCtrl", function ($scope, $http, $location, $routeParams){
+		window.scrollTo(0,0);
 		$('#editor').wysiwyg();
 		$('#editor').cleanHtml();
 		$('#internal, #external').click(function(){
@@ -717,6 +729,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		};
 	})
 	.controller('adminUpdateCtrl', function ($scope, $filter, $http, authenticationService) {
+		window.scrollTo(0,0);
 		$http.get('/api/updates').success(function(data, status, headers, config){
 			$scope.updates = data;
 			$scope.updateCount = $scope.updates.length;
@@ -741,6 +754,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		}
 	})
 	.controller("addUpdateCtrl",function ($scope, $http, $location){
+		window.scrollTo(0,0);
 		$('#editor').wysiwyg();
 		$('#editor').cleanHtml();
 		$scope.form = {};
@@ -763,6 +777,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		};
 	})
 	.controller("editUpdateCtrl", function ($scope, $http, $location, $routeParams){
+		window.scrollTo(0,0);
 		$('#editor').wysiwyg();
 		$('#editor').cleanHtml();
 		$scope.form = {};
@@ -800,6 +815,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		};
 	})
 	.controller('adminBlogCtrl', function ($scope, $filter, $http, authenticationService) {
+		window.scrollTo(0,0);
 		$http.get('/api/blogs').success(function(data, status, headers, config){
 			$scope.blogs = data;
 			$scope.blogCount = $scope.blogs.length;
@@ -828,6 +844,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		}
 	})
 	.controller("addBlogCtrl",function ($scope, $http, $location){
+		window.scrollTo(0,0);
 		$('#editor').wysiwyg();
 		$('#editor').cleanHtml();
 		$scope.form = {};
@@ -850,6 +867,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		};
 	})
 	.controller("editBlogCtrl", function ($scope, $http, $location, $routeParams){
+		window.scrollTo(0,0);
 		$('#editor').wysiwyg();
 		$('#editor').cleanHtml();
 		$scope.form = {};
@@ -886,6 +904,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		};
 	})
 	.controller('adminBoardCtrl', function ($scope, $filter, $http, authenticationService) {
+		window.scrollTo(0,0);
 		$http.get('/api/board').success(function(data, status, headers, config){
 			$scope.board = data;
 			$scope.boardCount = $scope.board.length;
@@ -918,6 +937,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		}
 	})
 	.controller("addBoardCtrl",function ($scope, $http, $location){
+		window.scrollTo(0,0);
 		$('#editor').wysiwyg();
 		$('#editor').cleanHtml();
 		$('#editor2').wysiwyg({toolbarSelector: '[data-role=editor-toolbar2]'});
@@ -942,6 +962,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		};
 	})
 	.controller("editBoardCtrl", function ($scope, $http, $location, $routeParams){
+		window.scrollTo(0,0);
 		$('#editor').wysiwyg();
 		$('#editor').cleanHtml();
 		$('#editor2').wysiwyg({toolbarSelector: '[data-role=editor-toolbar2]'});
@@ -974,6 +995,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		};
 	})
 	.controller('adminCarouselCtrl', function ($scope, $filter, $http, authenticationService) {
+		window.scrollTo(0,0);
 		$('#success').css("opacity",0);
 		var N;
 		$http.get('/api/carousel').success(function(data, status, headers, config){
@@ -1022,6 +1044,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		}
 	})
 	.controller("editCarouselCtrl", function ($scope, $http, $location, $routeParams){
+		window.scrollTo(0,0);
 		$('#editor').wysiwyg();
 		$('#editor').cleanHtml();
 		$('#editor2').wysiwyg({toolbarSelector: '[data-role=editor-toolbar2]'});
@@ -1047,6 +1070,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		};
 	})
 	.controller("adminCtrl", function ($scope, $http, $timeout, $location, authenticationService){
+		window.scrollTo(0,0);
 		$http.get('/api/carousel').success(function(data, status, headers, config){
 			$scope.carouselCount = data.length;
 		})
@@ -1072,6 +1096,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		}
 	})
 	.controller("loginCtrl", function ($scope,$location,$window,authenticationService){
+		window.scrollTo(0,0);
 		$scope.userInfo = null;
 		$scope.login = function () {
 			authenticationService.login($scope.userName, $scope.password)
