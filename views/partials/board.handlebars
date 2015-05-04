@@ -5,9 +5,9 @@
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1">
 			<div class="page-header">
-				<h2>Officer</h2>
+				<h2>Officers</h2>
 			</div>
-			<div class="col-xs-6 col-sm-4 col-md-3 [[member._id]]" ng-repeat="member in officers | orderBy:'name'" style="padding-left:10px;padding-right:10px">
+			<div class="col-xs-6 col-sm-4 col-md-3 [[member._id]]" ng-repeat="member in officers | orderBy:'position'" style="padding-left:10px;padding-right:10px">
 				<div style="padding:10px;margin-top:10px;margin-bottom:10px">
 					<div style="width:100%;padding-bottom:100%;position:relative">
 						<a style="cursor:pointer" ng-click="showModal([[member._id]])">
