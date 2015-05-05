@@ -64,6 +64,9 @@
 					  </tr>
 					</thead>		
 					<tbody>
+						<tr class="text-center" data-loading>
+							<th scope="row"><img src="img/Cal-Asia-Loading-Icon.gif"></th>
+						</tr>
 						<tr ng-repeat="item in items | orderBy:'order'" id="[[item._id]]">
 							<td><input ng-model="item.order" type="number" class="form-control" style="width:64px"></td>
 							<td>[[item.title]]</td>

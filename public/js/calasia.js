@@ -10,10 +10,6 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				templateUrl: 'partials/programs',
 				controller:"programsCtrl"
 			})
-			.when('/programs/:year',{
-				templateUrl: 'partials/programs',
-				controller: "programsCtrl"
-			})
 			.when('/calendar',{
 				templateUrl: 'partials/calendar',
 				controller:"calendarCtrl"
@@ -308,18 +304,16 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		$interpolateProvider.startSymbol('[[');
   		$interpolateProvider.endSymbol(']]');
 	}])
-	.controller("programsCtrl",function ($scope, $http, $routeParams){
+	.controller("programsCtrl",function ($scope, $http){
 		window.scrollTo(0,0);
-		if($routeParams.year==undefined){
-			$http.get("/api/events/2015").success(function(data, status, headers, config){
-				if(data.length==0){
-					data.push({name:"No Events"});
-				}
-				$scope.events = data;
-			})
-		}
-		else{
-			var year = $routeParams.year;
+		var currYear=new Date().getFullYear();
+		$http.get("/api/events/"+currYear).success(function(data, status, headers, config){
+			if(data.length==0){
+				data.push({name:"No Events in " +currYear});
+			}
+			$scope.events = data;
+		})
+		$scope.getYear = function(year){
 			$http.get("/api/events/"+year).success(function(data, status, headers, config){
 				if(data.length==0){
 					data.push({name:"No Events in "+year});
@@ -596,7 +590,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 	.controller("addEventCtrl",function ($scope, $http, $location){
 		window.scrollTo(0,0);
 		$('#editor').wysiwyg();
-		// $('#editor').cleanHtml();
+		$('#editor').cleanHtml();
 		$scope.form = {};
 		$scope.form.date = {};
 		$scope.form.eventTime = {};
@@ -944,7 +938,6 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		$('#editor2').cleanHtml();
 		$scope.form = {company:{},type:[]};
 		$scope.submitBoard = function () {
-			// $scope.form.type.push($('input[name=boardType]:checked', 'form').val());
 			for (var i=0;i<$('input[name=boardType]:checked', 'form').length;i++){
 				$scope.form.type.push($('input[name=boardType]:checked:eq('+i+')', 'form').val());
 			}
@@ -1119,6 +1112,37 @@ angular.module('calasia',['ngRoute','ngSanitize'])
             if (scope.$first) setTimeout(function(){
                 scope.$emit('onRepeatFirst', element, attrs);
             }, 1);
+        };
+    })
+	.directive('showDuringResolve',function($rootScope){
+		return{
+			link: function(scope,element){
+				element.css('display','none');
+				var unregister = $rootScope.$on('$routeChangeStart',function(){
+					element.css('display', 'block');
+				});
+				scope.$on('$destroy',unregister);
+			}
+		};
+	})
+	.directive('loading', function ($http, $timeout){
+        return {
+            restrict: 'A',
+            link: function (scope, elm, attrs)
+            {
+                scope.isLoading = function () {
+                    return $http.pendingRequests.length > 0;
+                };
+
+                scope.$watch(scope.isLoading, function (v)
+                {
+                    if(v){
+                        elm.show();
+                    }else{
+                       	elm.hide();
+                    }
+                });
+            }
         };
     })
 	.factory("authenticationService", function ($http, $q, $window){

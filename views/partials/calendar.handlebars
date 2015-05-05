@@ -53,6 +53,9 @@
 					  </tr>
 					</thead>		
 					<tbody>
+						<tr class="text-center" data-loading>
+							<th scope="row"><img src="img/Cal-Asia-Loading-Icon.gif"></th>
+						</tr>
 						<tr ng-repeat="event in internalEvents">
 							<th scope="row"><a ng-click="showModal([[event._id]])" data-toggle="modal" style="cursor:pointer">[[event.name]]</a></th>
 							<td>[[event.date.string]]</td>
@@ -116,6 +119,9 @@
 					  </tr>
 					</thead>		
 					<tbody>
+						<tr class="text-center" data-loading>
+							<th scope="row"><img src="img/Cal-Asia-Loading-Icon.gif"></th>
+						</tr>
 						<tr ng-repeat="event in externalEvents">
 							<th scope="row"><a ng-click="showModal([[event._id]])" data-toggle="modal" style="cursor:pointer">[[event.name]]</a></th>
 							<td>[[event.date.string]]</td>

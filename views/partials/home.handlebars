@@ -8,8 +8,11 @@
           </ol>
 
           <!-- Wrapper for slides --> 
-          <div class="carousel-inner">
+          <div class="carousel-inner" style="height:400px;background:#999">
             <div class="item" id="slide[[item.order]]" ng-repeat="item in carousel" carousel-first-active style="background: url([[item.image]]) top center no-repeat">
+              <div style="position:absolute; top:40%;left:48%" data-loading>
+                <img src="img/Cal-Asia-Loading-Icon.gif">
+              </div>
               <div class="carousel-caption" contenteditable="false">
                 <h4>[[item.title]]</h4>
                 <div ng-bind-html="item.text"></div>
@@ -73,7 +76,7 @@
             </div><!-- end modal dialog --> 
           </div><!--end modal fade --> 
           <div id="homeEvents">
-            <h4><span class="glyphicon glyphicon-calendar"></span> Upcoming Cal-Asia and Partner Events <small><a href="/calendar">view all >></a></small></h4>
+            <h4><span class="glyphicon glyphicon-calendar"></span> Upcoming Cal-Asia and Partner Events</h4>
             <p style="padding: 0 30px;" ng-repeat="event in upcomingEvents">
               <strong>[[event.name]]</strong><br> 
               <i ng-show="event.date.string">[[event.date.string]]</i><span style="color:gray" ng-show="event.date.string"> - [[event.countDown]]</span><br>
@@ -82,6 +85,9 @@
               </span>
               <br>
               <span ng-show="event._id"><a ng-click="showModal([[event._id]])" style="cursor:pointer">Details</a> | <a href="[[event.registration.url]]" target="_blank">Registration</a></span>
+            </p>
+            <p style="margin-left:30px; margin-top:30px">
+              <a href="/calendar">See all upcoming events</a> | <a href="/programs">Event archive</a>
             </p>
           </div><!-- end homeEvents -->   
         </div><!-- end col-md-8 leftColumn --> 
@@ -110,6 +116,9 @@
           <div id="homeUpdates"> 
             <div>
               <h4><span class="glyphicon glyphicon-paperclip"></span> News and Updates</h4>
+            </div>
+            <div class="text-center" data-loading>
+              <img src="img/Cal-Asia-Loading-Icon.gif">
             </div>
             <p ng-repeat="update in updates" style="padding: 10px 30px 10px 30px;margin:0;border-top:solid 1px #ddd">
               <strong>[[update.title]]</strong><br>
