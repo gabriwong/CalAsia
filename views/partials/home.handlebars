@@ -9,10 +9,10 @@
 
           <!-- Wrapper for slides --> 
           <div class="carousel-inner" style="height:400px;background:#999">
+            <div style="position:absolute; top:40%;left:48%;z-index:1" data-loading>
+              <img src="img/Cal-Asia-Loading-Icon.gif">
+            </div>
             <div class="item" id="slide[[item.order]]" ng-repeat="item in carousel" carousel-first-active style="background: url([[item.image]]) top center no-repeat">
-              <div style="position:absolute; top:40%;left:48%" data-loading>
-                <img src="img/Cal-Asia-Loading-Icon.gif">
-              </div>
               <div class="carousel-caption" contenteditable="false">
                 <h4>[[item.title]]</h4>
                 <div ng-bind-html="item.text"></div>
