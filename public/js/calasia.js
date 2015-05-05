@@ -537,7 +537,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			$(selector).modal('show');
 		}
 	})
-	.controller('adminEventCtrl', function ($scope, $filter, $http, authenticationService) {
+	.controller('adminEventCtrl', function ($scope, $filter, $http, $location, authenticationService) {
 		window.scrollTo(0,0);
 		$http.get('/api/events').success(function(data, status, headers, config){
 			$scope.eventCount = data.length;
@@ -646,7 +646,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			$http.post('/api/events/new', $scope.form).
 			  success(function(data) {
 			  	alert("event added");
-			  	$location.path('/admin');
+			  	$location.path('/adminEvent');
 			  });
 		};
 	})
@@ -718,11 +718,11 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			$scope.form.past = new Date > $scope.form.date.full;
 			$http.put('/api/event/' + $routeParams.id, $scope.form).
 				success(function(data) {
-					$location.url('/admin');
+					$location.url('/adminEvent');
 				});
 		};
 	})
-	.controller('adminUpdateCtrl', function ($scope, $filter, $http, authenticationService) {
+	.controller('adminUpdateCtrl', function ($scope, $filter, $http, $location, authenticationService) {
 		window.scrollTo(0,0);
 		$http.get('/api/updates').success(function(data, status, headers, config){
 			$scope.updates = data;
@@ -766,7 +766,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			$http.post('/api/updates/new', $scope.form).
 			  success(function(data) {
 			  	alert("Update added");
-			  	$location.path('/admin');
+			  	$location.path('/adminUpdate');
 			});
 		};
 	})
@@ -804,11 +804,11 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			}
 			$http.put('/api/update/' + $routeParams.id, $scope.form).
 				success(function(data) {
-					$location.url('/admin');
+					$location.url('/adminUpdate');
 				});
 		};
 	})
-	.controller('adminBlogCtrl', function ($scope, $filter, $http, authenticationService) {
+	.controller('adminBlogCtrl', function ($scope, $filter, $http, $location, authenticationService) {
 		window.scrollTo(0,0);
 		$http.get('/api/blogs').success(function(data, status, headers, config){
 			$scope.blogs = data;
@@ -856,7 +856,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			$http.post('/api/blogs/new', $scope.form).
 			  success(function(data) {
 			  	alert("Blog added");
-			  	$location.path('/admin');
+			  	$location.path('/adminBlog');
 			});
 		};
 	})
@@ -893,11 +893,11 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			}
 			$http.put('/api/blog/' + $routeParams.id, $scope.form).
 				success(function(data) {
-					$location.url('/admin');
+					$location.url('/adminBlog');
 				});
 		};
 	})
-	.controller('adminBoardCtrl', function ($scope, $filter, $http, authenticationService) {
+	.controller('adminBoardCtrl', function ($scope, $filter, $http, $location, authenticationService) {
 		window.scrollTo(0,0);
 		$http.get('/api/board').success(function(data, status, headers, config){
 			$scope.board = data;
@@ -987,7 +987,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				});
 		};
 	})
-	.controller('adminCarouselCtrl', function ($scope, $filter, $http, authenticationService) {
+	.controller('adminCarouselCtrl', function ($scope, $filter, $http, $location, authenticationService) {
 		window.scrollTo(0,0);
 		$('#success').css("opacity",0);
 		var N;
