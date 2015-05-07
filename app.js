@@ -159,7 +159,27 @@ app.post('/api/logout', requiresAuthentication, function (req,res){
   removeFromTokens(token);
   res.send(200);
 })
-
+app.get('/sitemap.xml', function(req, res) {
+  // do the XML string generation
+  var urls = ['', 'programs', 'calendar', 'membership', 'resources', 'resources-org', 'resources-seniorofficials','board','about'];
+  // the root of your website - the protocol and the domain name with a trailing slash
+  var root_path = 'http://calasia.org/';
+  // XML sitemap generation starts here
+  var priority = 0.80;
+  var freq = 'yearly';
+  var xml = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">';
+  for (var i in urls) {
+      xml += '<url>';
+      xml += '<loc>'+ root_path + urls[i] + '</loc>';
+      xml += urls[i]=='calendar'||urls[i]=='programs'||urls[i]==''?'<changefreq>'+ 'monthly' +'</changefreq>':'<changefreq>'+ freq +'</changefreq>';
+      xml += urls[i]==''?'<priority>'+ 1.00 +'</priority>':'<priority>'+ priority +'</priority>';
+      xml += '</url>';
+      i++;
+  }
+  xml += '</urlset>';
+  res.header('Content-Type', 'text/xml');
+  res.send(xml);
+});
 // redirect all others to the index (HTML5 history)
 app.get('*', routes.index);
 

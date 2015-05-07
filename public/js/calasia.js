@@ -23,10 +23,12 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				controller:"resourcesCtrl"
 			})
 			.when('/resources-orgs',{
-				templateUrl: 'partials/resources-orgs'
+				templateUrl: 'partials/resources-orgs',
+				controller:"resourcesCtrl"
 			})
 			.when('/resources-seniorofficials',{
-				templateUrl: 'partials/resources-seniorofficials'
+				templateUrl: 'partials/resources-seniorofficials',
+				controller:"resourcesCtrl"
 			})
 			.when('/membership', {
 				templateUrl: 'partials/membership',
@@ -304,28 +306,6 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		$interpolateProvider.startSymbol('[[');
   		$interpolateProvider.endSymbol(']]');
 	}])
-	.controller("programsCtrl",function ($scope, $http){
-		window.scrollTo(0,0);
-		var currYear=new Date().getFullYear();
-		$http.get("/api/events/"+currYear).success(function(data, status, headers, config){
-			if(data.length==0){
-				data.push({name:"No Events in " +currYear});
-			}
-			$scope.events = data;
-		})
-		$scope.getYear = function(year){
-			$http.get("/api/events/"+year).success(function(data, status, headers, config){
-				if(data.length==0){
-					data.push({name:"No Events in "+year});
-				}
-				$scope.events = data;
-			})
-		}
-		$scope.showModal = function (id){
-			var selector = "#"+id;
-			$(selector).modal('show');
-		}
-	})
 	.controller("homeCtrl",function ($window, $scope, $http, $location, authenticationService, $routeParams){
 		window.scrollTo(0,0);
 		$scope.$on('onRepeatFirst', function(scope, element, attrs){
@@ -427,36 +407,35 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		}
 			$("[contenteditable]").attr('contenteditable',false);
 	})
-	.controller("aboutCtrl", function(){
+	.controller("programsCtrl",function ($scope, $http){
 		window.scrollTo(0,0);
-		$('#toggle-view li h3, #toggle-view li strong').click(function () {
-	        var text = $(this).parent().children('div.panel');
-	        if (text.is(':hidden')) {
-	            text.slideDown('200');
-	            $(this).children('span').html('-');        
-	        } else {
-	            text.slideUp('200');
-	            $(this).children('span').html('+');        
-	        }
-	        
-	    });
-	})
-	.controller("membershipCtrl", function(){
-		window.scrollTo(0,0);
-		$('#toggle-view li h3, #toggle-view li strong').click(function () {
-	        var text = $(this).parent().children('div.panel');
-	        if (text.is(':hidden')) {
-	            text.slideDown('200');
-	            $(this).children('span').html('-');        
-	        } else {
-	            text.slideUp('200');
-	            $(this).children('span').html('+');        
-	        }
-	        
-	    });
+		$scope.page.setTitle('Cal-Asia Programs');
+		$scope.page.setDescription('The Council\'s programs in California have featured heads of state from Malaysia and the Philippines, Vietnam\'s Deputy Prime Minister, Chinese, and other Asian trade and economic ministers, ambassadors of the United States and Asian contries, and senior business leaders from both sides of the Pacific.');
+		var currYear=new Date().getFullYear();
+		$http.get("/api/events/"+currYear).success(function(data, status, headers, config){
+			if(data.length==0){
+				data.push({name:"No Events in " +currYear});
+			}
+			$scope.events = data;
+		})
+		$scope.getYear = function(year){
+			$http.get("/api/events/"+year).success(function(data, status, headers, config){
+				if(data.length==0){
+					data.push({name:"No Events in "+year});
+				}
+				$scope.events = data;
+			})
+		}
+		$scope.showModal = function (id){
+			var selector = "#"+id;
+			$(selector).modal('show');
+		}
 	})
 	.controller("calendarCtrl",function ($scope, $http){
 		window.scrollTo(0,0);
+		$scope.page.setTitle('Cal-Asia Calendar');
+		$scope.page.setDescription('See all upcoming Cal-Asia programs and events, and all upcoming featured international events.');
+
 		$http.get("/api/upcomingInternalEvents").success(function(data, status, headers, config){
 			if(data.length==0){
 				data.push({name:"No Upcoming Internal Events"});
@@ -475,8 +454,9 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		}
 	})
 	.controller("resourcesCtrl",function ($scope, $routeParams){
+		console.log($routeParams);
+		$scope.page.setTitle('Cal-Asia Resources');
 		$(".menubox").hide();
-
 		$(".menuitem").click(function(event) {
 			event.preventDefault();
 			$(".menubox").hide();
@@ -499,7 +479,42 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			window.scrollTo(0,0);
 		}
 	})
+	.controller("aboutCtrl", function($scope, $http){
+		window.scrollTo(0,0);
+		$scope.page.setTitle('About Cal-Asia');
+		$('#toggle-view li h3, #toggle-view li strong').click(function () {
+	        var text = $(this).parent().children('div.panel');
+	        if (text.is(':hidden')) {
+	            text.slideDown('200');
+	            $(this).children('span').html('-');        
+	        } else {
+	            text.slideUp('200');
+	            $(this).children('span').html('+');        
+	        }
+	    });
+	    $http.get("/api/board/officers").success(function(data, status, headers, config){
+			$scope.officers = data;
+		})
+		$http.get("/api/board/directors").success(function(data, status, headers, config){
+			$scope.directors = data;
+		})
+	})
+	.controller("membershipCtrl", function($scope){
+		window.scrollTo(0,0);
+		$scope.page.setTitle('Cal-Asia Membership');
+		$('#toggle-view li h3, #toggle-view li strong').click(function () {
+	        var text = $(this).parent().children('div.panel');
+	        if (text.is(':hidden')) {
+	            text.slideDown('200');
+	            $(this).children('span').html('-');        
+	        } else {
+	            text.slideUp('200');
+	            $(this).children('span').html('+');        
+	        }
+	    });
+	})
 	.controller("blogCtrl", function ($scope, $http){
+		$scope.page.setTitle('Cal-Asia Blog');
 		window.scrollTo(0,0);
 		if($routeParams.id==undefined){
 			$http.get('/api/blogs').success(function(data){
@@ -517,6 +532,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		}
 	})
 	.controller("boardCtrl",function ($scope, $http){
+		$scope.page.setTitle('Cal-Asia Board');
 		window.scrollTo(0,0);
 		$http.get("/api/board/officers").success(function(data, status, headers, config){
 			$scope.officers = data;
@@ -1198,15 +1214,24 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		};
 	})
 	.run(["$rootScope", "$location", function ($rootScope, $location) {
-	  $rootScope.$on("$routeChangeSuccess", function(userInfo) {
-	    // console.log(userInfo);
-	  });
-	 
-	  $rootScope.$on("$routeChangeError", function (event, current, previous, eventObj) {
-	    if (eventObj.authenticated === false) {
-	      $location.path("/login");
-	    }
-	  });
+		$rootScope.page = {
+			setTitle: function(title){
+				this.title=title + ' | California-Asia Business Council';
+			},
+			setDescription: function(text){
+				this.description=text;
+			}
+		}
+		$rootScope.$on("$routeChangeSuccess", function(event, current, previous) {
+			// console.log(userInfo);
+			$rootScope.page.setTitle(current.$$route.title || 'California-Asia Business Council');
+			$rootScope.page.setDescription(current.$$route.description || 'Cal-Asia\'s mission is to foster business between California and the economies of Asia');
+		});
+		$rootScope.$on("$routeChangeError", function (event, current, previous, eventObj) {
+			if (eventObj.authenticated === false) {
+				$location.path("/login");
+			}
+		});
 	}]);
 //var editorString ='<div class="btn-toolbar" data-role="editor-toolbar" data-target=".editor"><div class="btn-group"><a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="" data-original-title="Font"><i class="glyphicon glyphicon-font"></i><b class="caret"></b></a><ul class="dropdown-menu"><li><a data-edit="fontName Serif" style="font-family:\'Serif\'">Serif</a></li><li><a data-edit="fontName Sans" style="font-family:\'Sans\'">Sans</a></li><li><a data-edit="fontName Arial" style="font-family:\'Arial\'">Arial</a></li><li><a data-edit="fontName Arial Black" style="font-family:\'Arial Black\'">Arial Black</a></li><li><a data-edit="fontName Courier" style="font-family:\'Courier\'">Courier</a></li><li><a data-edit="fontName Courier New" style="font-family:\'Courier New\'">Courier New</a></li><li><a data-edit="fontName Comic Sans MS" style="font-family:\'Comic Sans MS\'">Comic Sans MS</a></li><li><a data-edit="fontName Helvetica" style="font-family:\'Helvetica\'">Helvetica</a></li><li><a data-edit="fontName Impact" style="font-family:\'Impact\'">Impact</a></li><li><a data-edit="fontName Lucida Grande" style="font-family:\'Lucida Grande\'">Lucida Grande</a></li><li><a data-edit="fontName Lucida Sans" style="font-family:\'Lucida Sans\'">Lucida Sans</a></li><li><a data-edit="fontName Tahoma" style="font-family:\'Tahoma\'">Tahoma</a></li><li><a data-edit="fontName Times" style="font-family:\'Times\'">Times</a></li><li><a data-edit="fontName Times New Roman" style="font-family:\'Times New Roman\'">Times New Roman</a></li><li><a data-edit="fontName Verdana" style="font-family:\'Verdana\'">Verdana</a></li></ul></div><div class="btn-group"><a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="" data-original-title="Font Size"><i class="glyphicon glyphicon-text-height"></i>&nbsp;<b class="caret"></b></a><ul class="dropdown-menu"><li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li><li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li><li><a data-edit="fontSize 1"><font size="1">Small</font></a></li></ul></div><div class="btn-group"><a class="btn btn-default" data-edit="bold" title="" data-original-title="Bold (Ctrl/Cmd+B)"><i class="glyphicon glyphicon-bold"></i></a><a class="btn btn-default" data-edit="italic" title="" data-original-title="Italic (Ctrl/Cmd+I)"><i class="glyphicon glyphicon-italic"></i></a><a class="btn btn-default" data-edit="underline" title="" data-original-title="Underline (Ctrl/Cmd+U)"><i class="glyphicon glyphicon-text-width"></i></a></div><div class="btn-group"><a class="btn btn-default" data-edit="insertunorderedlist" title="" data-original-title="Bullet list"><i class="glyphicon glyphicon-list"></i></a><a class="btn btn-default" data-edit="insertorderedlist" title="" data-original-title="Number list"><i class="glyphicon glyphicon-list-alt"></i></a><a class="btn btn-default" data-edit="outdent" title="" data-original-title="Reduce indent (Shift+Tab)"><i class="glyphicon glyphicon-indent-left"></i></a><a class="btn btn-default" data-edit="indent" title="" data-original-title="Indent (Tab)"><i class="glyphicon glyphicon-indent-right"></i></a></div><div class="btn-group"><a class="btn btn-default" data-edit="justifyleft" title="" data-original-title="Align Left (Ctrl/Cmd+L)"><i class="glyphicon glyphicon-align-left"></i></a><a class="btn btn-default" data-edit="justifycenter" title="" data-original-title="Center (Ctrl/Cmd+E)"><i class="glyphicon glyphicon-align-center"></i></a><a class="btn btn-default" data-edit="justifyright" title="" data-original-title="Align Right (Ctrl/Cmd+R)"><i class="glyphicon glyphicon-align-right"></i></a><a class="btn btn-default" data-edit="justifyfull" title="" data-original-title="Justify (Ctrl/Cmd+J)"><i class="glyphicon glyphicon-align-justify"></i></a></div><div class="btn-group"><a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="" data-original-title="Hyperlink"><i class="glyphicon glyphicon-link"></i></a><div class="dropdown-menu input-append"><input class="span2" placeholder="URL" type="text" data-edit="createLink"><button class="btn" type="button">Add</button></div><a class="btn btn-default" data-edit="unlink" title="" data-original-title="Remove Hyperlink"><i class="glyphicon glyphicon-remove"></i></a></div><div class="btn-group"><a class="btn btn-default" title="" id="pictureBtn" data-original-title="Insert picture (or just drag &amp; drop)"><i class="glyphicon glyphicon-picture"></i></a><input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" style="opacity: 0; position: absolute; top: 0px; left: 0px; width: 37px; height: 30px;"></div><div class="btn-group"><a class="btn btn-default" data-edit="undo" title="" data-original-title="Undo (Ctrl/Cmd+Z)"><i class="glyphicon glyphicon-backward"></i></a><a class="btn btn-default" data-edit="redo" title="" data-original-title="Redo (Ctrl/Cmd+Y)"><i class="glyphicon glyphicon-forward"></i></a></div></div>';
 //var editorString = '<div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor"><div class="btn-group"><a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="icon-font"></i><b class="caret"></b></a><ul class="dropdown-menu"></ul></div><div class="btn-group"><a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="icon-text-height"></i>&nbsp;<b class="caret"></b></a><ul class="dropdown-menu"><li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li><li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li><li><a data-edit="fontSize 1"><font size="1">Small</font></a></li></ul></div><div class="btn-group"><a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a><a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a><a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="icon-strikethrough"></i></a><a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="icon-underline"></i></a></div><div class="btn-group"><a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="icon-list-ul"></i></a><a class="btn" data-edit="insertorderedlist" title="Number list"><i class="icon-list-ol"></i></a><a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="icon-indent-left"></i></a><a class="btn" data-edit="indent" title="Indent (Tab)"><i class="icon-indent-right"></i></a></div><div class="btn-group"><a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="icon-align-left"></i></a><a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="icon-align-center"></i></a><a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="icon-align-right"></i></a><a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="icon-align-justify"></i></a></div><div class="btn-group"><a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="icon-link"></i></a><div class="dropdown-menu input-append"><input class="span2" placeholder="URL" type="text" data-edit="createLink"/><button class="btn" type="button">Add</button></div><a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="icon-cut"></i></a></div><div class="btn-group"><a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn"><i class="icon-picture"></i></a><input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" /></div><div class="btn-group"><a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="icon-undo"></i></a><a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="icon-repeat"></i></a></div><input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech=""></div>'
