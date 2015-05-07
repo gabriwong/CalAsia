@@ -410,7 +410,7 @@ exports.CalAsiaBoard= function(req,res){
 exports.boardOfficers = function(req, res){
 	models.Board
 		.find({type:'officer'})
-		.sort('name')
+		.sort('position')
 		.exec(callback);
 	function callback (err, result){
 		if(err) console.log(err);
