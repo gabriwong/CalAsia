@@ -39,31 +39,12 @@
 					</div>
 					<div class="col-md-6">
 						<h5>Officers</h5>
-						<strong>Chairman:</strong> Elizabeth Y.A. Ferguson <br>
-						<strong>Chairman Emeritus:</strong> Daniel Chao<br>
-						<strong>President/ Honorary Counsel:</strong> Mark C. Dosker<br>
-						<strong>Vice Presidents:</strong> Brad Aris, George Sycip<br>
-						<strong>Executive Director:</strong> Jeremy W. Potash<br>
-						<strong>Senior Advisor:</strong> Dr. Daniel K.H. Chao<br>
-						<strong>Emerging Leaders/ Young Professionals President:</strong> Michelle Full<br><br>
+						<p style="margin:0" ng-repeat="member in officers"><strong>[[member.position]]:</strong> [[member.name]]</p>
 					</div><!-- end col-md-6 -->
 
 					<div class="col-md-6">
 						<h5>Directors</h5>
-						Brad Aris, <i>Wells Fargo Bank</i><br> 
-						Chris Chang, <i>Alien Technology</i><br>
-						Mark C. Dosker, <i>Squire Patton Boggs</i><br> 
-						Elizabeth Y.A. Ferguson, <i>Drexel Oceania</i><br> 
-						Gordon Hein , Ph.D., <i>Asia Foundation</i><br> 
-						Michael Keyoung, MD, Ph.D, <i>Portola Capital Partners</i><br>
-						G. Paul Matthews, <i>Matthews International Capital</i><br>
-						Sandra R. McCandless, <i>Dentons</i><br>
-						Dr. Nancy Mangold, <i>Cal State East Bay</i><br>
-						Lillian Nakagawa, <i>GCA Law Partners LLP</i><br>
-						Peter Osmond, <i>Symantec</i><br>
-						Joe Ryan, <i>Top 1 Oil</i><br> 
-						George Sycip, <i>Halanna Management</i><br> 
-						Patricia Yeh, <i>SOM</i><br>
+						<p style="margin:0" ng-repeat="member in directors">[[member.name]], <i>[[member.company.name]]</i></p> 
 					</div><!-- end col-md-6 -->
 				</div><!-- end row -->
 			</div><!--end panel -->
