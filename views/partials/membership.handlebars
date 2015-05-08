@@ -3,17 +3,11 @@
 				<div class="row">
 					<!-- III Membership Blurb --> 
 					<div class="col-md-6"><br>
-						<p class="lead">What can Cal-Asia do for you?</p>
-						<p>Cal-Asia offers you unparalleled opportunities to make and strengthen contacts and to develop market intellegence that will further strategic goals.</p>
-						<ul>
-							<li>We provide your firm direct access to key US, China and Southeast Asian policy makers and business leaders who can affect the course of your business. This access will enable you to initiate or broaden business decisions, establish or reinforce your personal contacts, influence policy and regulation, and increase mutual understanding.</li>
-							<li>We inform you of opportunities and changes in the business environments of Southeast Asia, China and US government policies that could affect your business.</li>
-							<li>We proactively support measures that reduce commercial barriers and facilitate business.</li>
-							<li>We respond to our members' inquiries in a personal, customer-focused manner.</li>
-						</ul>
+						<p class="lead">[[membership[0].type]]</p>
+						<p ng-bind-html="membership[0].text"></p>
 						<hr>
-						<p class="lead">How can I sign up for membership?</p>
-						<p>To sign up for membership, please email us at <a href="mailto:#">info@calasia.org</a> or call us at 415-986-8808.  We are working on an online form -- thank you for your patience. </p>
+						<p class="lead">[[membership[1].type]]</p>
+						<p ng-bind-html="membership[1].text"></p>
 						<hr>
 						<p class="lead">Cal-Asia Official Partners</p>
 						

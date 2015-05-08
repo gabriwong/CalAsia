@@ -458,8 +458,8 @@ exports.editBoardMember = function (req, res){
 		.exec(callback);
 	function callback(err, result){
 		if(err) console.log(err);
-	    if(!result) res.json(false);
-	    else{
+		if(!result) res.json(false);
+		else{
 	    	result.type = req.body.type;
 			result.name = req.body.name;
 			result.image = req.body.image;
@@ -470,11 +470,11 @@ exports.editBoardMember = function (req, res){
 				if(err) res.send(500);
 				res.json(true);
 			});
-	    }
+		}
 	}
 }
 exports.deleteBoardMember = function (req, res){
-	var id = req.params.id
+	var id = req.params.id;
 	models.Board
 		.findOne({'_id':id})
 		.remove()
@@ -487,7 +487,71 @@ exports.deleteBoardMember = function (req, res){
 		res.json(true);
 	}
 }
-
+exports.pageContent = function(req, res){
+	var page = req.params.page;
+	models.Content
+		.find({'page':page})
+		.exec(callback);
+	function callback(err,result){
+		if(err)	console.log(err);
+		res.json(result);
+	}
+}
+exports.oneContent = function(req, res){
+	var id = req.params.id;
+	models.Content
+		.findOne({'_id':id})
+		.exec(callback);
+	function callback(err,result){
+		if(err) console.log(err);
+		res.json({content:result});
+	}
+}
+exports.newContent = function(req,res){
+	var newContent = new models.Content(req.body);
+	newContent.save(afterSaving);
+	function afterSaving(err){
+		if(err){
+			console.log(err);
+			res.send(500);
+		}
+		res.json(newContent);
+	}
+}
+exports.editContent = function(req,res){
+	var id = req.params.id
+	models.Content
+		.findOne({'_id':id})
+		.exec(callback);
+	function callback(err, result){
+		if(err) console.log(err);
+		if(!result) res.json(false);
+		else{
+	    	result.page = req.body.page;
+			result.type = req.body.type;
+			result.text = req.body.text;
+			result.image=req.body.image;
+			result.save(function(err){
+				if(err) res.send(500);
+				res.json(true);
+			});
+		}
+	}
+}
+exports.deleteContent = function (req, res){
+	var id = req.params.id;
+	models.Content
+		.findOne({'_id':id})
+		.remove()
+		.exec(afterRemove);
+	function afterRemove(err, result){
+		if(err){
+			console.log(err);
+			res.json(false);
+		}
+		res.json(true);
+	}
+}
 function checkPastEvents(){
 	models.Event
 		.find({past:false})

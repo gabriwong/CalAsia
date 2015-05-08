@@ -2,12 +2,8 @@
 		<div id="programsBox">
 			<div class="row">
 				<div class="col-md-12">
-					<p class="lead" style="padding-top: 20px; margin: 10px; text-align:center;">Cal-Asia Programs and Events</p>
-
-
-					<p style="padding-left: 30px; padding-right: 30px;">The Council's programs in California have featured heads of state from Malaysia and the Philippines, Vietnam's Deputy Prime Minister, Chinese, and other Asian trade and economic ministers, ambassadors of the United States and Asian contries, and senior business leaders from both sides of the Pacific. <br><br> 
-
-					The Council's vigorous program schedule, its initiatives focused on sustainable development in Asia and China's financial sector, and the periodic dissemination of key business highlights has earned <a href="/about">two coveted awards</a> from the United States Department of Commerce.</p><br> 
+					<p class="lead" style="padding-top: 20px; margin: 10px; text-align:center;">[[content[0].type]]</p>
+					<p style="padding-left: 30px; padding-right: 30px;" ng-bind-html="content[0].text"></p><br> 
 
 				</div><!-- end col-lg-12 -->
 			</div><!-- end row --> 
@@ -16,10 +12,10 @@
 			<div class="row">
 			  <div class="col-sm-6 col-md-4">
 			    <div class="thumbnail">
-			      <img src="img/programs/programs-infoseminar.jpg" alt="Info Seminars">
+			      <img src="[[content[1].image.slice(10, content.image.length-2)]]" alt="Info Seminars">
 			      <div class="caption">
-			        <h3>Information Seminars</h3>
-			        <p>Cal-Asia brings together government and industry experts on a wide range of Asia business issues.  We also host visiting business delegations, trade and investment briefings, and sector specific panel discussions.</p>
+			        <h3>[[content[1].type]]</h3>
+			        <p ng-bind-html="content[1].text"></p>
 			        <p><a href="/calendar" class="btn btn-primary" role="button">See upcoming events</a> </p>
 			      </div><!-- end caption --> 
 			    </div><!-- end thumbnail --> 
@@ -27,10 +23,10 @@
 
 			  <div class="col-sm-6 col-md-4">
 			    <div class="thumbnail">
-			      <img src="img/programs/programs-network.jpg" alt="Networking">
+			      <img src="[[content[2].image.slice(10, content.image.length-2)]]" alt="Networking">
 			      <div class="caption">
-			        <h3>Networking</h3>
-			        <p>We invite members to our meetings designed to facilitate face-to-face contact, an exchange of business cards, an opportunity to connect with potential partners, clients, friends.</p>
+			        <h3>[[content[2].type]]</h3>
+			        <p ng-bind-html="content[2].text"></p>
 			        <p><a href="/membership" class="btn btn-primary" role="button">Learn about Membership</a></p>
 			      </div><!-- end caption --> 
 			    </div><!-- end thumbnail --> 
@@ -38,10 +34,10 @@
 
 			  <div class="col-sm-6 col-md-4">
 			    <div class="thumbnail">
-			      <img src="img/programs/programs-gala.jpg" alt="Asia Night">
+			      <img src="[[content[3].image.slice(10, content.image.length-2)]]" alt="Asia Night">
 			      <div class="caption">
-			        <h3>Annual Gala</h3>
-			        <p>California-Asia Business Council (Cal-Asia) began bestowing the New Silk Road Award at Asia Night in 2003, calling attention to distinguished business and government leaders who have made outstanding contributions to California-Asia business. Visit www.AsiaNight.org to learn more.</p>
+			        <h3>[[content[3].type]]</h3>
+			        <p ng-bind-html="content[3].text"></p>
 			        <p><a href="www.asianight.org" target="_blank" class="btn btn-primary" role="button">Click here for Asia Night</a></p>
 			      </div><!-- end caption --> 
 			    </div><!-- end thumbnail --> 

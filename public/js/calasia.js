@@ -156,6 +156,22 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 					}
 				}
 			})
+			.when('/adminContent',{
+				templateUrl: 'partials/adminContent',
+				controller: 'adminContentCtrl',
+				resolve:{
+					auth: function ($q, authenticationService, $location){
+						var userInfo = authenticationService.getUserInfo();
+						if (userInfo) {
+							return $q.when(userInfo);
+						}
+						else{
+							$location.path('/login');
+							return $q.reject({authenticated:false});
+						}
+					}
+				}
+			})
 			.when('/addEvent',{
 				templateUrl: 'partials/addEvent',
 				controller:"addEventCtrl",
@@ -283,6 +299,38 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 					}
 				}
 			})
+			.when('/addContent',{
+				templateUrl: 'partials/contentForm',
+				controller:"addContentCtrl",
+				resolve:{
+					auth: function ($q, authenticationService, $location){
+						var userInfo = authenticationService.getUserInfo();
+						if (userInfo) {
+							return $q.when(userInfo);
+						}
+						else{
+							$location.path('/login');
+							return $q.reject({authenticated:false});
+						}
+					}
+				}
+			})
+			.when('/editContent/:id',{
+				templateUrl:'partials/contentForm',
+				controller:"editContentCtrl",
+				resolve:{
+					auth: function ($q, authenticationService, $location){
+						var userInfo = authenticationService.getUserInfo();
+						if (userInfo) {
+							return $q.when(userInfo);
+						}
+						else{
+							$location.path('/login');
+							return $q.reject({authenticated:false});
+						}
+					}
+				}
+			})
 			.when('/editCarousel/:id',{
 				templateUrl:'partials/carouselform',
 				controller:"editCarouselCtrl",
@@ -368,6 +416,9 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				$(id).modal('show');
 			});
 		},1000)
+		$http.get("/api/pageContent/home").success(function(data, status, headers, config){
+			$scope.content = data;
+		})
 		$http.get("/api/upcomingEvents").success(function(data, status, headers, config){
 			if(data.length==0){
 				$scope.upcomingEvents = [{name:"No Upcoming Events"}];
@@ -411,6 +462,9 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		window.scrollTo(0,0);
 		$scope.page.setTitle('Cal-Asia Programs');
 		$scope.page.setDescription('The Council\'s programs in California have featured heads of state from Malaysia and the Philippines, Vietnam\'s Deputy Prime Minister, Chinese, and other Asian trade and economic ministers, ambassadors of the United States and Asian contries, and senior business leaders from both sides of the Pacific.');
+		$http.get("/api/pageContent/programs").success(function(data, status, headers, config){
+			$scope.content = data;
+		})
 		var currYear=new Date().getFullYear();
 		$http.get("/api/events/"+currYear).success(function(data, status, headers, config){
 			if(data.length==0){
@@ -499,9 +553,13 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			$scope.directors = data;
 		})
 	})
-	.controller("membershipCtrl", function($scope){
+	.controller("membershipCtrl", function($scope,$http){
 		window.scrollTo(0,0);
 		$scope.page.setTitle('Cal-Asia Membership');
+		$http.get('/api/pageContent/membership').success(function(data, status, headers, config){
+			$scope.membership = data;
+			console.log($scope.membership)
+		})
 		$('#toggle-view li h3, #toggle-view li strong').click(function () {
 	        var text = $(this).parent().children('div.panel');
 	        if (text.is(':hidden')) {
@@ -692,7 +750,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			else $scope.form.registration = {};
 			$(':radio[value='+$scope.form.eventType+']').prop('checked',true);
 			if($('#external').prop('checked') == true) $('#externalLink').prop('disabled', false);
-	    	else $('#externalLink').prop('disabled', true);
+			else $('#externalLink').prop('disabled', true);
 		});
 		
 		$scope.submitEvent = function () {
@@ -1000,6 +1058,102 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			$http.put('/api/board/' + $routeParams.id, $scope.form).
 				success(function(data) {
 					$location.url('/adminBoard');
+				});
+		};
+	})
+	.controller('adminContentCtrl', function ($scope, $filter, $http, $location, authenticationService) {
+		window.scrollTo(0,0);
+		$http.get('/api/pageContent/home').success(function(data, status, headers, config){
+			$scope.home = data;
+		})
+		$http.get('/api/pageContent/programs').success(function(data, status, headers, config){
+			$scope.programs = data;
+		})
+		$http.get('/api/pageContent/membership').success(function(data, status, headers, config){
+			$scope.membership = data;
+		})
+		$http.get('/api/pageContent/resources').success(function(data, status, headers, config){
+			$scope.resources = data;
+		})
+		$http.get('/api/pageContent/about').success(function(data, status, headers, config){
+			$scope.about = data;
+		})
+		$scope.deleteContent = function(id){
+			var current = "."+id;
+			if(confirm("Are you sure you want to delete this content?")==true){
+				$http.delete('api/content/'+id)
+				.success(function(data){
+					$(current).fadeOut("fast");
+				})
+			}
+		}
+		$scope.logout = function() {
+			authenticationService.logout().then(function (result) {
+				$scope.userInfo = null;
+				$location.path("/login");
+			}, function (error) {
+				console.log(error);
+			});
+		}
+	})
+	.controller("addContentCtrl",function ($scope, $http, $location){
+		window.scrollTo(0,0);
+		$('#editor').wysiwyg();
+		$('#editor').cleanHtml();
+		$('#editor2').wysiwyg({toolbarSelector: '[data-role=editor-toolbar2]'});
+		$('#editor2').cleanHtml();
+		$scope.form = {};
+		$scope.submitContent = function () {
+			$scope.form.page = $('input[name=pageType]:checked', 'form').val();
+			if ($('#editor') !=undefined){
+				$scope.form.text = $('#editor').html();
+			}
+			if ($('#editor2') !=undefined){
+				if ($('#editor2').html().match(/<img src=/)!=null){
+					$scope.form.image = $('#editor2').html();
+				}
+				else {
+					$scope.form.image = "<img src='"+$('#editor2').html().replace(/(\s*|<.+>)/g, '')+"'>";
+				}
+			}
+			$http.post('/api/content/new', $scope.form).
+				success(function(data) {
+					alert("New content added");
+					$location.path('/adminContent');
+				});
+		};
+	})
+	.controller("editContentCtrl", function ($scope, $http, $location, $routeParams){
+		window.scrollTo(0,0);
+		$('#editor').wysiwyg();
+		$('#editor').cleanHtml();
+		$('#editor2').wysiwyg({toolbarSelector: '[data-role=editor-toolbar2]'});
+		$('#editor2').cleanHtml();
+		$scope.form={};
+		$http.get('/api/content/' + $routeParams.id).success(function(data) {
+			$scope.form = data.content;
+			console.log($scope.form)
+			$(':radio[value='+$scope.form.page+']').prop('checked',true)
+			if($scope.form.text != undefined) $('#editor').append($scope.form.text);
+			if($scope.form.image != undefined) $('#editor2').append($scope.form.image);
+		});
+		$scope.submitContent = function () {
+			$scope.form.page = $('input[name=pageType]:checked', 'form').val();
+			if ($('#editor') !=undefined){
+				$scope.form.text = $('#editor').html();
+			}
+			if ($('#editor2') !=undefined){
+				if ($('#editor2').html().match(/<img src=/)!=null){
+					$scope.form.image = $('#editor2').html();
+				}
+				else {
+					$scope.form.image = "<img src='"+$('#editor2').html().replace(/(\s*|<.+>)/g, '')+"'>";
+				}
+				console.log($scope.form.image)
+			}
+			$http.put('/api/content/' + $routeParams.id, $scope.form).
+				success(function(data) {
+					$location.url('/adminContent');
 				});
 		};
 	})

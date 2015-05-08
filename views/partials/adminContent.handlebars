@@ -1,0 +1,119 @@
+<div id="calendarBox">
+	<div class="row">
+		<div class="col-md-12">
+			<a href="/admin"><button style="margin:5px" class="btn btn-primary pull-left">Admin</button></a>
+			<button ng-click="logout()" style="margin:5px" class="btn btn-danger pull-right">Sign Out</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="btn-group" style="margin:5px">
+				<a href="/adminCarousel" class="btn btn-default btn-lg">
+					Carousel <span class="badge">[[carouselCount]]</span>
+				</a>
+			</div>
+			<div class="btn-group" style="margin:5px">
+				<a href="/adminEvent" class="btn btn-default btn-lg">
+					Events <span class="badge">[[eventCount]]</span>
+				</a>
+				<a href="/addEvent" class="btn btn-default btn-lg">
+					<span class="glyphicon glyphicon-plus"></span>
+				</a>
+			</div>
+			<div class="btn-group" style="margin:5px">
+				<a href="/adminUpdate" class="btn btn-default btn-lg">
+					Updates <span class="badge">[[updateCount]]</span>
+				</a>
+				<a href="/addUpdate" class="btn btn-default btn-lg">
+					<span class="glyphicon glyphicon-plus"></span>
+				</a>
+			</div>
+			<div class="btn-group" style="margin:5px">
+				<a href="/adminBlog" class="btn btn-default btn-lg">
+					Blogs <span class="badge">[[blogCount]]</span>
+				</a>
+				<a href="/addBlog" class="btn btn-default btn-lg">
+					<span class="glyphicon glyphicon-plus"></span>
+				</a>
+			</div>
+			<div class="btn-group" style="margin:5px">
+				<a href="/adminBoard" class="btn btn-default btn-lg">
+					Board <span class="badge">[[boardCount]]</span>
+				</a>
+				<a href="/addBoard" class="btn btn-default btn-lg">
+					<span class="glyphicon glyphicon-plus"></span>
+				</a>
+			</div>
+			<div class="btn-group" style="margin:5px">
+				<a href="/adminContent" class="btn btn-default btn-lg">
+					Page
+				</a>
+				<a href="/addContent" class="btn btn-default btn-lg">
+					<span class="glyphicon glyphicon-plus"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<p class="lead" style="padding-top:20px; text-align:center;">
+		Page Contents
+	</p>
+	<p class="text-center"><a href="/addContent">Add more content +</a></p>
+	<input class="form-control" ng-model="updateSearch", placeholder="search" style="border-radius:0">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="table-responsive">
+				<table class="table table-hover">
+					<thead>
+					  <tr>
+					  	<th>page Name</th>
+					  	<th>type</th>
+					  	<th>Content</th>
+					  	<th>Edit</th>
+					  	<th>Delete</th>	
+					  </tr>
+					</thead>		
+					<tbody>
+						<tr class="text-center" data-loading>
+							<th scope="row"><img src="img/Cal-Asia-Loading-Icon.gif"></th>
+						</tr>
+						<tr ng-repeat="content in home" class="[[content._id]]">
+							<th scope="row">[[content.page]]</th>
+							<td>[[content.type]]</td>
+							<td ng-bind-html="content.text"></td>
+							<td><a href="/editContent/[[content._id]]"><span class="glyphicon glyphicon-pencil"></span></a></td>
+							<td><p class="glyphicon glyphicon-trash" style="color:red;cursor:pointer" ng-click="deleteContent([[content._id]])"></p></td>
+						</tr>
+						<tr ng-repeat="content in programs" class="[[content._id]]">
+							<th scope="row">[[content.page]]</th>
+							<td>[[content.type]]</td>
+							<td ng-bind-html="content.text"></td>
+							<td><a href="/editContent/[[content._id]]"><span class="glyphicon glyphicon-pencil"></span></a></td>
+							<td><p class="glyphicon glyphicon-trash" style="color:red;cursor:pointer" ng-click="deleteContent([[content._id]])"></p></td>
+						</tr>
+						<tr ng-repeat="content in membership" class="[[content._id]]">
+							<th scope="row">[[content.page]]</th>
+							<td>[[content.type]]</td>
+							<td ng-bind-html="content.text"></td>
+							<td><a href="/editContent/[[content._id]]"><span class="glyphicon glyphicon-pencil"></span></a></td>
+							<td><p class="glyphicon glyphicon-trash" style="color:red;cursor:pointer" ng-click="deleteContent([[content._id]])"></p></td>
+						</tr>
+						<tr ng-repeat="content in resources" class="[[content._id]]">
+							<th scope="row">[[content.page]]</th>
+							<td>[[content.type]]</td>
+							<td ng-bind-html="content.text"></td>
+							<td><a href="/editContent/[[content._id]]"><span class="glyphicon glyphicon-pencil"></span></a></td>
+							<td><p class="glyphicon glyphicon-trash" style="color:red;cursor:pointer" ng-click="deleteContent([[content._id]])"></p></td>
+						</tr>
+						<tr ng-repeat="content in about" class="[[content._id]]">
+							<th scope="row">[[content.page]]</th>
+							<td>[[content.type]]</td>
+							<td ng-bind-html="content.text"></td>
+							<td><a href="/editContent/[[content._id]]"><span class="glyphicon glyphicon-pencil"></span></a></td>
+							<td><p class="glyphicon glyphicon-trash" style="color:red;cursor:pointer" ng-click="deleteContent([[content._id]])"></p></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

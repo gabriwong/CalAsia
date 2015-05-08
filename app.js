@@ -135,6 +135,12 @@ app.post('/api/board/new', api.addBoardMember);
 app.put('/api/board/:id', api.editBoardMember);
 app.delete('/api/board/:id', api.deleteBoardMember);
 
+app.get('/api/content/:id', api.oneContent);
+app.get('/api/pageContent/:page', api.pageContent);
+app.post('/api/content/new', api.newContent);
+app.put('/api/content/:id', api.editContent);
+app.delete('/api/content/:id', api.deleteContent);
+
 app.post('/api/login', function (req, res) {
     var userName = req.body.userName;
     var password = req.body.password;

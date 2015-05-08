@@ -68,3 +68,11 @@ var BoardSchema = new mongoose.Schema({
 	bio:String
 })
 exports.Board = mongoose.model('Board',BoardSchema);
+
+var ContentSchema = new mongoose.Schema({
+	page:String,
+	type:String,
+	text:String,
+	image:String,
+})
+exports.Content = mongoose.model('Content',ContentSchema);
