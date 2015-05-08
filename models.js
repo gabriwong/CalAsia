@@ -73,6 +73,6 @@ var ContentSchema = new mongoose.Schema({
 	page:String,
 	type:String,
 	text:String,
-	image:String,
+	image:String
 })
 exports.Content = mongoose.model('Content',ContentSchema);

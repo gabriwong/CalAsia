@@ -17,13 +17,13 @@
 							<div class="boardThumbnail" style="background:url([[member.image]]) center center;background-size:cover;width:100%;height:100%;position:absolute;top:0;left:0;border-radius:100px;border:solid 10px #537368"></div>
 						</a>
 					</div>
-					<div style="height:100px;text-align:center">
+					<div style="height:80px;text-align:center">
 						<h5 style="cursor:pointer" ng-click="showModal([[member._id]])"><strong>[[member.name]]</strong></h5>
-						<h5><strong>[[member.position]]</strong></h5>
+						<h6 style="color:#777"><strong>[[member.position]]</strong></h6>
 					</div>
 				</div>
 			</div>
-			<div class="modal fade" id="[[member._id]]" ng-repeat="member in officers | orderBy:'name'">
+			<div class="modal fade boardModal" id="[[member._id]]" ng-repeat="member in officers | orderBy:'name'">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header text-center">
@@ -73,13 +73,13 @@
 							<div class="boardThumbnail" style="background:url([[member.image]]) center center;background-size:cover;width:100%;height:100%;position:absolute;top:0;left:0;border-radius:100px;border:solid 10px #537368"></div>
 						</a>
 					</div>
-					<div style="height:100px;text-align:center">
+					<div style="height:80px;text-align:center">
 						<h5 style="cursor:pointer" ng-click="showModal([[member._id]])"><strong>[[member.name]]</strong></h5>
-						<h5><strong>[[member.position]]</strong></h5>
+						<h6 style="color:#777"><strong>[[member.position]]</strong></h6>
 					</div>
 				</div>
 			</div>
-			<div class="modal fade" id="[[member._id]]" ng-repeat="member in directors | orderBy:'name'">
+			<div class="modal fade boardModal" id="[[member._id]]" ng-repeat="member in directors | orderBy:'name'">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header text-center">
