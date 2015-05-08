@@ -92,6 +92,7 @@
 
 							<div class="modal-body">
 							<p ng-bind-html="event.description"></p>
+							<p ng-if="event.sponsors.length>0"><strong>Sponsors: </strong>[[event.sponsors.join(", ")]]</p>
 
 							</div><!-- end modal body-->
 
@@ -135,7 +136,7 @@
 							<td>[[event.date.string]]</td>
 							<td>[[event.location]]</td>
 							<td><span ng-show="event.registration.date.string">Register by [[event.registration.date.string]]<span></td>
-							<td ng-bind-html="event.sponsors">[[event.sponsors.join(", ")]]</td>
+							<td>[[event.sponsors.join(", ")]]</td>
 							<td><a href="/editEvent/[[event._id]]"><span class="glyphicon glyphicon-pencil"></span></a></td>
 							<td><p class="glyphicon glyphicon-trash" style="color:red;cursor:pointer" ng-click="deleteEvent([[event._id]])"></p></td>
 						</tr>

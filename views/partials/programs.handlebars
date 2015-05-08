@@ -88,6 +88,7 @@
 
 								<div class="modal-body">
 								<p ng-bind-html="event.description"></p>
+								<p ng-if="event.sponsors.length>0"><strong>Sponsors: </strong>[[event.sponsors.join(", ")]]</p>
 
 								</div><!-- end modal body-->
 
@@ -126,7 +127,7 @@
 								<th scope="row"><a ng-click="showModal([[event._id]])" data-toggle="modal" style="cursor:pointer">[[event.name]]</a></th>
 								<td>[[event.date.string]]</td>
 								<td>[[event.speakers.join(", ")]]</td>
-								<td ng-bind-html="event.sponsors">[[event.sponsors.join(", ")]]</td>
+								<td>[[event.sponsors.join(", ")]]</td>
 							</tr>
 						</tbody>
 					</table>
