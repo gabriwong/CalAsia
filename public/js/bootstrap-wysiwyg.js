@@ -39,17 +39,16 @@
 				var commandArr = commandWithArgs.split(' '),
 					command = commandArr.shift(),
 					args = commandArr.join(' ') + (valueArg || '');
-				if (args.substring(0,4) == "data"){
-					document.execCommand(command, 0, args);
-				}
-				else if (args != ''){
-					var selected = document.getSelection();
-					if ($('#linkTarget').is(':checked')){
-						if (args.substring(0,4) != "http") args = "http://"+args;
-						document.execCommand("insertHTML",false,"<a class='' href='"+args+"' target='_blank'>"+selected+"</a>");
-					}
-					else{
-						document.execCommand("insertHTML",false,"<a class='' href='"+args+"'>"+selected+"</a>");
+				if (command=='createLink'){
+					if (args != ''){
+						var selected = document.getSelection();
+						if ($('#linkTarget').is(':checked')){
+							if (args.substring(0,4) != "http") args = "http://"+args;
+							document.execCommand("insertHTML",false,"<a class='' href='"+args+"' target='_blank'>"+selected+"</a>");
+						}
+						else{
+							document.execCommand("insertHTML",false,"<a class='' href='"+args+"'>"+selected+"</a>");
+						}
 					}
 				}
 				else{
