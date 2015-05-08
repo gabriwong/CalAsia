@@ -509,7 +509,6 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		}
 	})
 	.controller("resourcesCtrl",function ($scope, $routeParams){
-		console.log($routeParams);
 		$scope.page.setTitle('Cal-Asia Resources');
 		$(".menubox").hide();
 		$(".menuitem").click(function(event) {
@@ -559,7 +558,6 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		$scope.page.setTitle('Cal-Asia Membership');
 		$http.get('/api/pageContent/membership').success(function(data, status, headers, config){
 			$scope.membership = data;
-			console.log($scope.membership)
 		})
 		$('#toggle-view li h3, #toggle-view li strong').click(function () {
 	        var text = $(this).parent().children('div.panel');
@@ -1133,7 +1131,6 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		$scope.form={};
 		$http.get('/api/content/' + $routeParams.id).success(function(data) {
 			$scope.form = data.content;
-			console.log($scope.form)
 			$(':radio[value='+$scope.form.page+']').prop('checked',true)
 			if($scope.form.text != undefined) $('#editor').append($scope.form.text);
 			if($scope.form.image != undefined) $('#editor2').append($scope.form.image);
@@ -1150,7 +1147,6 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				else {
 					$scope.form.image = "<img src='"+$('#editor2').html().replace(/(\s*|<.+>)/g, '')+"'>";
 				}
-				console.log($scope.form.image)
 			}
 			$http.put('/api/content/' + $routeParams.id, $scope.form).
 				success(function(data) {
@@ -1381,6 +1377,10 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			// console.log(userInfo);
 			$rootScope.page.setTitle(current.$$route.title || 'California-Asia Business Council');
 			$rootScope.page.setDescription(current.$$route.description || 'Cal-Asia\'s mission is to foster business between California and the economies of Asia');
+			$('.navbar-collapse li').click(function(){
+				if ($(this).find('.dropdown-menu').length>0) return;
+				else $('.navbar-collapse').collapse('hide');
+			})
 		});
 		$rootScope.$on("$routeChangeError", function (event, current, previous, eventObj) {
 			if (eventObj.authenticated === false) {
@@ -1414,5 +1414,3 @@ $('.extLink').hover(function(){
 }, function(){
 	$(this).find('span').css('opacity', 0);
 })
-
-
