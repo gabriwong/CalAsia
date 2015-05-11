@@ -111,12 +111,12 @@
 					</div><!--end modal fade --> 
 					<table class="table table-hover">
 						<thead>
-						  <tr>
-						  	<th class="col-sm-4">Event Name</th>
-						  	<th class="col-sm-2">Date</th>	
-						  	<th class="col-sm-2">Speakers</th>
-						  	<th class="col-sm-4">Sponsors and Supporters</th>	
-						  </tr>
+							<tr>
+								<th class="col-sm-4">Event Name</th>
+								<th class="col-sm-2">Status</th>
+								<th class="col-sm-2">Date</th>
+								<th class="col-sm-4">Sponsors and Supporters</th>	
+							</tr>
 						</thead>
 						<tbody>
 							<!-- start 2014 Event 1/12 -->
@@ -125,8 +125,8 @@
 							</tr>
 							<tr ng-repeat="event in events">
 								<th scope="row"><a ng-click="showModal([[event._id]])" data-toggle="modal" style="cursor:pointer">[[event.name]]</a></th>
+								<td><span ng-show="event.past">Past</span><span ng-hide="event.past">Upcoming</span></td>
 								<td>[[event.date.string]]</td>
-								<td>[[event.speakers.join(", ")]]</td>
 								<td>[[event.sponsors.join(", ")]]</td>
 							</tr>
 						</tbody>

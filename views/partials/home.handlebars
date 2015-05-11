@@ -54,7 +54,8 @@
                 </div><!-- end modal header-->
 
                 <div class="modal-body">
-                <p ng-bind-html="event.description"></p> 
+                <p ng-bind-html="event.description"></p>
+                <p ng-if="event.sponsors.length>0"><strong>Sponsors: </strong>[[event.sponsors.join(", ")]]</p>
 
                 </div><!-- end modal body-->
 
