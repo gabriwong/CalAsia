@@ -1221,7 +1221,12 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				$scope.form.text = $('#editor').html();
 			}
 			if ($('#editor2') !=undefined){
-				$scope.form.image = $('#editor2').html();
+				if ($('#editor2').html().match(/<img src=/)!=null){
+					$scope.form.image = $('#editor2').html();
+				}
+				else {
+					$scope.form.image = "<img src='"+$('#editor2').html().replace(/(\s*|<.+>)/g, '')+"'>";
+				}
 			}
 			$http.put('/api/carousel/' + $routeParams.id, $scope.form).
 				success(function(data) {
