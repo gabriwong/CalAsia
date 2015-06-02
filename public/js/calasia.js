@@ -432,7 +432,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				var today = new Date();
 				today = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 23,59,59);
 				$scope.upcomingEvents.forEach(function(item, i){
-					item.countDown = (new Date(item.date.full) - today) / 86400000;
+					item.countDown = Math.ceil((new Date(item.date.full) - today) / 86400000);
 					if(item.countDown == 0) item.countDown = 'Today';
 					else if (item.countDown == 1) item.countDown = 'Tomorrow';
 					else item.countDown = 'In '+item.countDown+' Days';
