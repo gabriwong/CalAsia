@@ -161,6 +161,8 @@ exports.editEvent = function (req, res){
 			result.registration.date.string = req.body.registration.date.string;
 			result.year = req.body.year;
 			result.past = req.body.past;
+			result.speakers = req.body.speakers;
+			result.banner = req.body.banner;
 			result.save(function(err){
 				if(err) res.send(500);
 				res.json(true);
@@ -487,6 +489,77 @@ exports.deleteBoardMember = function (req, res){
 		res.json(true);
 	}
 }
+
+exports.speakers = function(req,res){
+	models.Speaker
+		.find()
+		.sort('name')
+		.exec(callback);
+	function callback (err, result){
+		res.json(result);
+	}
+}
+exports.speaker=function(req,res){
+	var id = req.params.id;
+	models.Speaker
+		.findOne({'_id':id})
+		.exec(callback);
+	function callback(err,result){
+		if(err){
+			console.log(err);
+			res.json(false);
+		}
+		res.json({speaker:result});
+    }
+}
+exports.addSpeaker = function (req, res){
+	var newSpeaker = new models.Speaker(req.body);
+	newSpeaker.save(afterSaving);
+	function afterSaving(err){
+		if(err){
+			console.log(err);
+			res.send(500);
+		}
+		res.json(newSpeaker);
+	}
+}
+exports.editSpeaker = function (req, res){
+	var id = req.params.id
+	models.Speaker
+		.findOne({'_id':id})
+		.exec(callback);
+	function callback(err, result){
+		if(err) console.log(err);
+		if(!result) res.json(false);
+		else{
+	    	result.name = req.body.name;
+			result.position = req.body.position;
+			result.company = req.body.company;
+			result.bio = req.body.bio;
+			result.image = req.body.image;
+			result.events = req.body.events;
+			result.save(function(err){
+				if(err) res.send(500);
+				res.json(true);
+			});
+		}
+	}
+}
+exports.deleteSpeaker = function (req, res){
+	var id = req.params.id;
+	models.Speaker
+		.findOne({'_id':id})
+		.remove()
+		.exec(afterRemove);
+	function afterRemove(err, result){
+		if(err){
+			console.log(err);
+			res.json(false);
+		}
+		res.json(true);
+	}
+}
+
 exports.pageContent = function(req, res){
 	var page = req.params.page;
 	models.Content

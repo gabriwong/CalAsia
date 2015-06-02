@@ -14,6 +14,10 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				templateUrl: 'partials/calendar',
 				controller:"calendarCtrl"
 			})
+			.when('/events/:id',{
+				templateUrl: 'partials/event',
+				controller:"eventCtrl"
+			})
 			.when('/resources',{
 				templateUrl: 'partials/resources',
 				controller:"resourcesCtrl"
@@ -570,7 +574,17 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 	        }
 	    });
 	})
-	.controller("blogCtrl", function ($scope, $http){
+	.controller("eventCtrl", function ($scope, $http, $routeParams){
+		window.scrollTo(0,0);
+		var id = $routeParams.id;
+		$http.get("/api/event/"+id).success(function(data, status, headers, config){
+			$scope.event = data.event;
+			if($scope.event.banner == undefined) $scope.event.banner = "img/Cal-Asia-Asia-Globe.jpg";
+			else $scope.event.banner = data.event.banner.slice(9, data.event.banner.length-1);
+			$scope.page.setTitle(data.event.name);
+		})
+	})
+	.controller("blogCtrl", function ($scope, $http, $routeParams){
 		$scope.page.setTitle('Cal-Asia Blog');
 		window.scrollTo(0,0);
 		if($routeParams.id==undefined){
@@ -664,6 +678,10 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		window.scrollTo(0,0);
 		$('#editor').wysiwyg();
 		$('#editor').cleanHtml();
+		$('#editor2').wysiwyg();
+		$('#editor2').cleanHtml();
+		$('#editor3').wysiwyg();
+		$('#editor3').cleanHtml();
 		$scope.form = {};
 		$scope.form.date = {};
 		$scope.form.eventTime = {};
@@ -715,6 +733,15 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				$scope.form.eventTime.string = hours + ':' + minutes + ' ' + AMPM;
 				$scope.form.date.full = new Date($scope.form.date.string + ' ' +$scope.form.eventTime.string);
 			}
+			if ($('#editor2') !=undefined && $('#editor2').html() != ""){
+				if ($('#editor2').html().match(/<img src=/)!=null){
+					$scope.form.banner = $('#editor2').html();
+				}
+				else {
+					$scope.form.banner = "<img src='"+$('#editor2').html().replace(/(\s*|<.+>)/g, '')+"'>";
+				}
+			}
+			else $scope.form.banner = "<img src='img/Cal-Asia-Asia-Globe.jpg'>";
 			$scope.form.past = new Date > $scope.form.date.full;
 			$http.post('/api/events/new', $scope.form).
 			  success(function(data) {
@@ -727,6 +754,10 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		window.scrollTo(0,0);
 		$('#editor').wysiwyg();
 		$('#editor').cleanHtml();
+		$('#editor2').wysiwyg();
+		$('#editor2').cleanHtml();
+		$('#editor3').wysiwyg();
+		$('#editor3').cleanHtml();
 		$('#internal, #external').click(function(){
 			if($('#external').prop('checked') == true) $('#externalLink').prop('disabled', false);
 		    else $('#externalLink').prop('disabled', true);
@@ -740,6 +771,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 		success(function(data) {
 			$scope.form = data.event;
 			if($scope.form.description != undefined) $('#editor').append($scope.form.description);
+			if($scope.form.banner != undefined) $('#editor2').append($scope.form.banner);
 			if($scope.form.sponsors!=undefined) $scope.form.sponsors = $scope.form.sponsors.join(", ");
 			if($scope.form.date != undefined) $scope.form.date.full = new Date($scope.form.date.full);
 			else $scope.form.date = {};
@@ -788,6 +820,15 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				$scope.form.eventTime.string = hours + ':' + minutes + ' ' + AMPM;
 				$scope.form.date.full = new Date($scope.form.date.string + ' ' +$scope.form.eventTime.string);
 			}
+			if ($('#editor2')!=undefined && $('#editor2').html() != ""){
+				if ($('#editor2').html().match(/<img src=/)!=null){
+					$scope.form.banner = $('#editor2').html();
+				}
+				else {
+					$scope.form.banner = "<img src='"+$('#editor2').html().replace(/(\s*|<.+>)/g, '')+"'>";
+				}
+			}
+			else $scope.form.banner = "<img src='img/Cal-Asia-Asia-Globe.jpg'>";
 			$scope.form.past = new Date > $scope.form.date.full;
 			$http.put('/api/event/' + $routeParams.id, $scope.form).
 				success(function(data) {
@@ -1382,6 +1423,7 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			// console.log(userInfo);
 			$rootScope.page.setTitle(current.$$route.title || 'California-Asia Business Council');
 			$rootScope.page.setDescription(current.$$route.description || 'Cal-Asia\'s mission is to foster business between California and the economies of Asia');
+			$('.modal-open').css('padding',0).removeClass('modal-open');
 			$('.navbar-collapse li').click(function(){
 				if ($(this).find('.dropdown-menu').length>0) return;
 				else $('.navbar-collapse').collapse('hide');

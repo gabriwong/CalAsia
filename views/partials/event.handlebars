@@ -1,0 +1,58 @@
+<div class="row eventPage">
+	<div class="col-md-12">
+		<article class="panel panel-default" style="margin:0">
+			<div class="panel-heading" style="background-image:url([[event.banner]])">
+			  <h3>[[event.name]]</h3>
+			</div>
+			<div class="panel-body">
+				<p ng-if="event.past" style="color:red">This event has past.</p>
+				<p ng-if="event.date.string">
+					<strong>Date:</strong><br>
+					[[event.date.string]]
+				</p>
+				<p ng-if="event.eventTime.string">
+					<strong>Time:</strong><br>
+					[[event.eventTime.string]]
+				</p>
+				<p ng-if="event.location">
+					<strong>Location:</strong><br>
+					[[event.location]]
+				</p>
+				<p ng-if="event.price">
+					<strong>Price:</strong><br>
+					$[[event.price]]
+				</p>
+				<p ng-if="event.memberPrice">
+					<strong>Member Price:</strong><br>
+					$[[event.memberPrice]]
+				</p>
+				<p ng-if="event.registration.url">
+					<strong>Registration URL:</strong><br>
+					<a href="[[event.registration.url]]" target="_blank">[[event.registration.url]]</a>
+				</p>
+				<p ng-if="event.speakers.length>0">
+					<strong>Speakers includes:</strong><br>
+					<ul>
+						<li ng-repeat="speaker in event.speakers">
+							[[speaker]]
+						</li>
+					</ul>
+				</p>
+				<div ng-if="event.description">
+					<p><strong>Description:</strong></p>
+					<p ng-bind-html="event.description" style="border:solid 1px black; border-radius:5px; background:#eee;padding:15px"></p>
+				</div>
+			</div>
+			<div class="panel-footer text-center">
+				<a href="[[event.externalLink]]" target="_blank">
+					<button ng-show="event.externalLink" class="btn btn-default" type="button">
+						More Details <span class="glyphicon glyphicon-new-window"></span>
+					</button>
+				</a> 
+				<div ng-if="!event.past" style="display:inline-block">
+					<a href="[[event.registration.url]]" target="_blank" ng-show="event.registration.url"><button class="btn btn-success" type="button">Register for this Event</button></a>
+				</div>
+			</div>
+		</article>
+	</div>
+</div>

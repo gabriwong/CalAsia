@@ -135,6 +135,12 @@ app.post('/api/board/new', api.addBoardMember);
 app.put('/api/board/:id', api.editBoardMember);
 app.delete('/api/board/:id', api.deleteBoardMember);
 
+app.get('/api/speakers', api.speakers);
+app.get('/api/speakers/:id', api.speaker);
+app.post('/api/speaker/new', api.addSpeaker);
+app.put('/api/speaker/:id', api.editSpeaker);
+app.delete('/api/speaker/:id', api.deleteSpeaker);
+
 app.get('/api/content/:id', api.oneContent);
 app.get('/api/pageContent/:page', api.pageContent);
 app.post('/api/content/new', api.newContent);

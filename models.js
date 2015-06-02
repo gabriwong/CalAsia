@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 var EventSchema = new mongoose.Schema({
+	banner:String,
 	eventType:String,
 	externalLink:String,
 	name:String,//
@@ -27,7 +28,8 @@ var EventSchema = new mongoose.Schema({
 		}
 	},
 	year:Number,
-	past:Boolean
+	past:Boolean,
+	speakers: [{type: mongoose.Schema.Types.ObjectId, ref: 'Speaker'}]
 })
 exports.Event = mongoose.model('Event',EventSchema);
 
@@ -40,6 +42,16 @@ var UpdateSchema = new mongoose.Schema({
 	description:String
 })
 exports.Update = mongoose.model('Update',UpdateSchema);
+
+var SpeakerSchema = new mongoose.Schema({
+	name:String,//
+	position:String,
+	company:String,
+	bio:String,
+	image:String,
+	events:[{type: mongoose.Schema.Types.ObjectId, ref: 'Event'}]
+})
+exports.Speaker = mongoose.model('Speaker',SpeakerSchema);
 
 var BlogSchema = new mongoose.Schema({
 	title:String,//
