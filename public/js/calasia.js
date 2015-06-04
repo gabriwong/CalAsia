@@ -60,6 +60,12 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 			.when('/internship',{
 				templateUrl: 'partials/internship'
 			})
+			.when('/interns',{
+				templateUrl: 'partials/interns'
+			})
+			.when('/asiabuild',{
+				templateUrl: 'partials/asiabuild'
+			})
 			.when('/login',{
 				templateUrl: 'partials/login',
 				controller: 'loginCtrl'
