@@ -97,14 +97,16 @@ exports.oneEvent=function(req,res){
 			console.log(err);
 			res.json(false);
 		}
-		var today = new Date();
-		if (today > new Date(result.date.full)){
-			result.past = true;
-			result.save(function(err){
-				if(err) res.send(500);
-			})
-		}
-		res.json({event:result});
+		if (result != undefined) {
+			var today = new Date();
+			if (today > new Date(result.date.full)){
+				result.past = true;
+				result.save(function(err){
+					if(err) res.send(500);})
+			}
+				res.json({event:result});
+		} 
+		
     }
 }
 exports.oneEventTitle=function(req,res){
