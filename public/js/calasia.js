@@ -42,14 +42,14 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 				templateUrl: 'partials/board',
 				controller:"boardCtrl"
 			})
-			.when('/blog', {
-				templateUrl: 'partials/blog',
-				controller:"blogCtrl"
-			})
-			.when('/blog/:id', {
-				templateUrl: 'partials/blogEntry',
-				controller:"blogCtrl"
-			})
+			//.when('/blog', {
+			//	templateUrl: 'partials/blog',
+			//	controller:"blogCtrl"
+			//})
+			//.when('/blog/:id', {
+			//	templateUrl: 'partials/blogEntry',
+			//	controller:"blogCtrl"
+			//})
 			.when('/contact',{
 				templateUrl: 'partials/contact'
 			})
@@ -134,22 +134,22 @@ angular.module('calasia',['ngRoute','ngSanitize'])
 					}
 				}
 			})
-			.when('/adminBlog',{
-				templateUrl: 'partials/adminBlog',
-				controller: 'adminBlogCtrl',
-				resolve:{
-					auth: function ($q, authenticationService, $location){
-						var userInfo = authenticationService.getUserInfo();
-						if (userInfo) {
-							return $q.when(userInfo);
-						}
-						else{
-							$location.path('/login');
-							return $q.reject({authenticated:false});
-						}
-					}
-				}
-			})
+			//.when('/adminBlog',{
+			//	templateUrl: 'partials/adminBlog',
+			//	controller: 'adminBlogCtrl',
+			//	resolve:{
+			//		auth: function ($q, authenticationService, $location){
+			//			var userInfo = authenticationService.getUserInfo();
+			//			if (userInfo) {
+			//				return $q.when(userInfo);
+			//			}
+			//			else{
+			//				$location.path('/login');
+			//				return $q.reject({authenticated:false});
+			//			}
+			//		}
+			//	}
+			//})
 			.when('/adminBoard',{
 				templateUrl: 'partials/adminBoard',
 				controller: 'adminBoardCtrl',
