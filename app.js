@@ -115,11 +115,11 @@ app.post('/api/updates/new', api.addUpdate);
 app.put('/api/update/:id', api.editUpdate);
 app.delete('/api/updates/:id', api.deleteUpdate);
 
-app.get('/api/blogs', api.blogs);
-app.get('/api/blog/:id', api.oneBlog);
-app.post('/api/blogs/new', api.addBlog);
-app.put('/api/blog/:id', api.editBlog);
-app.delete('/api/blogs/:id', api.deleteBlog);
+//app.get('/api/blogs', api.blogs);
+//app.get('/api/blog/:id', api.oneBlog);
+//app.post('/api/blogs/new', api.addBlog);
+//app.put('/api/blog/:id', api.editBlog);
+//app.delete('/api/blogs/:id', api.deleteBlog);
 
 app.get('/api/carousel', api.carousel);
 app.get('/api/carousel/:id', api.carouselItem);
