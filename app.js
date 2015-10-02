@@ -18,13 +18,13 @@ var express = require('express'),
 
 var app = module.exports = express();
 
-//mongoDB setup
-var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/calasia');
-
 //load environment variables
 var dotenv = require('dotenv');
 dotenv.load();
+
+//mongoDB setup
+var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/calasia');
 
 /**
  * Configuration
